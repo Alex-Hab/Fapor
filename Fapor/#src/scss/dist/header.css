@@ -1,0 +1,37 @@
+.top-header {
+  height: 100px;
+  background-color: #24282f;
+  display: flex;
+  align-items: center;
+}
+.top-header__logo {
+  padding-left: 20px;
+}
+.top-header__name {
+  padding-left: 30px;
+}
+.top-header__column-left {
+  flex: 1 1 30%;
+  display: flex;
+  font-size: 26px;
+}
+.top-header__column-left span {
+  color: #fff;
+}
+.top-header__column-right {
+  flex: 0 1 70%;
+  display: flex;
+  justify-content: flex-end;
+}
+.menu__list {
+  display: flex;
+  justify-content: space-between;
+}
+.menu__list li {
+  padding: 0px 30px 0px 0px;
+}
+.menu__list a {
+  color: #fff;
+  font-size: 14px;
+  text-transform: uppercase;
+}

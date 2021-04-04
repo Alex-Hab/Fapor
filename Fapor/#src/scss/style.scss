@@ -1,0 +1,269 @@
+//<МИКСИНЫ>===================================
+@import "mixins";
+//<МИКСИНЫ>===================================
+
+//<ШРИФТЫ >===================================
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:regular,500,700,900&display=swap&subset=cyrilic-ext");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap");
+//@import "fonts";
+//<Подключаем шрифты >===================================
+
+//<Иконочные шрифты >===================================
+
+//<Шрифт по умолчанию >===================================
+$fontFamily: "Open+Sans";
+//<ШРИФТЫ >===================================
+
+//<ПЕРЕМЕННЫЕ >===================================
+$minWidth: 320px;
+$maxWidth: 1900px;
+$maxWidthContainer: 1392px;
+$md1: $maxWidthContainer + 12;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+//<ПЕРЕМЕННЫЕ >===================================
+
+//<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===================================
+@import "null";
+
+body {
+	color: #000;
+	font-size: 14px;
+	font-family: $fontFamily;
+	&._lock {
+		overflow: hidden;
+	}
+}
+
+//<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===================================
+
+//<ОБОЛОЧКА>===================================
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+//<ОБОЛОЧКА>===================================
+
+//ОСНОВНАЯ СЕТКА>===================================
+._container {
+	max-width: $maxWidthContainer;
+	margin: 0 auto;
+	padding: 0px 20px;
+	@media (max-width: $md3+px) {
+		padding: 0 10px;
+	}
+}
+a {
+	color: #fff;
+}
+.button {
+	font-size: 22px;
+	text-transform: uppercase;
+	height: 50px;
+	width: 175px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: #b5a263 2px solid;
+	border-radius: 30px;
+	font-family: $fontFamily;
+	text-align: center;
+}
+h2 {
+	font-size: 24px;
+	text-transform: uppercase;
+	text-align: center;
+	padding: 0px 0px 30px 0px;
+	font-family: "Raleway";
+}
+.line {
+	width: 77px;
+	border-bottom: 2px solid#b5a263;
+}
+.link {
+	color: #000;
+	font-size: 14px;
+	font-weight: 500;
+	transition: color 1s ease-out 0.2s;
+	transition: border-bottom 1s ease-out 0.2s;
+	line-height: 100px;
+	&:hover {
+		color: #b5a263;
+		border-bottom: 1px solid #b5a263;
+	}
+}
+
+//ОСНОВНАЯ СЕТКА>===================================
+
+//ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI ФОРМ И ГОТОВЫХ КЛАССОВ>===================================
+//@import "forms";
+//@import "ui";
+//ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI ФОРМ И ГОТОВЫХ КЛАССОВ>===================================
+
+//ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>===================================
+//@import "pagging";
+//@import "popup";
+@import "header";
+//@import "footer";
+//@import "home";
+//@import "catalog";
+//@import "product";
+@import "swiper-bundle.min";
+
+//ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>===================================
+
+//ОСНОВНОЙ БЛОК====================================================================
+//===================services========================
+.services {
+	min-height: 687px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	// .services__row
+	&__row {
+		min-height: 343px;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+	}
+	// .services__content
+	&__content {
+		font-size: 14px;
+		text-align: center;
+		padding: 30px 30px 0px 30px;
+		//max-width: 846px;
+		line-height: 27px;
+	}
+}
+
+.column-services {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 80%;
+
+	// .column-services__el
+	&__el {
+		width: 200px;
+		height: 354px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		min-width: 285px;
+	}
+}
+.el-services {
+	margin: 0px 10px 0px 10px;
+	:last-child {
+		margin: 0px 0px 0px 0px;
+	}
+	// .el-services__image
+	&__image {
+		padding-bottom: 40px;
+	}
+	// .el-services__title
+	&__title {
+		padding-bottom: 23px;
+		font-size: 16px;
+		text-transform: uppercase;
+		font-family: "Raleway";
+	}
+	// .el-services__content
+	&__content {
+		font-size: 14px;
+		line-height: 27px;
+	}
+}
+//===================who========================
+.who {
+	min-height: 724px;
+	width: 100%;
+	background-color: #f7f7f7;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.who-wrapper {
+	min-height: 486px;
+	margin: 119px 40px 119px 40px;
+	display: flex;
+	box-shadow: 0px 0px 50px 0px rgba(231, 231, 231, 0.8);
+	flex-wrap: wrap;
+	justify-content: center;
+	text-align: center;
+}
+.who-column {
+	display: flex;
+	flex-direction: column;
+	min-width: 490px;
+	max-width: 50%;
+	justify-content: center;
+	align-items: center;
+	img {
+		max-width: 100%;
+		min-height: 100%;
+		object-fit: cover;
+	}
+	&__title {
+		padding: 0px 0px 31px 0px;
+	}
+	&__content {
+		display: block;
+		padding: 31px 40px 71px 40px;
+		line-height: 26px;
+	}
+	// .who-column__line
+	&__line {
+		width: 77px;
+		border-bottom: 2px solid#b5a263;
+	}
+	// .who-column__button
+	&__button {
+		color: #b5a263;
+		font-size: 16px;
+		//margin-bottom: 123px;
+	}
+}
+//===================RECENT========================
+.recent {
+	min-width: 1017px;
+}
+.row-head {
+	min-width: 301px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	&__title {
+		padding: 120px 0px 0px 0px;
+	}
+	&__content,
+	ul {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__content {
+		//padding-top: 62px;
+		//padding-bottom: 58px;
+	}
+	li {
+		font-size: 14px;
+		text-transform: uppercase;
+		font-family: $fontFamily;
+		padding: 0px 22px 0px 22px;
+	}
+}
+.recent__row {
+	min-width: 357px;
+	display: flex;
+	flex-wrap: wrap;
+}
