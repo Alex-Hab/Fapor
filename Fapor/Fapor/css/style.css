@@ -1262,7 +1262,7 @@ button.swiper-pagination-bullet {
 }
 
 .who-wrapper {
-  min-height: 486px;
+  min-height: 465px;
   margin: 119px 40px 119px 40px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1281,6 +1281,7 @@ button.swiper-pagination-bullet {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 50%;
           flex: 0 1 50%;
+  padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1297,6 +1298,7 @@ button.swiper-pagination-bullet {
 }
 
 .who-column img {
+  max-height: 465px;
   min-width: 100%;
   min-height: 100%;
 }
@@ -1319,6 +1321,23 @@ button.swiper-pagination-bullet {
 .who-column__button {
   color: #b5a263;
   font-size: 16px;
+  margin: 20px;
+}
+
+.recent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .row-head {
@@ -1352,7 +1371,7 @@ button.swiper-pagination-bullet {
   width: 100%;
 }
 
-.row-head li {
+.row-head__li {
   font-size: 14px;
   text-transform: uppercase;
   font-family: "Open+Sans";
@@ -1368,10 +1387,12 @@ button.swiper-pagination-bullet {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .row-image__el {
-  min-width: 357px;
   -webkit-box-flex: 0;
       -ms-flex: 0 1 25%;
           flex: 0 1 25%;
@@ -1380,6 +1401,12 @@ button.swiper-pagination-bullet {
 .row-image img {
   width: 100%;
   height: 100%;
+}
+
+.row-button {
+  color: #b5a263;
+  font-size: 16px;
+  margin: 20px;
 }
 
 @media (max-width: 767.98px) {
@@ -1398,10 +1425,6 @@ button.swiper-pagination-bullet {
 
   .content-slider__button {
     font-size: 16px;
-  }
-
-  .who-column img {
-    height: 100%;
   }
 }
 
