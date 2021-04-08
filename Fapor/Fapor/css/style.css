@@ -1187,7 +1187,7 @@ button.swiper-pagination-bullet {
 }
 
 .services__content {
-  font-size: 14px;
+  font-size: 16px;
   text-align: center;
   padding: 30px 30px 0px 30px;
   line-height: 27px;
@@ -1242,7 +1242,7 @@ button.swiper-pagination-bullet {
 }
 
 .el-services__content {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 27px;
 }
 
@@ -1306,9 +1306,7 @@ button.swiper-pagination-bullet {
 }
 
 .who-column__title,
-.who-column .column-title,
-.column__title,
-.column .column-title {
+.column__title {
   padding: 31px 0px 31px 0px;
 }
 
@@ -1319,6 +1317,7 @@ button.swiper-pagination-bullet {
   display: block;
   padding: 31px 40px 71px 40px;
   line-height: 26px;
+  font-size: 16px;
 }
 
 .who-column__line,
@@ -1386,6 +1385,7 @@ button.swiper-pagination-bullet {
   text-transform: uppercase;
   font-family: "Open+Sans";
   padding: 0px 22px 0px 22px;
+  font-size: 16px;
 }
 
 .row-image {
@@ -1438,30 +1438,60 @@ button.swiper-pagination-bullet {
   display: -ms-flexbox;
   display: flex;
   height: 685px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .how-column {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
+}
+
+.how-column__left {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .how-column__title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  padding-top: 120px;
+}
+
+.how-column__content {
+  padding-top: 30px;
+  line-height: 33px;
+  font-size: 16px;
+  padding-bottom: 49px;
+}
+
+.item {
+  line-height: 70px;
+  font-size: 16px;
+}
+
+.item ol {
+  list-style-type: decimal;
+  list-style-position: inside;
+}
+
+.item li {
+  border-top: 2px solid #b5a263;
+  margin: 0;
+  padding: 0;
+}
+
+.item li:last-child {
+  border-bottom: 2px solid #b5a263;
 }
 
 @media (max-width: 991.98px) {

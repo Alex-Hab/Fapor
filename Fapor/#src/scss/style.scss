@@ -137,7 +137,7 @@ h2 {
 	}
 	// .services__content
 	&__content {
-		font-size: 14px;
+		font-size: 16px;
 		text-align: center;
 		padding: 30px 30px 0px 30px;
 		//max-width: 846px;
@@ -179,7 +179,7 @@ h2 {
 	}
 	// .el-services__content
 	&__content {
-		font-size: 14px;
+		font-size: 16px;
 		line-height: 27px;
 	}
 }
@@ -221,8 +221,7 @@ h2 {
 			//max-height: 400px;
 		}
 	}
-	&__title,
-	.column-title {
+	&__title {
 		padding: 31px 0px 31px 0px;
 	}
 	&__content,
@@ -230,6 +229,7 @@ h2 {
 		display: block;
 		padding: 31px 40px 71px 40px;
 		line-height: 26px;
+		font-size: 16px;
 	}
 	// .who-column__line
 	&__line {
@@ -272,6 +272,7 @@ h2 {
 		text-transform: uppercase;
 		font-family: $fontFamily;
 		padding: 0px 22px 0px 22px;
+		font-size: 16px;
 		//height: 50px;
 	}
 }
@@ -318,14 +319,42 @@ h2 {
 .how-container {
 	display: flex;
 	height: 685px;
-	justify-content: center;
-	align-items: center;
 }
 .how-column {
 	display: flex;
-	justify-content: start;
+	&__left {
+		flex: 0 1 50%;
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		@media (max-width: $md1+px) {
+			//width: 100%;
+		}
+	}
 	&__title {
 		display: flex;
-		justify-content: center;
+		padding-top: 120px;
+	}
+	&__content {
+		padding-top: 30px;
+		line-height: 33px;
+		font-size: 16px;
+		padding-bottom: 49px;
+	}
+}
+.item {
+	line-height: 70px;
+	font-size: 16px;
+	ol {
+		list-style-type: decimal;
+		list-style-position: inside;
+	}
+	li {
+		border-top: 2px solid #b5a263;
+		margin: 0;
+		padding: 0;
+		&:last-child {
+			border-bottom: 2px solid #b5a263;
+		}
 	}
 }
