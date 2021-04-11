@@ -1,4 +1,0 @@
-2018-06-16 16:17:52  HttpDownloader::getURL: url: http://emsfs.autodesk.com/utility/wingman/update.xml
-2018-06-16 16:17:52  HttpDownloader::getURL: proxy information not available
-2018-06-16 16:17:52  [ERROR] HttpDownloader::getURL: download file C:\Windows\TEMP\AdAppMgrUpdater\update.xml failed
-2018-06-16 16:17:52  [ERROR] Cannot download update.xml, return now
