@@ -87,7 +87,7 @@ h2 {
 }
 .link {
 	color: #000;
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: 500;
 	transition: color 1s ease-out 0.2s;
 	transition: border-bottom 1s ease-out 0.2s;
@@ -96,6 +96,20 @@ h2 {
 		color: #b5a263;
 		border-bottom: 1px solid #b5a263;
 	}
+}
+.title {
+	padding-top: 100px;
+	font-size: 25px;
+	text-transform: uppercase;
+	@media (max-width: $md3+px) {
+		padding-top: 40px;
+	}
+}
+.content {
+	font-size: 16px;
+	text-align: center;
+	padding: 30px 30px 0px 30px;
+	line-height: 27px;
 }
 
 //ОСНОВНАЯ СЕТКА>===================================
@@ -136,13 +150,6 @@ h2 {
 		text-align: center;
 	}
 	// .services__content
-	&__content {
-		font-size: 16px;
-		text-align: center;
-		padding: 30px 30px 0px 30px;
-		//max-width: 846px;
-		line-height: 27px;
-	}
 }
 .column-services {
 	display: flex;
@@ -268,7 +275,6 @@ h2 {
 		width: 100%;
 	}
 	&__li {
-		font-size: 14px;
 		text-transform: uppercase;
 		font-family: $fontFamily;
 		padding: 0px 22px 0px 22px;
@@ -384,8 +390,15 @@ h2 {
 	&__container {
 		max-width: 1195px;
 		display: flex;
+		flex-wrap: wrap;
 		flex: 0 1 33.333%;
 		justify-content: space-between;
+		@media (max-width: $md3+px) {
+			flex: 0 1 100%;
+			padding-top: 20px;
+			justify-content: center;
+			align-items: center;
+		}
 	}
 	&__column {
 		display: flex;
@@ -401,19 +414,113 @@ h2 {
 		color: #b5a263;
 		font-size: 24px;
 		font-weight: 700;
+		@media (max-width: $md3+px) {
+			padding-top: 25px;
+		}
 	}
 	&__title {
 		padding-top: 39px;
 		padding-bottom: 23px;
 		color: #fff;
-		font-size: 14px;
+		font-size: 16px;
 		text-transform: uppercase;
 	}
 	&__content {
 		padding-top: 24px;
 		color: #fff;
-		font-size: 14px;
+		font-size: 16px;
 		text-align: center;
 		line-height: 15px;
+		@media (max-width: $md3+px) {
+			&:last-child {
+				padding-bottom: 25px;
+			}
+		}
+	}
+}
+//===================MEET========================
+.meet {
+	min-height: 650px;
+	background-color: #f7f7f7;
+	&__container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	&__column {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		max-width: 1125px;
+	}
+}
+.feedback-meet {
+	flex: 0 1 50%;
+	max-width: 615px;
+	max-height: 194px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-top: 79px;
+	@media (max-width: $md3+px) {
+		flex: 0 1 100%;
+		padding-top: 20px;
+		justify-content: center;
+		align-items: center;
+	}
+	&__content {
+		padding: 0px 20px 0px 20px;
+	}
+	&__name {
+		font-size: 18px;
+		font-weight: 700;
+		text-transform: uppercase;
+		color: #b5a263;
+	}
+	&__work {
+		padding-top: 25px;
+		font-size: 16px;
+	}
+	&__text {
+		padding-top: 20px;
+		font-size: 16px;
+	}
+}
+//===================FEATURES========================
+.features {
+	&__container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	&__content {
+		max-width: 892px;
+	}
+}
+.text-features {
+	display: flex;
+	width: 100%;
+	padding-top: 50px;
+	&__column {
+		display: flex;
+		flex-direction: column;
+		flex: 0 1 50%;
+		justify-content: center;
+		align-items: center;
+	}
+	&__el {
+		max-width: 429px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: 70px;
+	}
+	&__content {
+		padding-left: 17px;
+		font-size: 16px;
+		line-height: 26px;
 	}
 }
