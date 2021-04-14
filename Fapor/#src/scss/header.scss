@@ -198,14 +198,14 @@
 	height: 738px;
 	width: 100%;
 }
-.slider-header .swiper-button-next::after,
-.slider-header .swiper-button-prev::after {
+.swiper-button-next::after,
+.swiper-button-prev::after {
 	color: #b5a263;
 	font-size: 18px;
 	border-radius: 5px;
 	border-color: #32353b;
 }
-.slider-header .swiper-pagination-bullet {
+.swiper-pagination-bullet {
 	height: 14px;
 	width: 14px;
 	background-color: #fff;
