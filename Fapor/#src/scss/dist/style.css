@@ -1447,6 +1447,7 @@ button.swiper-pagination-bullet {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  max-width: 892px;
 }
 .slider-feedback__content {
   display: flex;
@@ -1460,4 +1461,9 @@ button.swiper-pagination-bullet {
 }
 .slider-feedback__wrapper {
   max-width: 1125px;
+}
+.slider-feedback__prev::after, .slider-feedback__next::after {
+  height: 17px;
+  width: 11px;
+  color: #000;
 }
