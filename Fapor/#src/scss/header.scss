@@ -195,7 +195,7 @@
 	}
 }
 .swiper-container {
-	height: 738px;
+	height: 680px;
 	width: 100%;
 }
 .swiper-button-next::after,
@@ -206,11 +206,11 @@
 	border-color: #32353b;
 }
 .swiper-pagination-bullet {
-	height: 14px;
-	width: 14px;
-	background-color: #fff;
-	line-height: 20px;
-	font-size: 14px;
+	height: 15px;
+	width: 15px;
+}
+.swiper-pagination-bullet-active {
+	--swiper-theme-color: #fff;
 }
 @media (max-width: $md3+px) {
 	.content-slider {
