@@ -438,9 +438,11 @@ h2 {
 .swiper-button-next::after,
 .swiper-button-prev::after {
   color: #b5a263;
-  font-size: 18px;
-  border-radius: 5px;
-  border-color: #32353b;
+}
+
+.swiper-button-next::before,
+.swiper-button-prev::before {
+  border: none;
 }
 
 /**
@@ -1747,10 +1749,19 @@ button.swiper-pagination-bullet {
 
 .slider-feedback .swiper-container {
   max-height: 600px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .slider-feedback__wrapper {
-  max-width: 892px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 100%;
+          flex: 0 1 100%;
+  max-width: 100%;
   max-height: 600px;
 }
 

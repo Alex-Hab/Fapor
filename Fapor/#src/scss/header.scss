@@ -220,9 +220,13 @@
 .swiper-button-next::after,
 .swiper-button-prev::after {
 	color: #b5a263;
-	font-size: 18px;
-	border-radius: 5px;
-	border-color: #32353b;
+	//font-size: 18px;
+	//border-radius: 5px;
+	//border-color: #32353b;
+}
+.swiper-button-next::before,
+.swiper-button-prev::before{
+	border: none;
 }
 
 @media (max-width: $md3+px) {

@@ -1,27 +1,6 @@
 //=====================Подключение SWIPER========================
 @@include("swiper-bundle.min.js");
-/*var mySwiper = new Swiper('.swiper-container', {
-	// Optional parameters
-	direction: 'horizontal',
-	loop: true,
 
-	// If we need pagination
-	pagination: {
-		el: '.swiper-pagination',
-		clickable: true,
-	},
-
-	// Navigation arrows
-	navigation: {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev',
-	},
-
-	// And if we need scrollbar
-	/*scrollbar: {
-	  el: '.swiper-scrollbar',
-	},*/
-//});
 let sliders = document.querySelectorAll('.swiper-wrapper');
 if (sliders) {
 	for (let index = 0; index < sliders.length; index++) {
@@ -66,7 +45,6 @@ if (document.querySelector('.slider-header')) {
 				ibg();
 			},
 		},
-
 		// Navigation arrows
 		navigation: {
 			nextEl: '.swiper-button-next',
@@ -74,11 +52,16 @@ if (document.querySelector('.slider-header')) {
 		},		
 	});			
 }
-if (document.querySelector('.slider-feedback')) {
+if (document.querySelector('.feedback')) {
 	let mainslider = new Swiper('.slider-feedback__wrapper', {
 		// Optional parameters
+		slidesPerView: 1,
 		direction: 'horizontal',
 		loop: true,
+		navigation: {
+			nextEl: '.slider-feedback__next',
+			prevEl: '.slider-feedback__prev',
+		},
 	});
 }
 if (document.querySelector('.brands-slider')) {
