@@ -443,6 +443,50 @@ h2 {
   border-color: #32353b;
 }
 
+.footer {
+  min-height: 351px;
+  text-align: center;
+}
+
+.footer__container {
+  max-width: 1125px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content-footer {
+  height: 291px;
+  width: 100%;
+  background-color: #2b2f35;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content-footer__column {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 33.333%;
+          flex: 0 1 33.333%;
+}
+
+.social-footer {
+  height: 50px;
+  background-color: #24282f;
+}
+
 /**
  * Swiper 6.5.0
  * Most modern mobile touch slider and framework with hardware accelerated transitions

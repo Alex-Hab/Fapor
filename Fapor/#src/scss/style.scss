@@ -123,7 +123,7 @@ h2 {
 //@import "pagging";
 //@import "popup";
 @import "header";
-//@import "footer";
+@import "footer";
 //@import "home";
 //@import "catalog";
 //@import "product";
@@ -536,7 +536,7 @@ h2 {
 	justify-content: center;
 	align-items: center;
 	max-height: 600px;
-	.swiper-container{
+	.swiper-container {
 		max-height: 600px;
 	}
 	&__wrapper {
@@ -549,7 +549,6 @@ h2 {
 		align-items: center;
 		justify-content: center;
 		width: 100%;
-		
 	}
 	&__content {
 		display: flex;
@@ -558,7 +557,8 @@ h2 {
 		justify-content: center;
 		font-size: 16px;
 		text-align: center;
-		max-width: 700px;max-height: 600px;
+		max-width: 700px;
+		max-height: 600px;
 	}
 	&__title {
 		padding: 0;
@@ -591,7 +591,6 @@ h2 {
 	height: 170px;
 	background-color: #fff;
 }
-.brands-slider__slide{
+.brands-slider__slide {
 	height: 170px;
-
 }
