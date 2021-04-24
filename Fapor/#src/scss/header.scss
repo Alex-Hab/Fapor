@@ -118,10 +118,10 @@
 				top: -100%;
 				left: 0;
 				width: 100%;
-				height: 20%;
+				height: 100%;
 				overflow: auto;
 				transition: all 0.3s ease 0s;
-				background-color: #24282f;
+				background-color: rgba(0, 0, 0, 0.89);
 				padding: 90px 10px 20px 20px;
 				text-align: center;
 			}
@@ -152,7 +152,8 @@
 		align-items: center;
 		color: #fff;
 	}
-	&__image, img {
+	&__image,
+	img {
 		display: flex;
 		justify-content: center;
 		position: absolute;
@@ -160,13 +161,13 @@
 		height: 100%;
 		top: 0;
 		left: 0;
-	}	
-	&__pagination{
+	}
+	&__pagination {
 		position: relative;
 		z-index: 2;
 		margin: -100px 0px 0px 0px;
 		display: flex;
-		justify-content: center;		
+		justify-content: center;
 	}
 	.swiper-pagination-bullet {
 		cursor: pointer;
@@ -174,12 +175,12 @@
 		width: 15px;
 		height: 15px;
 		overflow: hidden;
-		border-radius: 50%;		
-		&-active{		  
-		  //--swiper-theme-color: #fff;
-		  background: #fff;			
+		border-radius: 50%;
+		&-active {
+			//--swiper-theme-color: #fff;
+			background: #fff;
 		}
-   }
+	}
 }
 .swiper-slide {
 	display: flex;
