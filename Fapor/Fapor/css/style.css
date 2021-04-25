@@ -445,6 +445,50 @@ h2 {
   border: none;
 }
 
+.footer {
+  min-height: 351px;
+  text-align: center;
+}
+
+.footer__container {
+  max-width: 1125px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content-footer {
+  height: 291px;
+  width: 100%;
+  background-color: #2b2f35;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content-footer__column {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 33.333%;
+          flex: 0 1 33.333%;
+}
+
+.social-footer {
+  height: 50px;
+  background-color: #24282f;
+}
+
 /**
  * Swiper 6.5.0
  * Most modern mobile touch slider and framework with hardware accelerated transitions
@@ -1935,12 +1979,12 @@ button.swiper-pagination-bullet {
     top: -100%;
     left: 0;
     width: 100%;
-    height: 20%;
+    height: 100%;
     overflow: auto;
     -webkit-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
-    background-color: #24282f;
+    background-color: rgba(0, 0, 0, 0.89);
     padding: 90px 10px 20px 20px;
     text-align: center;
   }
