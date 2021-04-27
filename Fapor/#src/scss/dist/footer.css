@@ -14,11 +14,24 @@
   width: 100%;
   background-color: #2b2f35;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
 }
 .content-footer__column {
   flex: 0 1 33.333%;
+  flex-direction: column;
+  display: flex;
+  justify-content: left;
+}
+.content-footer__title {
+  padding-top: 75px;
+  font-size: 16px;
+  font-weight: 900;
+  color: #b5a263;
+}
+.content-footer__text {
+  padding-top: 35px;
+  font-size: 16px;
 }
 
 .social-footer {
