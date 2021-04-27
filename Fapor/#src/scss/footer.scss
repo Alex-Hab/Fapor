@@ -18,6 +18,7 @@
 	align-items: center;
 	&__column {
 		flex: 0 1 33.333%;
+<<<<<<< HEAD
 		flex-direction: column;
 		display: flex;
 		justify-content: left;
@@ -31,6 +32,22 @@
 	&__text {
 		padding-top: 35px;
 		font-size: 16px;
+||||||| aa50db9d
+=======
+		flex-direction: column;
+		display: flex;
+		justify-content: left;
+	}
+	&__title{
+		padding-top: 75px;
+		font-size: 16px;
+		font-weight: 900;
+		color: #b5a263;
+	}
+	&__text{
+		padding-top: 35px;
+		font-size: 16px;
+>>>>>>> f3381eeb4da0d930f90486687d1e89c7c02f469c
 	}
 }
 .social-footer {

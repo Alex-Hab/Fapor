@@ -538,9 +538,12 @@ h2 {
 	max-height: 600px;
 	.swiper-container {
 		max-height: 600px;
+		display: flex;
+		justify-content: center;
 	}
 	&__wrapper {
-		max-width: 892px;
+		flex: 0 1 100%;
+		max-width: 100%;
 		max-height: 600px;
 	}
 	&__slide {
@@ -567,6 +570,7 @@ h2 {
 		padding-top: 66px;
 		padding-bottom: 44px;
 	}
+	&__text{}
 	&__name {
 		padding-top: 45px;
 		text-transform: uppercase;
