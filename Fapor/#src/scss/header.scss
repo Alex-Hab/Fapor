@@ -223,9 +223,12 @@
 .swiper-button-prev::after {
 	color: #b5a263;
 }
-* {
-	outline: none !important;
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+	color: #098494;
+	transition: opacity 0.2s ease-in-out;
 }
+
 .swiper-button-next::before,
 .swiper-button-prev::before {
 	color: #fff;

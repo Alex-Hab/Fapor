@@ -237,6 +237,10 @@ h2 {
   line-height: 27px;
 }
 
+* {
+  outline: none !important;
+}
+
 .header {
   z-index: 5;
 }
@@ -440,8 +444,12 @@ h2 {
   color: #b5a263;
 }
 
-* {
-  outline: none !important;
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: #098494;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -o-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
 }
 
 .swiper-button-next::before,
