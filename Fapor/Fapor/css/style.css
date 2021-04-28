@@ -440,9 +440,13 @@ h2 {
   color: #b5a263;
 }
 
+* {
+  outline: none !important;
+}
+
 .swiper-button-next::before,
 .swiper-button-prev::before {
-  border: none;
+  color: #fff;
 }
 
 .footer {
