@@ -500,7 +500,7 @@ h2 {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: start;
-  padding-right: 130px;
+  padding-right: 0px;
 }
 
 .content-footer__column:last-child {
@@ -525,7 +525,7 @@ h2 {
   padding: 0 0 0 14px;
   background-color: #2b2f35;
   font-size: 16px;
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   border: 1px solid #6e7279;
   width: 284px;
   height: 35px;
@@ -539,6 +539,10 @@ h2 {
   background-color: #b5a263;
   border: none;
   color: #fff;
+}
+
+.content-footer .element-2 {
+  max-width: 175px;
 }
 
 .social-footer {
@@ -1938,6 +1942,10 @@ button.swiper-pagination-bullet {
 .brands-slider {
   height: 170px;
   background-color: #fff;
+}
+
+.brands-slider__container {
+  height: 170px;
 }
 
 .brands-slider__slide {

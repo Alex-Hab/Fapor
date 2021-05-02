@@ -16,20 +16,21 @@
 	background-color: #2b2f35;
 	display: flex;
 	justify-content: center;
-	
+
 	//align-items: center;
 	&__column {
 		flex: 0 1 33.333%;
 		flex-direction: column;
 		display: flex;
 		align-items: start;
-		padding-right: 130px;
-		&:last-child{
+		padding-right: 0px;
+		&:last-child {
 			padding-right: 0px;
 		}
 	}
 
 	&__title {
+		//margin-right: 130px;
 		padding-top: 65px;
 		font-size: 16px;
 		font-weight: 900;
@@ -37,28 +38,30 @@
 	}
 	&__text {
 		padding-top: 35px;
-		font-size: 16px;	
-		color:#6e7279;	
+		font-size: 16px;
+		color: #6e7279;
 		line-height: 24px;
 		input {
 			padding: 0 0 0 14px;
 			background-color: #2b2f35;
 			font-size: 16px;
-			font-family: 'Open Sans';
+			font-family: "Open Sans";
 			border: 1px solid #6e7279;
 			width: 284px;
-			height: 35px;			
+			height: 35px;
 			margin: 0;
 		}
 	}
-	&__button{
+	&__button {
 		margin-top: 10px;
 		height: 40px;
 		width: 300px;
 		background-color: #b5a263;
 		border: none;
 		color: #fff;
-		
+	}
+	.element-2 {
+		max-width: 175px;
 	}
 }
 .social-footer {

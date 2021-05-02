@@ -514,10 +514,10 @@ h2 {
 		flex: 0 1 50%;
 		justify-content: center;
 		align-items: center;
-		flex-wrap: wrap;	
+		flex-wrap: wrap;
 		@media (max-width: $md3+px) {
 			flex: 0 1 100%;
-		}	
+		}
 	}
 	&__el {
 		max-width: 429px;
@@ -603,6 +603,9 @@ h2 {
 .brands-slider {
 	height: 170px;
 	background-color: #fff;
+	&__container {
+		height: 170px;
+	}
 }
 .brands-slider__slide {
 	height: 170px;
