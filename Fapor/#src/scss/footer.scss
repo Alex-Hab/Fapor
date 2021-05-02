@@ -23,14 +23,15 @@
 		flex-direction: column;
 		display: flex;
 		align-items: start;
-		padding-right: 0px;
-		&:last-child {
-			padding-right: 0px;
+		@media (max-width: $md3+px) {
+			flex: 0 1 100%;
+			justify-content: center;
+			align-items: center;
 		}
 	}
 
 	&__title {
-		//margin-right: 130px;
+		padding-right: 20px;
 		padding-top: 65px;
 		font-size: 16px;
 		font-weight: 900;
@@ -38,6 +39,7 @@
 	}
 	&__text {
 		padding-top: 35px;
+		padding-right: 20px;
 		font-size: 16px;
 		color: #6e7279;
 		line-height: 24px;
@@ -62,6 +64,9 @@
 	}
 	.element-2 {
 		max-width: 175px;
+		@media (max-width: $md3+px) {
+			max-width: 100%;
+		}
 	}
 }
 .social-footer {

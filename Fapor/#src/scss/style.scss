@@ -508,6 +508,7 @@ h2 {
 	display: flex;
 	width: 100%;
 	padding-top: 50px;
+	flex-wrap: wrap;
 	&__column {
 		display: flex;
 		flex-direction: column;
