@@ -447,7 +447,6 @@ h2 {
 
 .footer {
   min-height: 351px;
-  text-align: center;
 }
 
 .footer__container {
@@ -458,24 +457,21 @@ h2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  margin: 0 25px 0 25px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .content-footer {
-  height: 291px;
+  min-height: 291px;
   width: 100%;
   background-color: #2b2f35;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .content-footer__column {
@@ -489,13 +485,18 @@ h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  padding-right: 130px;
+}
+
+.content-footer__column:last-child {
+  padding-right: 0px;
 }
 
 .content-footer__title {
-  padding-top: 75px;
+  padding-top: 65px;
   font-size: 16px;
   font-weight: 900;
   color: #b5a263;
@@ -504,6 +505,28 @@ h2 {
 .content-footer__text {
   padding-top: 35px;
   font-size: 16px;
+  color: #6e7279;
+  line-height: 24px;
+}
+
+.content-footer__text input {
+  padding: 0 0 0 14px;
+  background-color: #2b2f35;
+  font-size: 16px;
+  font-family: 'Open Sans';
+  border: 1px solid #6e7279;
+  width: 284px;
+  height: 35px;
+  margin: 0;
+}
+
+.content-footer__button {
+  margin-top: 10px;
+  height: 40px;
+  width: 300px;
+  background-color: #b5a263;
+  border: none;
+  color: #fff;
 }
 
 .social-footer {
@@ -1772,6 +1795,8 @@ button.swiper-pagination-bullet {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .text-features__el {
@@ -2108,6 +2133,12 @@ button.swiper-pagination-bullet {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+
+  .text-features__column {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
   }
 }
 
