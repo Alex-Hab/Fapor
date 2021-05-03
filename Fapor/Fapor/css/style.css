@@ -502,6 +502,10 @@ h2 {
           align-items: start;
 }
 
+.content-footer__column:last-child {
+  padding-bottom: 15px;
+}
+
 .content-footer__title {
   padding-right: 20px;
   padding-top: 65px;
@@ -538,13 +542,62 @@ h2 {
   color: #fff;
 }
 
-.content-footer .element-2 {
-  max-width: 175px;
-}
-
 .social-footer {
   height: 50px;
   background-color: #24282f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.social-footer span {
+  color: #fff;
+}
+
+.social-footer__container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.social-footer__column-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.social-footer__column-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 /**
@@ -1826,6 +1879,7 @@ button.swiper-pagination-bullet {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 70px;
+  padding-right: 15px;
 }
 
 .text-features__content {
@@ -2096,18 +2150,14 @@ button.swiper-pagination-bullet {
 
   .content-footer__column {
     -webkit-box-flex: 0;
-        -ms-flex: 0 1 100%;
-            flex: 0 1 100%;
+        -ms-flex: 0 1 70%;
+            flex: 0 1 70%;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-  }
-
-  .content-footer .element-2 {
-    max-width: 100%;
   }
 
   .row-image__el {

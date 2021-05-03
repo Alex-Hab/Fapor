@@ -24,9 +24,12 @@
 		display: flex;
 		align-items: start;
 		@media (max-width: $md3+px) {
-			flex: 0 1 100%;
+			flex: 0 1 70%;
 			justify-content: center;
 			align-items: center;
+		}
+		&:last-child {
+			padding-bottom: 15px;
 		}
 	}
 
@@ -63,13 +66,32 @@
 		color: #fff;
 	}
 	.element-2 {
-		max-width: 175px;
-		@media (max-width: $md3+px) {
-			max-width: 100%;
-		}
 	}
 }
 .social-footer {
 	height: 50px;
 	background-color: #24282f;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	span {
+		color: #fff;
+	}
+	&__container {
+		width: 100%;
+		display: flex;
+		flex: 0 1 50%;
+		justify-content: center;
+		align-items: center;
+	}
+	&__column-1 {
+		display: flex;
+		justify-content: start;
+		align-items: center;
+	}
+	&__column-2 {
+		display: flex;
+		justify-content: end;
+		align-items: center;
+	}
 }
