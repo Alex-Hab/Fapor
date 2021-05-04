@@ -70,21 +70,26 @@
 }
 .social-footer {
 	height: 50px;
+	width: 100%;
+	margin: 0;
 	background-color: #24282f;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	span {
-		color: #fff;
-	}
-	&__container {
+	&__container{
 		width: 100%;
 		display: flex;
-		flex: 0 1 50%;
 		justify-content: center;
 		align-items: center;
 	}
+	&__content {
+		max-width: 1125px;
+		display: flex;
+		flex: 0 1 50%;
+	 	justify-content: space-between;
+	}
 	&__column-1 {
+		color: #fff;
 		display: flex;
 		justify-content: start;
 		align-items: center;
@@ -93,5 +98,6 @@
 		display: flex;
 		justify-content: end;
 		align-items: center;
+		color: #fff;
 	}
 }
