@@ -19,10 +19,11 @@
 
 	//align-items: center;
 	&__column {
-		flex: 0 1 33.333%;
+		flex: 0 1 30.333%;
 		flex-direction: column;
 		display: flex;
 		align-items: start;
+		padding: 0 20px 0 0;
 		@media (max-width: $md3+px) {
 			flex: 0 1 70%;
 			justify-content: center;
@@ -41,8 +42,8 @@
 		color: #b5a263;
 	}
 	&__text {
-		padding-top: 35px;
-		padding-right: 20px;
+		padding: 35px 0 0 0;
+		width: 100%;
 		font-size: 16px;
 		color: #6e7279;
 		line-height: 24px;
@@ -52,7 +53,7 @@
 			font-size: 16px;
 			font-family: "Open Sans";
 			border: 1px solid #6e7279;
-			width: 284px;
+			width: 95%;
 			height: 35px;
 			margin: 0;
 		}
@@ -60,7 +61,7 @@
 	&__button {
 		margin-top: 10px;
 		height: 40px;
-		width: 300px;
+		width: 100%;
 		background-color: #b5a263;
 		border: none;
 		color: #fff;
@@ -69,35 +70,33 @@
 	}
 }
 .social-footer {
-	height: 50px;
 	width: 100%;
-	margin: 0;
+	height: 70px;
 	background-color: #24282f;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	&__container{
-		width: 100%;
+	&__container {
+		max-width: 1125px;
 		display: flex;
 		justify-content: center;
-		align-items: center;
+		margin: 0 25px 0 25px;
+		flex-wrap: wrap;
+		flex: 0 1 100%;
 	}
-	&__content {
-		//max-width: 1125px;
-		display: flex;
+	&__column_1 {
 		flex: 0 1 50%;
-	 	justify-content: space-between;
-	}
-	&__column-1 {
-		color: #fff;
 		display: flex;
-		justify-content: start;
-		align-items: center;
+		justify-content: flex-start;
 	}
-	&__column-2 {
+	&__column_2 {
+		flex: 0 1 50%;
 		display: flex;
-		justify-content: end;
-		align-items: center;
-		color: #fff;
+		justify-content: flex-end;
+	}
+	span {
+		color: #6e7279;
+		font-size: 14px;
+		font-family: "Open Sans";
 	}
 }
