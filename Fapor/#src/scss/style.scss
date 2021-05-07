@@ -73,6 +73,16 @@ a {
 	border-radius: 30px;
 	font-family: $fontFamily;
 	text-align: center;
+
+	position: relative;
+	top: 0;
+	transition-property: background-color;
+	transition-duration: 0.5s;
+	&:hover {
+		top: 2px;
+		background-color: #b5a263;
+		color: #fff;
+	}
 }
 h2 {
 	font-size: 24px;
@@ -252,7 +262,6 @@ h2 {
 		color: #b5a263;
 		font-size: 16px;
 		margin: 20px;
-		//margin-bottom: 123px;
 	}
 }
 //===================RECENT========================

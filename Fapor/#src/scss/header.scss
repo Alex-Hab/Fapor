@@ -46,7 +46,7 @@
 		line-height: 100px;
 		&:hover {
 			color: #b5a263;
-			border-bottom: 1px solid #b5a263;
+			border-bottom: none;
 		}
 	}
 	//.header__list
@@ -56,7 +56,11 @@
 		text-transform: uppercase;
 		font-family: $fontFamily;
 		li {
-			padding: 0px 30px 0px 0px;
+			margin: 0px 15px 0px 15px;
+			&:hover {
+				transition-duration: 0.5s;
+				border-bottom: 1px solid #b5a263;
+			}
 		}
 	}
 	//==================	БУРГЕР=======================
@@ -213,6 +217,15 @@
 		border-radius: 25px;
 		font-family: $fontFamily;
 		text-align: center;
+
+		position: relative;
+		top: 0;
+		transition-property: background-color;
+		transition-duration: 0.5s;
+		&:hover {
+			top: 2px;
+			background-color: #837546;
+		}
 	}
 }
 .swiper-container {

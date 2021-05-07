@@ -191,6 +191,20 @@ a {
   border-radius: 30px;
   font-family: "Open+Sans";
   text-align: center;
+  position: relative;
+  top: 0;
+  -webkit-transition-property: background-color;
+  -o-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-duration: 0.5s;
+       -o-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+.button:hover {
+  top: 2px;
+  background-color: #b5a263;
+  color: #fff;
 }
 
 h2 {
@@ -311,7 +325,7 @@ h2 {
 
 .header__link:hover {
   color: #b5a263;
-  border-bottom: 1px solid #b5a263;
+  border-bottom: none;
 }
 
 .header__list {
@@ -326,7 +340,14 @@ h2 {
 }
 
 .header__list li {
-  padding: 0px 30px 0px 0px;
+  margin: 0px 15px 0px 15px;
+}
+
+.header__list li:hover {
+  -webkit-transition-duration: 0.5s;
+       -o-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  border-bottom: 1px solid #b5a263;
 }
 
 .slider-header__content {
@@ -432,6 +453,19 @@ h2 {
   border-radius: 25px;
   font-family: "Open+Sans";
   text-align: center;
+  position: relative;
+  top: 0;
+  -webkit-transition-property: background-color;
+  -o-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-duration: 0.5s;
+       -o-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+.content-slider__button:hover {
+  top: 2px;
+  background-color: #837546;
 }
 
 .swiper-container {
@@ -541,6 +575,19 @@ h2 {
   background-color: #b5a263;
   border: none;
   color: #fff;
+  position: relative;
+  top: 0;
+  -webkit-transition-property: background-color;
+  -o-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-duration: 0.5s;
+       -o-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+.content-footer__button:hover {
+  top: 2px;
+  background-color: #837546;
 }
 
 .social-footer {

@@ -65,6 +65,14 @@
 		background-color: #b5a263;
 		border: none;
 		color: #fff;
+		position: relative;
+		top: 0;
+		transition-property: background-color;
+		transition-duration: 0.5s;
+		&:hover {
+			top: 2px;
+			background-color: #837546;
+		}
 	}
 	.element-2 {
 	}

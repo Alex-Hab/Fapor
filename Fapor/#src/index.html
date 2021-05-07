@@ -11,6 +11,52 @@
 </head>
 
 <body>
+	<div class="header__slider slider-header swiper-container">
+		<!-- Additional required wrapper -->
+		<div class="slider-header-wrapper swiper-wrapper">
+			<!-- Slides -->
+			<div class="slider-header__slide swiper-slide">
+				<div class="slider-header__content content-slider">
+					<div class="content-slider__subtitle">We create Amazing Things</div>
+					<div class="content-slider__title">Wellcome to FAPOR</div>
+					<button class="content-slider__button">
+						<a href="#">Learn MoRe</a>
+					</button>
+				</div>
+				<div class="slider-header__image _ibg">
+					<img src="img/slider_image/slide_1.png" alt="">
+				</div>
+			</div>
+			<div class="slider-header__slide swiper-slide">
+				<div class="slider-header__content content-slider">
+					<div class="content-slider__subtitle">Кадастровые работы под ключ</div>
+					<div class="content-slider__title">Добро пожаловать на наш сайт</div>
+					<button class="content-slider__button">
+						<a href="#">Узнать больше</a>
+					</button>
+				</div>
+				<div class="slider-header__image _ibg">
+					<img src="img/slider_image/slide_1.png" alt="">
+				</div>
+			</div>
+			<div class="slider-header__slide swiper-slide">
+				<div class="slider-header__content content-slider">
+					<div class="content-slider__subtitle">У нас есть крутые идеи</div>
+					<div class="content-slider__title">Добро пожаловать в FAPOR</div>
+					<button class="content-slider__button"><a href="#">Узнать больше</a></button>
+				</div>
+				<div class="slider-header__image _ibg">
+					<img src="img/slider_image/slide_1.png" alt="">
+				</div>
+			</div>
+		</div>
+		<!-- If we need pagination -->
+		<div class="slider-header__pagination"></div>
+
+		<!-- If we need navigation buttons -->
+		<div class="swiper-button-prev"></div>
+		<div class="swiper-button-next"></div>
+	</div>
 	<div class="wrapper">
 		@@include('_header.html',{})
 		<div class="services _container">
@@ -60,7 +106,7 @@
 						designs for print and
 						web. We work flexibly with clients to fulfil their design needs. Whether you need to create a brand
 						from scratch.</div>
-					<div class="who-column__button button">Learn MoRe</div>
+					<button class="who-column__button button">Learn MoRe</button>
 				</div>
 			</div>
 		</div>
@@ -339,11 +385,11 @@
 							<div class="slider-feedback__work">General Manager</div>
 						</div>
 					</div>
-				</div>				
+				</div>
 				<!-- If we need navigation buttons -->
 				<div class="slider-feedback__next swiper-button-next"></div>
 				<div class="slider-feedback__prev swiper-button-prev"></div>
-				
+
 			</div>
 		</div>
 		<div class="brands-slider">
@@ -371,8 +417,6 @@
 		@@include('_footer.html',{})
 	</div>
 
-	@@include('_popup.html',{})
-	@@include('_js.html',{})
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 	<script src="js/script.min.js"></script>
 </body>
