@@ -6,19 +6,19 @@ if (sliders) {
 	for (let index = 0; index < sliders.length; index++) {
 		let slider = sliders[index];
 		let slider_items = slider.children;
-			if (slider_items) {
-				for (let index = 0; index < slider_items.length; index++) {
-					let el = slider_items[index];
-					el.classList.add('swiper-slide');
-				}
+		if (slider_items) {
+			for (let index = 0; index < slider_items.length; index++) {
+				let el = slider_items[index];
+				el.classList.add('swiper-slide');
 			}
+		}
 		let slider_content = slider.innerHTML;
 		let slider_wrapper = document.createElement('div');
-			slider_wrapper.classList.add('swiper-wrapper');
-			slider_wrapper.innerHTML = slider_content;
-			slider.innerHTML = '';
-			slider.appendChild(slider_wrapper);
-			slider.classList.add('swiper-bild');				
+		slider_wrapper.classList.add('swiper-wrapper');
+		slider_wrapper.innerHTML = slider_content;
+		slider.innerHTML = '';
+		slider.appendChild(slider_wrapper);
+		slider.classList.add('swiper-bild');
 	}
 	sliders_bild_callback();
 }
@@ -34,10 +34,15 @@ if (document.querySelector('.slider-header')) {
 		slidesPerView: 1,
 		spaceBetween: 0,
 		speed: 800,
+		autoplay: {
+			delay: 3000,
+			stopOnLastSlide: true,
+			disableOnInteraction: false
+		},
 
 		// If we need pagination
 		pagination: {
-			el: '.slider-header__pagination',			
+			el: '.slider-header__pagination',
 			clickable: true,
 		},
 		on: {
@@ -49,13 +54,18 @@ if (document.querySelector('.slider-header')) {
 		navigation: {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',
-		},		
-	});			
+		},
+	});
 }
 if (document.querySelector('.feedback')) {
 	let mainslider = new Swiper('.slider-feedback__wrapper', {
 		// Optional parameters
 		slidesPerView: 1,
+		autoplay: {
+			delay: 3000,
+			stopOnLastSlide: true,
+			disableOnInteraction: false
+		},
 		direction: 'horizontal',
 		loop: true,
 		navigation: {
@@ -67,9 +77,14 @@ if (document.querySelector('.feedback')) {
 if (document.querySelector('.brands-slider')) {
 	let brandsSlider = new Swiper('.brands-slider__wrapper', {
 		slidesPerView: 5,
-		spaceBetween: 0,		
+		spaceBetween: 0,
 		speed: 800,
-		loop: true,		
+		loop: true,
+		autoplay: {
+			delay: 1000,
+			stopOnLastSlide: true,
+			disableOnInteraction: false
+		},
 		breakpoints: {
 			320: {
 				slidesPerView: 1,

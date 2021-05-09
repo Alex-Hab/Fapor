@@ -344,10 +344,11 @@ h2 {
 }
 
 .header__list li:hover {
-  -webkit-transition-duration: 0.5s;
-       -o-transition-duration: 0.5s;
-          transition-duration: 0.5s;
-  border-bottom: 1px solid #b5a263;
+  -webkit-transform: translateY(5px) scale3d(1.1, 1.1, 1.1);
+          transform: translateY(5px) scale3d(1.1, 1.1, 1.1);
+  -webkit-transition: all 0.8s ease 0s;
+  -o-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
 }
 
 .slider-header__content {
@@ -649,6 +650,14 @@ h2 {
   color: #6e7279;
   font-size: 14px;
   font-family: "Open Sans";
+}
+
+.services {
+  margin-top: 100px;
+}
+
+.services__top {
+  height: 90px;
 }
 
 /**

@@ -55,11 +55,20 @@
 		justify-content: space-between;
 		text-transform: uppercase;
 		font-family: $fontFamily;
+
 		li {
 			margin: 0px 15px 0px 15px;
 			&:hover {
-				transition-duration: 0.5s;
-				border-bottom: 1px solid #b5a263;
+				transform: translateY(5px) scale3d(1.1, 1.1, 1.1);
+				//font-weight: 900px;
+				transition: all 0.8s ease 0s;
+			}
+		}
+		a {
+			//transition-duration: 0.5s;
+			&:hover {
+				//border-bottom: 2px solid #b5a263;
+				//transition: all 0.8s ease 0s;
 			}
 		}
 	}
