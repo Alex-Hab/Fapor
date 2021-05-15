@@ -1,6 +1,18 @@
 .services {
 	margin-top: 100px;
 	&__top {
-		height: 90px;
+		height: 288px;
+		width: 100%;
+		background-image: url('../img/services-page/services-top.png');
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+	}
+		h2{
+		font-size: 40px;
+		color: #fff;
+	}
+	&__content{
+		color: #fff;
 	}
 }
