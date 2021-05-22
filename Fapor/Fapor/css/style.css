@@ -657,7 +657,27 @@ h2 {
 }
 
 .services__top {
-  height: 90px;
+  height: 288px;
+  width: 100%;
+  background-image: url("../img/services-page/services-top.png");
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.services h2 {
+  font-size: 40px;
+  color: #fff;
+}
+
+.services__content {
+  color: #fff;
 }
 
 /**
@@ -2295,7 +2315,7 @@ button.swiper-pagination-bullet {
   }
 }
 @supports (-webkit-appearance:none){
-
+.services__top{background-image:.webpurl("../img/services-page/services-top.png")}
 }
 
  @media (max-width: 991.98px){
