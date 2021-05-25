@@ -73,7 +73,7 @@
 		}
 	}
 	//==================	БУРГЕР=======================
-	@media (max-width: 846px) {
+	@media (max-width: 932px) {
 		body.lock {
 			overflow: hidden;
 		}
@@ -135,7 +135,7 @@
 				overflow: auto;
 				transition: all 0.3s ease 0s;
 				background-color: rgba(0, 0, 0, 0.89);
-				padding: 90px 10px 20px 20px;
+				padding: 90px 0px 20px 0px;
 				text-align: center;
 			}
 			&__menu.active {
@@ -146,9 +146,15 @@
 			}
 			&__list li {
 				margin: 0 0 20px 0;
+				height: 30px;
+				&:hover {
+				transform: none;
+				//font-weight: 900px;
+				transition: none;
+			}
 			}
 			&__link {
-				font-size: 24px;
+				font-size: 20px;
 			}
 		}
 	}

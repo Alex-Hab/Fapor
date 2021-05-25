@@ -676,10 +676,6 @@ h2 {
   color: #fff;
 }
 
-.services__content {
-  color: #fff;
-}
-
 /**
  * Swiper 6.5.0
  * Most modern mobile touch slider and framework with hardware accelerated transitions
@@ -1414,6 +1410,7 @@ button.swiper-pagination-bullet {
 }
 
 .services {
+  margin: 0;
   min-height: 687px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1428,6 +1425,22 @@ button.swiper-pagination-bullet {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.services h2 {
+  color: #000;
+}
+
+.services__content {
+  display: block;
+  padding: 31px 40px 71px 40px;
+  line-height: 26px;
+  font-size: 16px;
+  color: #000;
+}
+
+.services__header {
+  padding-top: 40px;
 }
 
 .services__row {
@@ -2100,7 +2113,7 @@ button.swiper-pagination-bullet {
   }
 }
 
-@media (max-width: 846px) {
+@media (max-width: 932px) {
   .header body.lock {
     overflow: hidden;
   }
@@ -2185,7 +2198,7 @@ button.swiper-pagination-bullet {
     -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
     background-color: rgba(0, 0, 0, 0.89);
-    padding: 90px 10px 20px 20px;
+    padding: 90px 0px 20px 0px;
     text-align: center;
   }
 
@@ -2199,10 +2212,20 @@ button.swiper-pagination-bullet {
 
   .header .header__list li {
     margin: 0 0 20px 0;
+    height: 30px;
+  }
+
+  .header .header__list li:hover {
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none;
   }
 
   .header .header__link {
-    font-size: 24px;
+    font-size: 20px;
   }
 }
 
@@ -2326,7 +2349,7 @@ button.swiper-pagination-bullet {
 
 }
 
- @media (max-width: 846px){
+ @media (max-width: 932px){
 
 @supports (-webkit-appearance:none){
 
