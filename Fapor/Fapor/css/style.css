@@ -652,11 +652,8 @@ h2 {
   font-family: "Open Sans";
 }
 
-.services {
-  margin-top: 100px;
-}
-
-.services__top {
+.services-page__top {
+  margin: 100px 0 0 0;
   height: 288px;
   width: 100%;
   background-image: url("../img/services-page/services-top.png");
@@ -671,9 +668,21 @@ h2 {
           align-items: center;
 }
 
-.services h2 {
+.services-page__header {
+  padding: 0 40px 0 40px;
+}
+
+.services-page .h2__services {
   font-size: 40px;
   color: #fff;
+}
+
+.services-page__content {
+  color: #fff;
+  display: block;
+  padding: 31px 40px 71px 40px;
+  line-height: 26px;
+  font-size: 16px;
 }
 
 /**
@@ -2338,7 +2347,7 @@ button.swiper-pagination-bullet {
   }
 }
 @supports (-webkit-appearance:none){
-.services__top{background-image:.webpurl("../img/services-page/services-top.png")}
+.services-page__top{background-image:.webpurl("../img/services-page/services-top.png")}
 }
 
  @media (max-width: 991.98px){

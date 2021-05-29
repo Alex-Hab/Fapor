@@ -1,6 +1,6 @@
-.services {
-	margin-top: 100px;
+.services-page {	
 	&__top {
+		margin: 100px 0 0 0;
 		height: 288px;
 		width: 100%;
 		background-image: url('../img/services-page/services-top.png');
@@ -8,8 +8,19 @@
 		justify-content: flex-start;
 		align-items: center;
 	}
-		h2{
+	&__header{
+		padding: 0 40px 0 40px;
+	}
+	.h2__services{
 		font-size: 40px;
-		color: #fff;
+		 color: #fff;
 	}	
+	&__content{
+		color: #fff;
+		display: block;
+		padding: 31px 40px 71px 40px;
+		line-height: 26px;
+		font-size: 16px;
+	 
+	}
 }
