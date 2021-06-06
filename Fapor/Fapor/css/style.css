@@ -207,6 +207,10 @@ a {
   color: #fff;
 }
 
+.button:hover a {
+  color: #fff;
+}
+
 h2 {
   font-size: 24px;
   text-transform: uppercase;
@@ -1744,6 +1748,15 @@ button.swiper-pagination-bullet {
   height: 100%;
 }
 
+.row-image__el img:hover {
+  -webkit-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+  -webkit-transform: scale(1.1, 1.1);
+      -ms-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+}
+
 .row-button {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -1753,6 +1766,10 @@ button.swiper-pagination-bullet {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.row-button a {
+  color: #b5a263;
 }
 
 .button {
