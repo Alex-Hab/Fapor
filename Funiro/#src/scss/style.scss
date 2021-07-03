@@ -36,6 +36,7 @@ $darkGrayColor: #616161;
 body {
 	color: $mainColor;
 	font-size: 15px;
+	font-family: $fontFamily;
 
 	&._lock {
 		overflow: hidden;
