@@ -654,6 +654,7 @@ h2 {
 
 .services {
   margin-top: 100px;
+  position: relative;
 }
 
 .services__top {
@@ -671,8 +672,7 @@ h2 {
           align-items: center;
 }
 
-.services h2 {
-  font-size: 40px;
+.services .h2__services {
   color: #fff;
 }
 
@@ -1425,10 +1425,6 @@ button.swiper-pagination-bullet {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.services h2 {
-  color: #000;
 }
 
 .services__content {

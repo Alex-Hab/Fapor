@@ -1,0 +1,15 @@
+.services {
+  margin-top: 100px;
+  position: relative;
+}
+.services__top {
+  height: 288px;
+  width: 100%;
+  background-image: url("../img/services-page/services-top.png");
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.services .h2__services {
+  color: #fff;
+}

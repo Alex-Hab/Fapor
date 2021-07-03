@@ -154,15 +154,13 @@ h2 {
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
-	h2{
-		color:#000;
-	}	
+	
 	&__content{
 		display: block;
-    padding: 31px 40px 71px 40px;
-    line-height: 26px;
-    font-size: 16px;
-	 color:#000;
+		padding: 31px 40px 71px 40px;
+		line-height: 26px;
+		font-size: 16px;
+		color:#000;
 	}
 	&__header{
 		padding-top: 40px;

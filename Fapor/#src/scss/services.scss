@@ -1,5 +1,6 @@
 .services {
 	margin-top: 100px;
+	position: relative;
 	&__top {
 		height: 288px;
 		width: 100%;
@@ -8,8 +9,7 @@
 		justify-content: flex-start;
 		align-items: center;
 	}
-		h2{
-		font-size: 40px;
+	.h2__services{
 		color: #fff;
-	}	
+	}
 }
