@@ -34,10 +34,9 @@ $darkGrayColor: #616161;
 @import "null";
 
 body {
+	background-color: #f9f1e7;
 	color: $mainColor;
-	font-size: 15px;
 	font-family: $fontFamily;
-
 	&._lock {
 		overflow: hidden;
 	}

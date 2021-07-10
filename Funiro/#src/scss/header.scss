@@ -45,6 +45,9 @@
 
 	// .header__search
 	&__search {
+		@media (min-width: $md2+px) {
+			flex: 1 1 auto;
+		}
 	}
 
 	// .header__actions
@@ -159,9 +162,44 @@
 		line-height: 120%;
 	}
 }
+.search-form {
+	max-width: 473px;
+
+	//.search-form__icon
+	&__icon {
+		display: none;
+	}
+
+	//.search-form__item
+	&__item {
+		background-color: #fff;
+		display: flex;
+		align-items: center;
+	}
+	//.search-form__btn
+	&__btn {
+		flex: 0 0 45px;
+		height: 45px;
+		font-size: 15px;
+		color: #333333;
+	}
+	//.search-form__input
+	&__input {
+		font-size: 14px;
+		width: 100%;
+		padding: 0 20px 0 0;
+		color: $darkGrayColor;
+	}
+}
 .actions-header {
 	// .actions-header__item
-
+	position: relative;
+	z-index: 5;
+	display: grid;
+	grid-template-columns: auto;
+	grid-auto-flow: column;
+	align-items: center;
+	@include adaptiv-value("gap", 32, 15, 1);
 	&__item {
 		// .actions-header__item_favorites
 		&_favorites {
@@ -193,5 +231,5 @@
 .icon-menu {
 }
 
-//51-41
+//54-35
 //по стрелочкам выпадающего меню посмотреть ролик про спойлеры

@@ -45,6 +45,15 @@ function ibg() {
 
 ibg();
 
+
+//========================================
+//RemoveClasses (цикл для сброса класса)
+function _removeClasses(el, class_name) {
+	for (var i = 0; i < el.length; i++) {
+		el[i].classList.remove(class_name);
+	}
+}
+
 window.onload = function () {
 	document.addEventListener("click", documentActions);
 
