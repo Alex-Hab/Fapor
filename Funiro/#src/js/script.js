@@ -69,4 +69,3 @@ window.onload = function () {
 		}
 	}
 }
-_
