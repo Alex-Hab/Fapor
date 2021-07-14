@@ -23,12 +23,22 @@
 		align-items: center;
 		padding: 5px 0;
 		min-height: 125px;
+		position: relative;
+		@media (max-width: $md2+px) {
+			min-height: 80px;
+		}
+		@media (max-width: $md3+px) {
+			min-height: 50px;
+		}
 	}
 	// .header__main
 	&__main {
 		display: flex;
 		align-items: center;
 		flex: 0 0 494 / 1240 * 100%;
+		@media (max-width: $md2+px) {
+			flex: 1 1 auto;
+		}
 	}
 
 	// .header__logo
@@ -37,6 +47,8 @@
 		font-weight: 700;
 		font-size: 24px;
 		line-height: 29 /24 * 100%;
+		position: relative;
+		z-index: 5;
 	}
 
 	// .header__menu
@@ -61,6 +73,17 @@
 	// .menu__body
 
 	&__body {
+		@media (max-width: $md3+px) {
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			overflow: auto;
+			top: 0;
+			left: 0;
+			background-color: #fcf8f3;
+			transition: left 0.3s ease 0s;
+			padding: 70px 15px 30px 15px;
+		}
 	}
 
 	// .menu__list
@@ -122,6 +145,10 @@
 		font-weight: 500;
 		color: inherit;
 		transition: color 0.3s ease 0s;
+		@media (max-width: $md3+px) {
+			font-weight: 600;
+			font-size: 24px;
+		}
 	}
 
 	// .menu__arrow
@@ -136,7 +163,7 @@
 		position: relative;
 		background-color: $orangeColor;
 		padding: 15px;
-		float: 1 1 100%;
+		flex: 1 1 100%;
 		@media (min-width: $md3+px) {
 			opacity: 0;
 			transition: all 0.3s ease 0s;
@@ -181,7 +208,7 @@
 		z-index: 5;
 		font-size: 22px;
 		color: #262f56;
-		@media (min-width: md2+px) {
+		@media (min-width: $md2+px) {
 			display: none;
 		}
 	}
@@ -295,5 +322,5 @@
 .icon-menu {
 }
 
-//01-04-47
+//01-12-51
 //по стрелочкам выпадающего меню посмотреть ролик про спойлеры
