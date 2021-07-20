@@ -3,9 +3,13 @@
 	width: 100%;
 	top: 0;
 	left: 0;
+	@media (max-width: $md3+px) {
+		min-height: 5px;
+	}
 
 	// .header__wrapper
 	&__wrapper {
+		transition: background-color 0.3s ease 0s;
 		position: fixed;
 		width: 100%;
 		top: 0;
@@ -19,6 +23,7 @@
 
 	// .header__body
 	&__body {
+		transition: min-height 0.3s ease 0s;
 		display: flex;
 		align-items: center;
 		padding: 5px 0;
@@ -46,7 +51,7 @@
 		color: #000;
 		font-weight: 700;
 		font-size: 24px;
-		line-height: 29 /24 * 100%;
+		line-height: 29 / 24 * 100%;
 		position: relative;
 		z-index: 5;
 	}
@@ -71,7 +76,6 @@
 .menu {
 	flex: 0 1 420px;
 	// .menu__body
-
 	&__body {
 		@media (max-width: $md3+px) {
 			position: fixed;
@@ -83,6 +87,24 @@
 			background-color: #fcf8f3;
 			transition: left 0.3s ease 0s;
 			padding: 70px 15px 30px 15px;
+			//Прокладка чтобы контент не наезжал на шапку
+			&::before {
+				content: "";
+				position: fixed;
+				width: 100%;
+				height: 50px;
+				top: 0;
+				left: -100%;
+				transition: left 0.3s ease 0s;
+				background-color: #fcf8f3;
+				z-index: 2;
+			}
+			&._active {
+				left: 0;
+				&::before {
+					left: 0;
+				}
+			}
 		}
 	}
 
@@ -138,6 +160,12 @@
 				}
 			}
 		}
+		@media (max-width: $md3+px) {
+			margin: 0px 25px 15px 0px; //от себя правый отступ 25px
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
 	}
 
 	// .menu__link
@@ -156,6 +184,13 @@
 		margin: 0 0 0 8px;
 		transition: all 0.3s ease 0s;
 		font-size: 8px;
+		@media (max-width: $md3+px) {
+			font-size: 14px;
+			left: -20%;
+			&._active {
+				transform: rotate(-180deg);
+			}
+		}
 	}
 
 	// .menu__sub-list
@@ -174,6 +209,10 @@
 			pointer-events: none;
 			position: absolute;
 			top: 100%;
+			z-index: 5;
+		}
+		@media (max-width: $md3+px) {
+			margin: 10px -15px 0px -15px;
 		}
 	}
 
@@ -181,6 +220,9 @@
 	&__sub-item {
 		&:not(:last-child) {
 			margin: 0px 0px 0px 0px;
+			@media (max-width: $md3+px) {
+				margin: 0px 0px 10px 0px;
+			}
 		}
 	}
 
@@ -188,6 +230,14 @@
 	&__sub-link {
 		color: #fff;
 		line-height: 120%;
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+			@media (max-width: $md3+px) {
+				font-size: 18px;
+			}
+		}
 	}
 }
 .search-form {
@@ -322,5 +372,5 @@
 .icon-menu {
 }
 
-//01-12-51
+//01-14-00
 //по стрелочкам выпадающего меню посмотреть ролик про спойлеры
