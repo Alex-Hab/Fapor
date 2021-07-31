@@ -25,7 +25,7 @@ if (sliders) {
 function sliders_bild_callback(params) { }
 
 if (document.querySelector('.slider-header')) {
-	let mainslider = new Swiper('.swiper-slider-header-wrapper', {
+	let mainslider = new Swiper('.slider-header-wrapper', {
 		// Optional parameters
 		//direction: 'horizontal',
 		loop: true,
