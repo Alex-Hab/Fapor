@@ -35,7 +35,6 @@ $darkGrayColor: #616161;
 @import "popup";
 
 body {
-	background-color: #f9f1e7;
 	color: $mainColor;
 	font-family: $fontFamily;
 	&._lock {
@@ -61,6 +60,100 @@ body {
 	max-width: $maxWidthContainer + px;
 	padding: 0 15px;
 	margin: 0 auto;
+}
+
+.page {
+	// .page__main-slider
+	flex: 1 1 auto;
+	&__main-slider {
+	}
+}
+
+//Главный слайдер
+.main-slider {
+	// .main-slider__container
+	background-color: #fcf8f3;
+	&__container {
+	}
+
+	// .main-slider__body
+
+	&__body {
+	}
+
+	// .main-slider__content
+
+	&__content {
+	}
+}
+
+.content-main {
+	// .content-main_button
+
+	&_button {
+	}
+
+	// .content-main__title
+
+	&__title {
+	}
+
+	// .content-main__text
+
+	&__text {
+	}
+}
+.slider-main {
+	// .slider-main__controls
+
+	&__controls {
+	}
+
+	// .slider-main__body
+
+	&__body {
+	}
+
+	// .slider-main__slide
+
+	&__slide {
+	}
+
+	// .slider-main__image
+
+	&__image {
+	}
+
+	// .slider-main__content
+
+	&__content {
+	}
+
+	// .slider-main__title
+
+	&__title {
+	}
+
+	// .slider-main__text
+
+	&__text {
+	}
+
+	// .slider-main__price
+
+	&__price {
+	}
+}
+.controls-slider-main {
+	// .controls-slider-main__dotts
+
+	&__dotts {
+	}
+
+	// .controls-slider-main__arrows
+
+	&__arrows {
+	}
 }
 
 //ОСНОВНАЯ СЕТКА>===================================

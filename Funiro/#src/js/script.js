@@ -828,4 +828,6 @@ animate({
 	}
 })();
 
-@@include("forms.js");
+@@include("swiper.min.js")
+@@include("sliders.js")
+@@include("forms.js")
