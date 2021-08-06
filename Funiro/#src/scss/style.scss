@@ -32,8 +32,6 @@ $darkGrayColor: #616161;
 
 //<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===================================
 @import "null";
-@import "popup";
-@import "forms";
 
 body {
 	color: $mainColor;
@@ -124,7 +122,6 @@ body {
 		}
 	}
 }
-
 .content-main {
 	position: relative;
 	z-index: 5;
@@ -234,7 +231,7 @@ body {
 			@include adaptiv-value("right", 40, 0, 1);
 			@include adaptiv-value("bottom", 40, 0, 1);
 		}
-		/* Если браузер поддерживает backdrop-filter */
+		// Если браузер поддерживает backdrop-filter
 		@supports ((-webkit-backdrop-filter: blur(31px)) or (backdrop-filter: blur(31px))) {
 			background: rgba(255, 255, 255, 0.72);
 			backdrop-filter: blur(31px);
@@ -242,7 +239,6 @@ body {
 	}
 
 	// .slider-main__title
-
 	&__title {
 		@include adaptiv-value("font-size", 28, 22, 1);
 		font-weight: 600;
@@ -279,6 +275,7 @@ body {
 .controls-slider-main {
 	display: flex;
 	align-items: center;
+
 	// .controls-slider-main__dotts
 	&__dotts {
 		flex: 1 1 auto;
@@ -300,12 +297,12 @@ body {
 //ОСНОВНАЯ СЕТКА>===================================
 
 //ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI ФОРМ И ГОТОВЫХ КЛАССОВ>===================================
-//@import "forms";
+@import "forms";
 @import "ui";
 //ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI ФОРМ И ГОТОВЫХ КЛАССОВ>===================================
 
 //ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>===================================
-//@import "popup";
+@import "popup";
 @import "header";
 @import "footer";
 //@import "home";
