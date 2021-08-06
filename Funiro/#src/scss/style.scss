@@ -219,7 +219,6 @@ body {
 	}
 
 	// .slider-main__content
-
 	&__content {
 		min-width: 295px;
 		max-height: 300px;
@@ -235,7 +234,7 @@ body {
 			@include adaptiv-value("right", 40, 0, 1);
 			@include adaptiv-value("bottom", 40, 0, 1);
 		}
-		//Если браузер поддерживает background-filter
+		/* Если браузер поддерживает backdrop-filter */
 		@supports ((-webkit-backdrop-filter: blur(31px)) or (backdrop-filter: blur(31px))) {
 			background: rgba(255, 255, 255, 0.72);
 			backdrop-filter: blur(31px);
