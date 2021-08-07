@@ -1,34 +1,39 @@
 {
-  "name": "logo",
+  "name": "funiro",
   "version": "1.0.0",
-  "description": "Сборка GULP",
+  "description": "Start template with Gulp",
+  "author": "FLS",
+  "private": true,
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "browser-sync": "latest",
+    "del": "latest",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "latest",
+    "gulp-clean-css": "latest",
+    "gulp-file-include": "latest",
+    "gulp-fonter": "latest",
+    "gulp-group-css-media-queries": "latest",
+    "gulp-imagemin": "latest",
+    "gulp-newer": "latest",
+    "gulp-plumber": "latest",
+    "gulp-rename": "latest",
+    "gulp-sass": "latest",
+    "gulp-ttf2woff": "latest",
+    "gulp-ttf2woff2": "latest",
+    "gulp-uglify-es": "latest",
+    "gulp-webp-html": "latest",
+    "gulp-webpcss": "latest",
+    "imagemin-webp": "latest",
+    "sass": "latest",
+    "transform-runtime": "0.0.0",
+    "webp-converter": "2.2.3"
+  },
+  "dependencies": {
+    "glob-stream": "^6.1.0"
+  },
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Fls",
-  "license": "ISC",
-  "devDependencies": {
-    "browser-sync": "^2.26.12",
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^7.0.1",
-    "gulp-clean-css": "^4.3.0",
-    "gulp-file-include": "^2.2.2",
-    "gulp-fonter": "^0.3.0",
-    "gulp-group-css-media-queries": "^1.2.2",
-    "gulp-imagemin": "^7.1.0",
-    "gulp-rename": "^2.0.0",
-    "gulp-sass": "^4.1.0",
-    "gulp-svg-sprite": "^1.5.0",
-    "gulp-ttf2woff": "^1.1.1",
-    "gulp-ttf2woff2": "^3.0.0",
-    "gulp-uglify-es": "^2.0.0",
-    "gulp-webp": "^4.0.1",
-    "gulp-webp-css": "^1.1.0",
-    "gulp-webp-html": "^1.0.2",
-    "gulp-webpcss": "^1.1.1"
-  },
-  "dependencies": {
-    "del": "^6.0.0"
   }
 }

@@ -1,259 +1,84 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
+* {
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+}
+*,
+*:before,
+*:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,
+:active {
+	// outline: none;
+}
+a:focus,
+a:active {
+	// outline: none;
+}
+aside,
+nav,
+footer,
+header,
+section {
+	display: block;
+}
+html {
+	font-size: #{$fontSize + px};
+}
 html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
+body {
+	height: 100%;
+	min-width: $minWidth;
+}
+body {
+	line-height: 1;
+	font-family: $fontFamily;
+	//text-rendering: optimizeLegibility;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,
+button,
+textarea {
+	font-family: $fontFamily;
+	font-size: inherit;
+}
+input::-ms-clear {
+	display: none;
+}
+button {
+	cursor: pointer;
+	background-color: inherit;
+}
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+ul li {
+	list-style: none;
+}
+img {
+	vertical-align: top;
+}
 h1,
 h2,
 h3,
 h4,
 h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-	text-decoration: none;
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
 }
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol,
-ul {
-	list-style: none;
-}
-blockquote,
-q {
-	quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-	content: "";
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-button,
-input,
-optgroup,
-select,
-textarea {
-	padding: 0;
-	margin: 0;
-	border: none;
-	border-radius: 0;
-	box-shadow: none;
-	background-color: transparent;
-	font: inherit; // По дефолту, шрифтовые свойства, для этих элементов не наследуются
-	color: inherit;
-	letter-spacing: inherit;
-}
-
-button,
-input {
-	overflow: visible;
-}
-
-button,
-select {
-	text-align: left;
-	text-transform: none;
-}
-
-button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
-	cursor: pointer;
-	-webkit-appearance: none;
-}
-
-textarea {
-	resize: none;
-	overflow-y: auto;
-	overflow-x: hidden;
-}
-
-button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
-	border: none;
-	padding: 0;
-}
-
-button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
-	outline: none;
-}
-
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
-	height: auto;
-}
-
-[type="search"]::-webkit-search-decoration {
-	-webkit-appearance: none;
-}
-
-[type="search"] {
-	outline: none;
-}
-
-::-webkit-file-upload-button {
-	-webkit-appearance: button;
-	font: inherit;
-}
-
-select {
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
-}
-
-select::-ms-expand {
-	display: none;
-}
-
-::-webkit-input-placeholder {
-	color: inherit;
-	opacity: 1;
-	transition: opacity 0.3s;
-}
-
-::-moz-placeholder {
-	color: inherit;
-	opacity: 1;
-	transition: opacity 0.3s;
-}
-
-:-moz-placeholder {
-	color: inherit;
-	opacity: 1;
-	transition: opacity 0.3s;
-}
-
-:-ms-input-placeholder {
-	color: inherit;
-	opacity: 1;
-	transition: opacity 0.3s;
-}
-
-:focus::-webkit-input-placeholder {
-	opacity: 0;
-}
-
-:focus::-moz-placeholder {
-	opacity: 0;
-}
-
-:focus:-moz-placeholder {
-	opacity: 0;
-}
-
-:focus:-ms-input-placeholder {
-	opacity: 0;
-}
-
-*,
-a:focus {
-	outline: none !important;
-}
+//-webkit-overflow-scrolling: touch;
+//animation-play-state: paused !important;

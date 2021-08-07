@@ -1,9 +1,9 @@
+@use "sass:math";
+
 .footer {
 	// .footer__container
-
 	&__container {
 	}
-
 	// .footer__body
 	&__body {
 		border-top: 1px solid #d8d8d8;
@@ -21,7 +21,6 @@
 			display: block;
 		}
 	}
-
 	// .footer__main
 	&__main {
 		display: flex;
@@ -32,12 +31,10 @@
 			@include adaptiv-value("margin-bottom", 40, 30, 1);
 		}
 	}
-
 	// .footer__logo
 	&__logo {
-		margin: 0px 0px 16px / 24px * 1em 0px;
+		margin: 0px 0px math.div(16px, 24px) * 1em 0px;
 	}
-
 	// .footer__text
 	&__text {
 		color: $grayColor;
@@ -46,25 +43,19 @@
 			margin: 0px 0px 1em 0px;
 		}
 	}
-
 	// .footer__contacts
 	&__contacts {
 	}
-
 	// .footer__menu
-
 	&__menu {
 		@media (max-width: $md2+px) {
 			@include adaptiv-value("margin-bottom", 40, 30, 1);
 		}
 	}
-
 	// .footer__subscribe
-
 	&__subscribe {
 	}
 }
-
 .contacts-footer {
 	display: flex;
 	flex-direction: column;
@@ -94,7 +85,6 @@
 		display: flex;
 	}
 	// .menu-footer__column
-
 	&__column {
 		@media (min-width: $md3+px) {
 			flex: 0 1 33.333%;
@@ -103,12 +93,11 @@
 			@include adaptiv-value("margin-bottom", 30, 15, 1);
 		}
 	}
-
 	// .menu-footer__title
 	&__title {
 		cursor: default;
 		@media (min-width: $md3+px) {
-			margin: 0px 0px 16px / 24px * 1em 0px;
+			margin: 0px 0px math.div(16px, 24px) * 1em 0px;
 		}
 		._init & {
 			display: flex;
@@ -116,17 +105,16 @@
 			flex-direction: row-reverse;
 			justify-content: space-between;
 			align-items: center;
-
 			@extend ._icon-arrow-down;
 			&::before {
 				@extend %ic;
-				font-size: 14px;
-				transition: all 0.3s ease 0s;
+				font-size: 12px;
+				transition: transform 0.3s ease 0s;
 			}
 		}
 		&._active {
 			&::before {
-				transform: rotate(180deg);
+				transform: rotate(-180deg);
 			}
 		}
 	}
@@ -141,7 +129,6 @@
 			padding: 15px 0px 0px 0px;
 		}
 	}
-
 	// .menu-footer__link
 	&__link {
 		color: $darkGrayColor;
@@ -157,11 +144,9 @@
 }
 .subscribe {
 	// .subscribe__title
-
 	&__title {
-		margin: 0px 0px 16px / 24px * 1em 0px;
+		margin: 0px 0px math.div(16px, 24px) * 1em 0px;
 	}
-
 	// .subscribe__form
 	&__form {
 		display: flex;
@@ -175,7 +160,6 @@
 			font-size: 12px;
 		}
 	}
-
 	// .subscribe__button
 	&__button {
 		flex: 0 0 45px;
@@ -194,12 +178,12 @@
 			}
 		}
 	}
+	// .subscribe__input
 	&__input {
 		width: 100%;
-		padding: 0 12px;
+		padding: 0px 12px;
 		background: #f4f5f7;
 		color: #828282;
+		font-size: 16px;
 	}
 }
-
-//01:41:27
