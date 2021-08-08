@@ -369,6 +369,7 @@
 		visibility: hidden;
 		transition: all 0.3s ease 0s;
 		transform: translate(0px, 20px);
+		//отображение при получении класса active
 		._active & {
 			opacity: 1;
 			visibility: visible;
