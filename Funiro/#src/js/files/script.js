@@ -276,9 +276,9 @@ window.onload = function () {
 
 	// Furniture Gallery
 	const furniture = document.querySelector('.furniture__body');
-	if (furniture && !isMobile.any()) {
+	if (furniture && !isMobile.any()) { //проверка существования .furniture__body
 		const furnitureItems = document.querySelector('.furniture__items');
-		const furnitureColumn = document.querySelectorAll('.furniture__column');
+		const furnitureColumn = document.querySelectorAll('.furniture__column');//считает количество колонок
 
 		// Скорость анимации
 		const speed = furniture.dataset.speed;
@@ -307,6 +307,7 @@ window.onload = function () {
 				furniture.classList.remove('_init');
 			}
 		}
+		//Прослушка движения мыши
 		furniture.addEventListener("mousemove", function (e) {
 			// Получение ширины
 			const furnitureWidth = furniture.offsetWidth;
