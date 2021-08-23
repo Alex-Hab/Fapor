@@ -24,8 +24,8 @@
 		transition: min-height 0.3s ease 0s;
 		display: flex;
 		align-items: center;
-		padding: 5px 0;
-		min-height: 125px;
+		padding: 38px 0;
+		min-height: 100px;
 		position: relative;
 		@media (max-width: $md2+px) {
 			min-height: 80px;
@@ -36,49 +36,28 @@
 	}
 
 	// .header__logo
-
 	&__logo {
 		color: #000;
+		font-family: "Tahu";
 		font-weight: 700;
-		font-size: 24px;
+		font-size: 60px;
 		position: relative;
 		z-index: 5;
-		line-height: math.div(29, 24) * 100%;
+		flex: 0 0 calc(315 / 1700 * 100%);
 	}
 
 	// .header__menu
 	&__menu {
+		display: flex;
+		flex: 0 1 710px;
 	}
 
 	// .header__social
 	&__social {
-	}
-}
-
-.logo {
-}
-.menu {
-	// .menu__body
-
-	&__body {
-	}
-
-	// .menu__list
-
-	&__list {
 		display: flex;
 	}
-
-	// .menu__item
-
-	&__item {
-	}
-
-	// .menu__sub-link
-
-	&__sub-link {
-	}
 }
+
 .facebook {
 }
 .instagramm {
