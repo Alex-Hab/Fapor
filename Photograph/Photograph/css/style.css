@@ -244,6 +244,12 @@ body._lock {
 }
 
 .header__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   color: #000;
   font-family: "Tahu";
   font-weight: 700;
@@ -255,19 +261,57 @@ body._lock {
           flex: 0 0 calc(315 / 1700 * 100%);
 }
 
-.header__menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 710px;
-          flex: 0 1 710px;
-}
-
 .header__social {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 1180px;
+          flex: 0 1 1180px;
+}
+
+.menu_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0px 3px;
+  position: relative;
+  padding: 5px 0px;
+}
+
+.button {
+  background-color: red;
+  height: 35px;
+  width: 120px;
+  color: #fff;
+  border-radius: 5px;
+}
+
+@media (min-width: 767.98px) {
+  .menu__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
 }
 
 @media (max-width: 991.98px) {

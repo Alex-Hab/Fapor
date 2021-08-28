@@ -37,6 +37,8 @@
 
 	// .header__logo
 	&__logo {
+		display: flex;
+		justify-content: center;
 		color: #000;
 		font-family: "Tahu";
 		font-weight: 700;
@@ -48,13 +50,33 @@
 
 	// .header__menu
 	&__menu {
-		display: flex;
-		flex: 0 1 710px;
 	}
 
 	// .header__social
 	&__social {
 		display: flex;
+	}
+}
+.menu {
+	display: flex;
+	flex: 0 1 1180px;
+	&__body {
+	}
+	&__list {
+		@media (min-width: $md3+px) {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-evenly;
+		}
+	}
+	&_item {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		margin: 0px 3px;
+		position: relative;
+		padding: 5px 0px;
 	}
 }
 
