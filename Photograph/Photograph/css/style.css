@@ -184,6 +184,7 @@ h6 {
 
 body {
   color: #000;
+  font-family: "Poppins";
 }
 
 body._lock {
@@ -272,11 +273,21 @@ body._lock {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 1180px;
-          flex: 0 1 1180px;
+      -ms-flex: 0 1 calc(900 / 1700 * 100%);
+          flex: 0 1 calc(900 / 1700 * 100%);
 }
 
-.menu_item {
+.menu__body {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  top: 0;
+  left: 0;
+  font-family: "Poppins";
+  font-size: 16;
+}
+
+.menu__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -293,12 +304,62 @@ body._lock {
   padding: 5px 0px;
 }
 
+.menu__sub-link {
+  -webkit-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+
+.menu__sub-link:hover {
+  color: #ff3c2d;
+  border-bottom: solid 1px #ff3c2d;
+}
+
+.social-header {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(285 / 1700 * 100%);
+          flex: 0 0 calc(285 / 1700 * 100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.social-header__list {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.social-header__item {
+  padding: 0px 10px 0px 10px;
+}
+
 .button {
-  background-color: red;
+  background-color: #ff7300;
   height: 35px;
   width: 120px;
   color: #fff;
   border-radius: 5px;
+}
+
+.button:hover {
+  background-color: #ff3c2d;
+  -webkit-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
 }
 
 @media (min-width: 767.98px) {

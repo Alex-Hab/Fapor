@@ -7,10 +7,24 @@
 		<title>bp-photo</title>
 	</head>
 	<body>
-		@@include('_header.html')
-		<main class="main">
-
-		</main>
-		<script src="js/script.min.js"></script>
+		<div class="wrapper">
+			@@include('_header.html')
+			<main class="page">
+				<section class="page-slider main-slider">
+					<div class="main-slider__container _container">
+						<div class="main-slider__body">
+							<div class="main-slider__content content-main">
+								<h1>Быстро. Просто. Профессионально.</h1>
+								<button type="button">
+									<a href="" data-da=".main-slider__body,991.98" class="content-main__button btn">Посмотреть</a>
+								</button>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+			@@include('_footer.html',{})
+		</div>
+		@@include('_js.html',{})
 	</body>
 </html>
