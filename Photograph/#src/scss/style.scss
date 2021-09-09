@@ -94,3 +94,42 @@ body {
 	}
 }
 //</ОСНОВНОЙ БЛОК>====================================================================================================
+
+//<Главный СЛАЙДЕР>=======================================================================================
+.main-slider {
+	// .main-slider__container
+	&__container {
+		position: relative;
+	}
+	// .main-slider__body
+	&__body {
+		padding: 100px 0px 0px 0px;
+		position: relative;
+		z-index: 2;
+		@media (max-width: $md2+px) {
+			padding: 80px 0px 0px 0px;
+		}
+		@media (max-width: $md3+px) {
+			padding: 50px 0px 0px 0px;
+		}
+		@media (min-width: $md2+px) {
+			display: flex;
+		}
+	}
+	// .main-slider__content
+	&__content {
+		align-self: flex-start;
+		flex: 0 0 calc(494 / 1700 * 100%);
+		@include adaptiv-value("margin-bottom", 80, 15, 1);
+		@media (max-width: $md2+px) {
+			margin: 0px -15px;
+		}
+	}
+	// .main-slider__slider
+	&__slider {
+		flex: 1 1 auto;
+		min-width: 0;
+		align-self: center;
+	}
+}
+//</Главный СЛАЙДЕР>=======================================================================================
