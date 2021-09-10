@@ -132,4 +132,68 @@ body {
 		align-self: center;
 	}
 }
+.slider-main {
+	display: flex;
+	justify-content: center;
+	//flex-direction: column;
+	align-items: center;
+	max-width: 100%;
+	@media (max-width: $md2+px) {
+		//align-items: stretch;
+		flex-direction: column-reverse;
+	}
+	// .slider-main__controls
+	&__controls {
+		align-self: stretch;
+		margin: 0px 0px 20px 0px;
+		@media (max-width: $md2+px) {
+			margin: 10px 0px 20px 0px;
+		}
+	}
+	// .slider-main__body
+	&__body {
+		//overflow: visible;
+		@media (min-width: $md2+px) {
+			@include adaptiv-value("width", 934, 290, 1);
+		}
+	}
+	// .slider-main__slide
+	&__slide {
+		position: relative;
+	}
+	// .slider-main__image
+	&__image {
+		//padding: 0px 0px 59.1% 0px;
+	}
+
+	// .slider-main__title
+	&__title {
+		@include adaptiv-value("font-size", 28, 22, 1);
+		font-weight: 600;
+		line-height: 120%;
+		&:not(:last-child) {
+			margin: 0px 0px math.div(4px, 28px) * 1em 0px;
+		}
+	}
+}
+.controls-slider-main {
+	display: flex;
+	align-items: center;
+	// .controls-slider-main__dotts
+	&__dotts {
+		flex: 1 1 auto;
+		@media (min-width: $md2+px) {
+			padding: 0px 20px 0px 0px;
+		}
+		@media (max-width: $md2+px) {
+			justify-content: center;
+		}
+	}
+	// .controls-slider-main__arrows
+	&__arrows {
+		@media (max-width: $md2+px) {
+			display: none;
+		}
+	}
+}
 //</Главный СЛАЙДЕР>=======================================================================================

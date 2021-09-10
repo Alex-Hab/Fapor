@@ -4,9 +4,11 @@
 	top: 0;
 	left: 0;
 	min-height: 40px;
+
 	// .header__wrapper
 	&__wrapper {
-		transition: background-color 0.3s ease 0s;
+		background-color: #fff;
+		//transition: background-color 0.3s ease 0s;
 		position: fixed;
 		width: 100%;
 		left: 0;

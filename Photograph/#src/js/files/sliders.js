@@ -25,9 +25,6 @@ if (sliders) {
 				slider.appendChild(sliderScroll);
 			}
 		}
-		if (slider.classList.contains('_gallery')) {
-			//slider.data('lightGallery').destroy(true);
-		}
 	}
 	sliders_bild_callback();
 }
@@ -39,13 +36,13 @@ if (document.querySelector('.slider-main__body')) {
 		observer: true,
 		observeParents: true,
 		slidesPerView: 1,
-		spaceBetween: 32,
+		spaceBetween: 0,
 		watchOverflow: true,
 		speed: 800,
 		loop: true,
-		loopAdditionalSlides: 5,
+		//loopAdditionalSlides: 1,
 		preloadImages: false,
-		parallax: true,
+		//parallax: true,
 		// Dotts
 		pagination: {
 			el: '.controls-slider-main__dotts',
