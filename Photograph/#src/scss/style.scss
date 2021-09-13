@@ -69,14 +69,14 @@ body {
 
 //<ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
 //@import "forms";
-//@import "ui";
+@import "ui";
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
 
 //<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
 //@import "datepicker";
 //@import "lightgallery"; //галерея в popup
 //@import "pagging";
-//@import "popup";
+@import "popup";
 @import "header";
 //@import "footer";
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
@@ -93,19 +93,23 @@ body {
 		transition: all 0.5s ease 0s;
 	}
 }
+
+img {
+	//width: 100%;
+	//height: 100%;
+}
 //</ОСНОВНОЙ БЛОК>====================================================================================================
 
 //<Главный СЛАЙДЕР>=======================================================================================
 .main-slider {
-	// .main-slider__container
-	&__container {
-		position: relative;
-	}
+	background: #fcf8f3;
+
 	// .main-slider__body
 	&__body {
-		padding: 100px 0px 0px 0px;
+		padding: 140px 0px 0px 0px;
 		position: relative;
 		z-index: 2;
+		max-height: 510px;
 		@media (max-width: $md2+px) {
 			padding: 80px 0px 0px 0px;
 		}
@@ -119,7 +123,7 @@ body {
 	// .main-slider__content
 	&__content {
 		align-self: flex-start;
-		flex: 0 0 calc(494 / 1700 * 100%);
+		flex: 0 0 math.div(494, 1240) * 100%;
 		@include adaptiv-value("margin-bottom", 80, 15, 1);
 		@media (max-width: $md2+px) {
 			margin: 0px -15px;
@@ -127,35 +131,30 @@ body {
 	}
 	// .main-slider__slider
 	&__slider {
-		flex: 1 1 auto;
-		min-width: 0;
-		align-self: center;
+		flex: 0 1 auto;
+		width: 100%;
+		//min-width: 0;
+		//align-self: center;
+		@media (min-width: $md2+px) {
+			padding: 0px 0px 0px 0px;
+		}
 	}
 }
+
 .slider-main {
 	display: flex;
-	justify-content: center;
+	width: 100%;
 	//flex-direction: column;
-	align-items: center;
-	max-width: 100%;
+	//align-items: flex-end;
 	@media (max-width: $md2+px) {
 		//align-items: stretch;
-		flex-direction: column-reverse;
+		//flex-direction: column-reverse;
 	}
 	// .slider-main__controls
 	&__controls {
-		align-self: stretch;
-		margin: 0px 0px 20px 0px;
-		@media (max-width: $md2+px) {
-			margin: 10px 0px 20px 0px;
-		}
 	}
 	// .slider-main__body
 	&__body {
-		//overflow: visible;
-		@media (min-width: $md2+px) {
-			@include adaptiv-value("width", 934, 290, 1);
-		}
 	}
 	// .slider-main__slide
 	&__slide {
@@ -163,9 +162,31 @@ body {
 	}
 	// .slider-main__image
 	&__image {
-		//padding: 0px 0px 59.1% 0px;
+		padding: 0px 0px 0px 0;
+		max-width: 100%;
 	}
-
+	// .slider-main__content
+	&__content {
+		min-width: 295px;
+		max-height: 300px;
+		overflow: auto;
+		color: inherit;
+		display: flex;
+		flex-direction: column;
+		@include adaptiv-value("padding", 24, 15, 1);
+		background: rgba(255, 255, 255, 0.9);
+		@media (min-width: $md3+px) {
+			position: absolute;
+			min-width: 350px;
+			@include adaptiv-value("right", 40, 0, 1);
+			@include adaptiv-value("bottom", 40, 0, 1);
+		}
+		/* Если браузер поддерживает backdrop-filter */
+		@supports ((-webkit-backdrop-filter: blur(31px)) or (backdrop-filter: blur(31px))) {
+			background: rgba(255, 255, 255, 0.72);
+			backdrop-filter: blur(31px);
+		}
+	}
 	// .slider-main__title
 	&__title {
 		@include adaptiv-value("font-size", 28, 22, 1);
@@ -173,6 +194,14 @@ body {
 		line-height: 120%;
 		&:not(:last-child) {
 			margin: 0px 0px math.div(4px, 28px) * 1em 0px;
+		}
+	}
+	// .slider-main__text
+	&__text {
+		line-height: 150%;
+		color: $grayColor;
+		&:not(:last-child) {
+			margin: 0px 0px math.div(8px, 16px) * 1em 0px;
 		}
 	}
 }
