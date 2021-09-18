@@ -10,47 +10,42 @@
 		<div class="wrapper">
 			@@include('_header.html')
 			<main class="page">
-				<section class="page__main-slider main-slider">											
-					<!-- Главный контейнер (класс указывается в js)-->											
+				<section class="page__main-slider main-slider">		
+					<!--Флекс контейнер-->									
 					<div class="main-slider__container">
-						<div class="main-slider__body">
-							
-							<div class="main-slider__slider slider-main">
-								<div class="slider-main__controls controls-slider-main">
-									<div class="controls-slider-main__dotts"></div>
-									<div class="controls-slider-main__arrows slider-arrows">
-										<button type="button" class="slider-arrow slider-arrow_prev _icon-arrow-down"></button>
-										<button type="button" class="slider-arrow slider-arrow_next _icon-arrow-down"></button>
+						<!-- Флекс элемент-->
+						<div class="main-slider__slider">
+							<!-- Главный контейнер (класс указывается в js)-->											
+							<div class="main-slider__body _swiper">
+								<!-- Обязательная оболочка swiper-wrapper перед блоком автоматически добавлена из js-->				
+								<!-- Slides-->
+								<div class="slider-main__slide">
+									<div class="slider-main__image">
+										<img src="img/main-sliders/bg_main.png" alt="Image">
 									</div>
+									<a href="" data-swiper-parallax-opacity="0" data-swiper-parallax-x="-100%" class="slider-main__content">
+										<div class="slider-main__title">Bohauss</div>
+										<div class="slider-main__text">Luxury big sofa 2-seat</div>
+									</a>
 								</div>
-								
-								<div class="slider-main__body _swiper">
-									<div class="slider-main__slide">
-										<div class="slider-main__image">
-											<img src="img/main-sliders/bg_main.png" alt="Image">
-										</div>
-										<a href="" data-swiper-parallax-opacity="0" data-swiper-parallax-x="-100%" class="slider-main__content">
-											<div class="slider-main__title">Bohauss</div>
-											<div class="slider-main__text">Luxury big sofa 2-seat</div>
-										</a>
+								<!-- /Slides-->
+								<!-- Slides-->
+								<div class="slider-main__slide">
+									<div class="slider-main__image">
+										<img src="img/main-sliders/bg_main.png" alt="Image">
 									</div>
-									<div class="slider-main__slide">
-										<div class="slider-main__image">
-											<img src="img/main-sliders/bg_main.png" alt="Картинка слайда">
-										</div>
-										<a href="" data-swiper-parallax-opacity="0" data-swiper-parallax-x="-100%" class="slider-main__content">
-											<div class="slider-main__title">Bohauss</div>
-											<div class="slider-main__text">Luxury big sofa 2-seat</div>
-										</a>
-									</div>									
+									<a href="" data-swiper-parallax-opacity="0" data-swiper-parallax-x="-100%" class="slider-main__content">
+										<div class="slider-main__title">Bohauss</div>
+										<div class="slider-main__text">Luxury big sofa 2-seat</div>
+									</a>
 								</div>
+								<!-- /Slides-->
+								<!-- /Обязательная оболочка -->
+								<div class="swiper-pagination"></div>
 							</div>
+							<!-- /Главный контейнер (класс указывается в js)-->
 						</div>
 					</div>
-						<!--Кнопки управления слайдером-->
-						
-						<!--/Кнопки управления слайдером-->
-															
 				</section>
 			</main>
 			@@include('_footer.html',{})
