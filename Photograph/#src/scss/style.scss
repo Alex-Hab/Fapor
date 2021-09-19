@@ -96,36 +96,98 @@ body {
 //</ОСНОВНОЙ БЛОК>====================================================================================================
 
 //<Главный СЛАЙДЕР>=======================================================================================
+.page {
+	// .page__main-slider
+	&__main-slider {
+	}
+}
 .main-slider {
+	padding-top: 140px;
+	max-width: $maxWidth;
 	// .main-slider__container
-
 	&__container {
+		position: relative;
+		@media (min-width: $md2+px) {
+			&::before {
+				content: "";
+				background: #f9f1e7;
+				position: absolute;
+				top: 0;
+				width: 100vw;
+				right: 376px;
+				height: 100%;
+			}
+		}
 	}
 
-	// .main-slider__wrapper
+	// .main-slider__body
+	&__body {
+		min-width: 0;
+	}
 
-	&__wrapper {
+	// .main-slider__slider
+	&__slider {
+	}
+}
+.slider-main {
+	// .slider-main__body
+	&__body {
+		overflow: visible;
+		width: 100%;
+	}
+
+	// .slider-main__slide
+	&__slide {
+		position: relative;
+		max-width: 100%;
 		display: flex;
 	}
 
-	// .main-slider__slide
-
-	&__slide {
+	// .slider-main__image
+	&__image {
+		overflow: hidden;
+		height: 500px;
+		//width: 100%;
+		img {
+			max-height: auto;
+			object-fit: cover;
+			object-position: center;
+		}
 	}
 
-	// .main-slider__image
+	// .slider-main__content
+	&__content {
+		min-width: 295px;
+		max-height: 300px;
+		overflow: auto;
+		color: inherit;
+		display: flex;
+		flex-direction: column;
+		@include adaptiv-value("padding", 24, 15, 1);
+		background: rgba(255, 255, 255, 0.9);
+		@media (min-width: $md3+px) {
+			position: absolute;
+			min-width: 350px;
+			@include adaptiv-value("left", 40, 0, 1);
+			@include adaptiv-value("bottom", 140, 0, 1);
+		}
+		/* Если браузер поддерживает backdrop-filter */
+		@supports ((-webkit-backdrop-filter: blur(31px)) or (backdrop-filter: blur(31px))) {
+			background: rgba(255, 255, 255, 0.72);
+			backdrop-filter: blur(31px);
+		}
+	}
 
-	&__image,
-	img {
-		max-width: 100%;
+	// .slider-main__title
+	&__title {
+	}
+
+	// .slider-main__text
+	&__text {
+	}
+
+	// .slider-main__price
+	&__price {
 	}
 }
-
-.swiper {
-}
-.swiper-wrapper {
-}
-.swiper-slide {
-}
-
 //</Главный СЛАЙДЕР>=======================================================================================
