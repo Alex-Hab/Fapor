@@ -1,13 +1,10 @@
 //<МИКСИНЫ>===============================================================================================
-@use "sass:math";
-
 @import "mixins";
 //</МИКСИНЫ>===============================================================================================
 
 //<ШРИФТЫ>===============================================================================================
 
 //<Подключаем шрифты>=======================================================================================
-//&display=swap&subset=cyrillic-ext
 @import "fonts";
 //</Подключаем шрифты>=======================================================================================
 
@@ -46,6 +43,7 @@ body {
 		overflow: hidden;
 	}
 	font-family: $font-Family;
+	width: $maxWidth;
 }
 
 //</ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
@@ -98,74 +96,36 @@ body {
 //</ОСНОВНОЙ БЛОК>====================================================================================================
 
 //<Главный СЛАЙДЕР>=======================================================================================
-.page {
-	// .page__main-slider
-	&__main-slider {
-	}
-}
 .main-slider {
-	width: 100%;
-	padding-top: 140px;
-	// .main-slider__container флекс-контейнер
-	&__container {
-		position: relative;
-		//display: flex;
-		@media (min-width: $md2+px) {
-			&::before {
-				content: "";
-				background: #f9f1e7;
-				position: absolute;
-				top: 0;
-				width: 100vw;
-				//right: 376px;
-				height: 100%;
-			}
-		}
-	}
-	// .main-slider__slider
-	&__slider {
-		flex: 1 1 auto;
-		min-width: 0;
-	}
-	// .main-slider__body
-	&__body {
-		max-width: 100%;
-	}
-	// .main-slider__slider
-	&__slider {
-	}
-}
+	// .main-slider__container
 
-.slider-main {
-	// .slider-main__slide
+	&__container {
+	}
+
+	// .main-slider__wrapper
+
+	&__wrapper {
+		display: flex;
+	}
+
+	// .main-slider__slide
+
 	&__slide {
 	}
 
-	// .slider-main__image
-	__image,
+	// .main-slider__image
+
+	&__image,
 	img {
-		display: flex;
-		justify-content: center;
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		left: 0;
+		max-width: 100%;
 	}
+}
 
-	// .slider-main__content
-	&__content {
-	}
-
-	// .slider-main__title
-
-	&__title {
-	}
-
-	// .slider-main__text
-
-	&__text {
-	}
+.swiper {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
 }
 
 //</Главный СЛАЙДЕР>=======================================================================================

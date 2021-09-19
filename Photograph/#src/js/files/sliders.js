@@ -24,22 +24,18 @@ if (sliders) {
 }
 function sliders_bild_callback(params) { }
 
-
-function sliders_bild_callback(params) { }
-
-if (document.querySelector('.main-slider__body')) {
-	new Swiper('.main-slider__body', {
-		observer: true,
-		observeParents: true,
-		slidesPerView: 1,
-		watchOverflow: true,
-		speed: 800,
-		loop: true,
-		loopAdditionalSlides: 5,
-		parallax: true,
-		pagination: {
-			el: '.swiper-pagination',
-			clickable: true,
+if (document.querySelector('.main-slider__container')) {
+	new Swiper('.main-slider__container', {
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev'
 		},
+		slideToClickedSlide: true,
+		autoHeight: true,
+		slidesPerGroup: 1,
+		slidesPerView: 1,
+		centeredSlides: false,
+		initialSlide: 0,
+		loop: true,
 	});
 }
