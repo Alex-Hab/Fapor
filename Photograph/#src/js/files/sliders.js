@@ -49,6 +49,7 @@ if (document.querySelector('.slider-main__body')) {
 		loopAdditionalSlides: 5,
 		preloadImages: false,
 		parallax: true,
+		autoHeight: true,
 		// Dotts
 		pagination: {
 			el: '.controls-slider-main__dotts',
