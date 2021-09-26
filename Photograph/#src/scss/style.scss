@@ -29,9 +29,10 @@ $md3: 767.98;
 $md4: 479.98;
 
 $mainColor: #000;
-$orangeColor: #e89f71;
+$orangeColor: #ff7300;
 $grayColor: #898989;
 $darkGrayColor: #616161;
+$redColor: #ff3c2d;
 
 //</ПЕРЕМЕННЫЕ>===========================================================================================================
 
@@ -97,6 +98,7 @@ body {
 
 //<Главный СЛАЙДЕР>=======================================================================================
 .page {
+	flex: 1 1 auto;
 	// .page__main-slider
 	&__main-slider {
 	}
@@ -164,6 +166,14 @@ body {
 			object-fit: cover;
 			object-position: center;
 		}
+		// .slider-main__controls
+		&__controls {
+			align-self: stretch;
+			margin: 0px 0px 20px 0px;
+			@media (max-width: $md2+px) {
+				margin: 10px 0px 20px 0px;
+			}
+		}
 	}
 
 	// .slider-main__content
@@ -196,4 +206,31 @@ body {
 		padding-bottom: 15px;
 	}
 }
+.controls-slider-main {
+	display: flex;
+	align-items: center;
+	height: 30px;
+
+	// .controls-slider-main__dotts
+	&__dotts {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex: 1 1 auto;
+		@media (min-width: $md2+px) {
+			padding: 0px 20px 0px 0px;
+		}
+		@media (max-width: $md2+px) {
+			justify-content: center;
+		}
+	}
+}
 //</Главный СЛАЙДЕР>=======================================================================================
+
+//<Фотосессии>=============================================================================================
+.sessions {
+	height: 720px;
+	display: flex;
+	flex-wrap: wrap;
+}
+//</Фотосессии>=============================================================================================

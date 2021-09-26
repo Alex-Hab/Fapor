@@ -51,6 +51,24 @@ if (document.querySelector('.slider-main__body')) {
 		preloadImages: false,
 		parallax: true,
 		autoHeight: true,
+		// Переключение при клике на слайд
+		slideToClickedSlide: true,
+		//Управление клавиатурой
+		keyboard: {
+			//Включить\выключить
+			//только когда слайдер в пределах вьюпорта
+			onlyInViewport: true,
+		},
+		mousewheel: {
+			// Чувствительность колеса мыши
+			sensitivity: 1,
+		},
+		autoplay: {
+			//Пауза между прокруткой
+			delay: 2000,
+			//Закончить на последнем слайде
+			stopOnLastSlide: true,
+		},
 		// Dotts
 		pagination: {
 			el: '.controls-slider-main__dotts',
@@ -105,7 +123,27 @@ function ibg() {
 
 ibg();
 
-
+//=================
+//Menu
+let iconMenu = document.querySelector(".icon-menu");
+if (iconMenu != null) {
+	let delay = 500;
+	let menuBody = document.querySelector(".menu__body");
+	iconMenu.addEventListener("click", function (e) {
+		if (unlock) {
+			body_lock(delay);
+			iconMenu.classList.toggle("_active");
+			menuBody.classList.toggle("_active");
+		}
+	});
+};
+function menu_close() {
+	let iconMenu = document.querySelector(".icon-menu");
+	let menuBody = document.querySelector(".menu__body");
+	iconMenu.classList.remove("_active");
+	menuBody.classList.remove("_active");
+}
+//=================
 
 
 

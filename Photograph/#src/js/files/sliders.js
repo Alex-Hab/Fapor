@@ -50,6 +50,24 @@ if (document.querySelector('.slider-main__body')) {
 		preloadImages: false,
 		parallax: true,
 		autoHeight: true,
+		// Переключение при клике на слайд
+		slideToClickedSlide: true,
+		//Управление клавиатурой
+		keyboard: {
+			//Включить\выключить
+			//только когда слайдер в пределах вьюпорта
+			onlyInViewport: true,
+		},
+		mousewheel: {
+			// Чувствительность колеса мыши
+			sensitivity: 1,
+		},
+		autoplay: {
+			//Пауза между прокруткой
+			delay: 2000,
+			//Закончить на последнем слайде
+			stopOnLastSlide: true,
+		},
 		// Dotts
 		pagination: {
 			el: '.controls-slider-main__dotts',

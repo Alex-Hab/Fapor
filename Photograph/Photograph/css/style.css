@@ -266,7 +266,7 @@ body._lock {
   border-radius: 50%;
   height: 48px;
   background-color: rgba(232, 159, 113, 0.3);
-  color: #e89f71;
+  color: #ff7300;
   font-size: 12px;
   cursor: pointer;
   -webkit-transition: all 0.3s ease 0s;
@@ -342,7 +342,7 @@ body._lock {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  border: 1px solid #e89f71;
+  border: 1px solid #ff7300;
   -webkit-transition: -webkit-transform 0.3s ease 0s;
   transition: -webkit-transform 0.3s ease 0s;
   -o-transition: transform 0.3s ease 0s;
@@ -354,7 +354,7 @@ body._lock {
 }
 
 .swiper-pagination-bullet-active::after {
-  background-color: #e89f71;
+  background-color: #ff7300;
 }
 
 .swiper-pagination-bullet-active::before {
@@ -849,6 +849,10 @@ body.ie ._ibg img {
   padding: 0px 10px 0px 10px;
 }
 
+.icon-menu {
+  display: none;
+}
+
 .button {
   background-color: #ff7300;
   height: 35px;
@@ -862,6 +866,12 @@ body.ie ._ibg img {
   -webkit-transition: all 0.5s ease 0s;
   -o-transition: all 0.5s ease 0s;
   transition: all 0.5s ease 0s;
+}
+
+.page {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
 }
 
 .main-slider {
@@ -928,6 +938,13 @@ body.ie ._ibg img {
      object-position: center;
 }
 
+.slider-main__image__controls {
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+  margin: 0px 0px 20px 0px;
+}
+
 .slider-main__content {
   font-family: "Poppins";
   min-width: 295px;
@@ -959,6 +976,40 @@ body.ie ._ibg img {
   padding-bottom: 15px;
 }
 
+.controls-slider-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 30px;
+}
+
+.controls-slider-main__dotts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.sessions {
+  height: 720px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
 @media (min-width: 767.98px) {
   .menu__list {
     display: -webkit-box;
@@ -988,6 +1039,10 @@ body.ie ._ibg img {
     right: 376px;
     height: 100%;
   }
+
+  .controls-slider-main__dotts {
+    padding: 0px 20px 0px 0px;
+  }
 }
 
 @media (max-width: 1700px) {
@@ -1011,6 +1066,75 @@ body.ie ._ibg img {
 
   .header__body {
     min-height: 80px;
+  }
+
+  .icon-menu {
+    margin-left: 32px;
+    position: relative;
+    display: block;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 30px;
+            flex: 0 0 30px;
+    height: 18px;
+    cursor: pointer;
+    z-index: 5;
+  }
+
+  .icon-menu span {
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    top: calc(50% - 1px);
+    left: 0px;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+  }
+
+  .icon-menu span:first-child {
+    top: 0px;
+  }
+
+  .icon-menu span:last-child {
+    top: auto;
+    bottom: 0px;
+  }
+
+  .icon-menu._active span {
+    -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+            transform: scale(0);
+  }
+
+  .icon-menu._active span:first-child {
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    top: calc(50% - 1px);
+  }
+
+  .icon-menu._active span:last-child {
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+    bottom: calc(50% - 1px);
+  }
+
+  .slider-main__image__controls {
+    margin: 10px 0px 20px 0px;
+  }
+
+  .controls-slider-main__dotts {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (max-width: 991.98px) and (max-width: 1700px) {
+  .icon-menu {
+    margin-left: calc(15px + 17 * ((100vw - 320px) / 1380));
   }
 }
 
@@ -1041,7 +1165,7 @@ body.ie ._ibg img {
   }
 
   .slider-arrow_white:hover {
-    background-color: #e89f71;
+    background-color: #ff7300;
     color: #fff;
   }
 }
