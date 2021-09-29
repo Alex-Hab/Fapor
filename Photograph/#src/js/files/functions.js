@@ -1,3 +1,5 @@
+"use strict"
+
 var ua = window.navigator.userAgent;
 var msie = ua.indexOf("MSIE ");
 var isMobile = { Android: function () { return navigator.userAgent.match(/Android/i); }, BlackBerry: function () { return navigator.userAgent.match(/BlackBerry/i); }, iOS: function () { return navigator.userAgent.match(/iPhone|iPad|iPod/i); }, Opera: function () { return navigator.userAgent.match(/Opera Mini/i); }, Windows: function () { return navigator.userAgent.match(/IEMobile/i); }, any: function () { return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()); } };
@@ -29,7 +31,6 @@ testWebP(function (support) {
 });
 
 function ibg() {
-
 	let ibg = document.querySelectorAll(".ibg");
 	for (var i = 0; i < ibg.length; i++) {
 		if (ibg[i].querySelector('img')) {
@@ -37,21 +38,18 @@ function ibg() {
 		}
 	}
 }
-
 ibg();
 
+
 //=================
-//Menu
-let iconMenu = document.querySelector(".icon-menu");
-if (iconMenu != null) {
-	let delay = 500;
-	let menuBody = document.querySelector(".menu__body");
-	iconMenu.addEventListener("click", function (e) {
-		if (unlock) {
-			body_lock(delay);
-			iconMenu.classList.toggle("_active");
-			menuBody.classList.toggle("_active");
-		}
+//Menu Бургер
+const iconMenu = document.querySelector('.icon-menu');
+if (iconMenu) {
+	const menuBody = document.querySelector('.menu__body');
+	iconMenu.addEventListener('click', function (e) {
+		document.body.classList.toggle('_lock');
+		iconMenu.classList.toggle('_active');
+		menuBody.classList.toggle('_active');
 	});
 };
 function menu_close() {
@@ -61,6 +59,5 @@ function menu_close() {
 	menuBody.classList.remove("_active");
 }
 //=================
-
 
 

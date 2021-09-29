@@ -758,7 +758,6 @@ body.ie ._ibg img {
   font-weight: 700;
   font-size: 60px;
   position: relative;
-  z-index: 5;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 calc(315 / 1700 * 100%);
           flex: 0 0 calc(315 / 1700 * 100%);
@@ -1068,27 +1067,82 @@ body.ie ._ibg img {
     min-height: 80px;
   }
 
+  .menu__body {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    top: 0;
+    left: -100%;
+    background-color: #fcf8f3;
+    -webkit-transition: left 0.3s ease 0s;
+    -o-transition: left 0.3s ease 0s;
+    transition: left 0.3s ease 0s;
+    padding: 70px 15px 30px 15px;
+  }
+
+  .menu__body::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    top: 0;
+    left: -100%;
+    -webkit-transition: left 0.3s ease 0s;
+    -o-transition: left 0.3s ease 0s;
+    transition: left 0.3s ease 0s;
+    background-color: #fcf8f3;
+    z-index: 2;
+  }
+
+  .menu__body._active {
+    left: 0;
+  }
+
+  .menu__body._active::before {
+    left: 0;
+  }
+
+  .menu__item {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 24px;
+    padding-bottom: 30px;
+  }
+
+  .menu__item:first-child {
+    padding-top: 50px;
+  }
+
+  .menu__sub-link {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 24px;
+  }
+
   .icon-menu {
     margin-left: 32px;
-    position: relative;
+    z-index: 5;
     display: block;
+    position: relative;
     -webkit-box-flex: 0;
         -ms-flex: 0 0 30px;
             flex: 0 0 30px;
     height: 18px;
     cursor: pointer;
-    z-index: 5;
   }
 
   .icon-menu span {
-    -webkit-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
     top: calc(50% - 1px);
     left: 0px;
     position: absolute;
     width: 100%;
-    height: 2px;
+    height: 10%;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
     background-color: #000;
   }
 
@@ -1145,6 +1199,20 @@ body.ie ._ibg img {
 
   .header__body {
     min-height: 50px;
+  }
+
+  .header__logo {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 479.98px) {
+  .header__logo {
+    font-size: 40px;
+  }
+
+  .header__button {
+    display: none;
   }
 }
 
