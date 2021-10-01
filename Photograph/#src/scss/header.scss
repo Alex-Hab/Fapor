@@ -93,7 +93,7 @@
 			overflow: auto;
 			top: 0;
 			left: -100%;
-			background-color: #fcf8f3;
+			background-color: #fff;
 			transition: left 0.3s ease 0s;
 			padding: 70px 15px 30px 15px;
 
@@ -105,7 +105,6 @@
 				top: 0;
 				left: -100%;
 				transition: left 0.3s ease 0s;
-				background-color: #fcf8f3;
 				z-index: 2;
 			}
 			&._active {
@@ -121,6 +120,7 @@
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: space-evenly;
+			margin: 0px 0px 0px 0px;
 		}
 	}
 	&__item {
@@ -133,10 +133,11 @@
 		padding: 5px 0px;
 		@media (max-width: $md2+px) {
 			justify-content: center;
-			font-size: 24px;
+			font-size: 18px;
 			padding-bottom: 30px;
 			&:first-child {
 				padding-top: 50px;
+				text-align: center;
 			}
 		}
 	}
@@ -151,6 +152,9 @@
 		@media (max-width: $md2+px) {
 			justify-content: center;
 			font-size: 24px;
+			&:hover {
+				border-bottom: none;
+			}
 		}
 	}
 	&__button {

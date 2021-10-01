@@ -60,7 +60,8 @@ if (document.querySelector('.slider-main__body')) {
 		},
 		mousewheel: {
 			// Чувствительность колеса мыши
-			sensitivity: 1,
+			//sensitivity: 1,
+			releaseOnEdges: false,
 		},
 		autoplay: {
 			//Пауза между прокруткой
@@ -72,11 +73,6 @@ if (document.querySelector('.slider-main__body')) {
 		pagination: {
 			el: '.controls-slider-main__dotts',
 			clickable: true,
-		},
-		// Arrows
-		navigation: {
-			nextEl: '.slider-main .slider-arrow_next',
-			prevEl: '.slider-main .slider-arrow_prev',
 		}
 	});
 }

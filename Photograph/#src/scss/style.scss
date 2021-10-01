@@ -147,6 +147,9 @@ body {
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		@media (max-width: $md3+px) {
+			flex-wrap: wrap;
+		}
 	}
 
 	// .slider-main__image
@@ -193,6 +196,13 @@ body {
 			@include adaptiv-value("left", 40, 0, 1);
 			@include adaptiv-value("bottom", 140, 0, 1);
 		}
+		@media (max-width: $md3+px) {
+			width: 100%;
+			justify-content: center;
+			align-items: center;
+			background: rgba(255, 255, 255, 0.9);
+		}
+
 		/* Если браузер поддерживает backdrop-filter */
 		@supports ((-webkit-backdrop-filter: blur(31px)) or (backdrop-filter: blur(31px))) {
 			background: rgba(255, 255, 255, 0.72);
@@ -210,6 +220,9 @@ body {
 	display: flex;
 	align-items: center;
 	height: 30px;
+	@media (max-width: $md3+px) {
+		display: none;
+	}
 
 	// .controls-slider-main__dotts
 	&__dotts {
