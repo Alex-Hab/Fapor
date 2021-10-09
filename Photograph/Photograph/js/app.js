@@ -59,11 +59,7 @@ if (document.querySelector('.slider-main__body')) {
 			//только когда слайдер в пределах вьюпорта
 			onlyInViewport: true,
 		},
-		mousewheel: {
-			// Чувствительность колеса мыши
-			//sensitivity: 1,
-			releaseOnEdges: false,
-		},
+
 		autoplay: {
 			//Пауза между прокруткой
 			delay: 2000,
@@ -74,6 +70,47 @@ if (document.querySelector('.slider-main__body')) {
 		pagination: {
 			el: '.controls-slider-main__dotts',
 			clickable: true,
+			//dynamicBullets: true,
+		}
+	});
+}
+if (document.querySelector('.slider-professional__body')) {
+	new Swiper('.slider-professional__body', {
+		observer: true,
+		observeParents: true,
+		slidesPerView: 1,
+		watchOverflow: true,
+		slidesPerGroup: 1,
+		initialSlide: 0,
+		centeredSlides: true,
+		//spaceBetween: 32,
+		watchOverflow: true,
+		speed: 800,
+		loop: true,
+		loopAdditionalSlides: 5,
+		preloadImages: false,
+		parallax: true,
+		autoHeight: true,
+		// Переключение при клике на слайд
+		slideToClickedSlide: true,
+		//Управление клавиатурой
+		keyboard: {
+			//Включить\выключить
+			//только когда слайдер в пределах вьюпорта
+			onlyInViewport: true,
+		},
+
+		autoplay: {
+			//Пауза между прокруткой
+			delay: 2000,
+			//Закончить на последнем слайде
+			stopOnLastSlide: true,
+		},
+		// Dotts
+		pagination: {
+			el: '.controls-slider-main__dotts',
+			clickable: true,
+			//dynamicBullets: true,
 		}
 	});
 }
