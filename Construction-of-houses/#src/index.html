@@ -1,16 +1,69 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="css/style.min.css">
-		<title>EgorStroy</title>
+		<title>bp-photo</title>
 	</head>
-	<body>		
+	<body>
 		<div class="wrapper">
 			@@include('_header.html')
 			<main class="page">
-
+				<section class="page__main-slider main-slider">		
+					<!--Флекс контейнер-->									
+					<div class="main-slider__container">
+						<!--Флекс элемент-->
+						<div class="main-slider__body">
+							<!-- Главный контейнер -->
+							<div class="main-slider__slider slider-main">
+								<div class="slider-main__controls controls-slider-main">
+									<div class="controls-slider-main__arrows slider-arrows">
+										<button type="button" class="slider-arrow slider-arrow_prev _icon-arrow-down"></button>
+										<button type="button" class="slider-arrow slider-arrow_next _icon-arrow-down"></button>
+									</div>
+								</div>	
+								<!-- Обязательная оболочка - этот класс указать в js-->
+								<div class="slider-main__body _swiper">
+									<!-- Слайдер + lazy loading + zoom-->
+									<div class="slider-main__slide">
+										<div class="slider-main__image ">
+											<img src="img/main-sliders/slider1.jpg" alt="">
+										</div>
+										<a href="" data-swiper-parallax-opacity="0" data-swiper-parallax-x="-150%" class="slider-main__content">
+											<div class="slider-main__title">Быстро. Просто. Профессионально.</div>
+											<button type="button" class="button">
+												<span>Подробности</span>					
+											</button>
+										</a>
+									</div>	
+									<div class="slider-main__slide">
+										<div class="slider-main__image ">
+											<img src="img/main-sliders/slider2.jpg" alt="">
+										</div>
+										<a href="" data-swiper-parallax-opacity="0" data-swiper-parallax-x="-150%" class="slider-main__content">
+											<div class="slider-main__title">Съёмки на природе</div>
+											<button type="button" class="button">
+												<span>Подробности</span>					
+											</button>
+										</a>										
+									</div>	
+									<div class="slider-main__slide">
+										<div class="slider-main__image ">
+											<img src="img/main-sliders/slider3.jpg" alt="">
+										</div>
+										<a href="" data-swiper-parallax-opacity="0" data-swiper-parallax-x="-150%" class="slider-main__content">
+											<div class="slider-main__title">Съёмки важных событий</div>
+											<button type="button" class="button button">
+												<span>Подробности</span>					
+											</button>
+										</a>
+									</div>																
+								</div>								
+							</div>
+						</div>
+					</div>
+				</section>
 			</main>
 			@@include('_footer.html',{})
 		</div>
