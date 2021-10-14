@@ -47,7 +47,7 @@ if (document.querySelector('.slider-main__body')) {
 		watchOverflow: true,
 		speed: 800,
 		loop: true,
-		loopAdditionalSlides: 5,
+		loopAdditionalSlides: 3,
 		preloadImages: false,
 		parallax: true,
 		autoHeight: true,
@@ -62,15 +62,14 @@ if (document.querySelector('.slider-main__body')) {
 
 		autoplay: {
 			//Пауза между прокруткой
-			delay: 2000,
+			delay: 3000,
 			//Закончить на последнем слайде
 			stopOnLastSlide: true,
 		},
-		// Dotts
-		pagination: {
-			el: '.controls-slider-main__dotts',
-			clickable: true,
-			//dynamicBullets: true,
+		//Стрелки
+		navigation: {
+			nextEl: '.slider-main .slider-arrow_next',
+			prevEl: '.slider-main .slider-arrow_prev',
 		}
 	});
 }
