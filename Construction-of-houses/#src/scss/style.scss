@@ -33,6 +33,7 @@ $orangeColor: #ff7300;
 $grayColor: #898989;
 $darkGrayColor: #616161;
 $redColor: #ff3c2d;
+$yelowColor: #ffcb0f;
 
 //</ПЕРЕМЕННЫЕ>===========================================================================================================
 
@@ -83,11 +84,12 @@ body {
 
 //<ОСНОВНОЙ БЛОК>====================================================================================================
 .button {
-	background-color: #ff7300;
-	height: 35px;
-	width: 120px;
+	background-color: $yelowColor;
+	height: 50px;
+	width: 180px;
 	color: #fff;
-	border-radius: 5px;
+	border-radius: 25px;
+	font-size: 25px;
 	&:hover {
 		background-color: #ff3c2d;
 		transition: all 0.5s ease 0s;
@@ -106,6 +108,7 @@ body {
 }
 .main-slider {
 	max-width: $maxWidth;
+	height: 500px;
 	// .main-slider__container
 	&__container {
 		position: relative;
@@ -132,6 +135,8 @@ body {
 }
 .slider-main {
 	width: 100%;
+	display: flex;
+	justify-content: center;
 	//height: 500px;
 	// .slider-main__body
 	&__body {
@@ -149,7 +154,7 @@ body {
 		align-items: center;
 		background: rgba(0, 0, 0, 0.32);
 		@media (max-width: $md3+px) {
-			flex-wrap: wrap;
+			//flex-wrap: wrap;
 		}
 	}
 
@@ -159,7 +164,7 @@ body {
 		justify-content: center;
 		align-items: center;
 		overflow: hidden;
-		height: 500px;
+		//height: 500px;
 		width: 100%;
 		justify-content: center;
 		align-items: center;
@@ -192,6 +197,7 @@ body {
 		color: inherit;
 		display: flex;
 		justify-content: center;
+		align-items: center;
 		flex-direction: column;
 		@include adaptiv-value("padding", 24, 15, 1);
 
@@ -199,13 +205,11 @@ body {
 			position: absolute;
 			min-width: 300px;
 			//@include adaptiv-value("left", 500, 0, 1);
-			@include adaptiv-value("bottom", 240, 0, 1);
+			//@include adaptiv-value("bottom", 140, 0, 1);
 		}
 		@media (max-width: $md3+px) {
 			width: 100%;
-			justify-content: center;
-			align-items: center;
-			background: rgba(0, 0, 0, 0.12);
+			position: absolute;
 		}
 
 		/* Если браузер поддерживает backdrop-filter */
@@ -221,11 +225,10 @@ body {
 		text-transform: uppercase;
 		font-weight: bold;
 		font-family: "Poppins";
-		color: #ffcb0f;
+		color: $yelowColor;
 		padding-bottom: 15px;
 		text-shadow: 0 1px 2px rgb(0 0 0 / 60%);
-		//font-size: 70px;
-		@include adaptiv-value("font-size", 70, 15, 1);
+		@include adaptiv-value("font-size", 70, 35, 1);
 	}
 }
 .controls-slider-main {
