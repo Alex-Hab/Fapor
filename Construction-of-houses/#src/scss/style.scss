@@ -99,12 +99,12 @@ body {
 //<Главный СЛАЙДЕР>=======================================================================================
 .page {
 	flex: 1 1 auto;
+	margin-top: 100px;
 	// .page__main-slider
 	&__main-slider {
 	}
 }
 .main-slider {
-	//padding-top: 130px;
 	max-width: $maxWidth;
 	// .main-slider__container
 	&__container {
@@ -165,6 +165,7 @@ body {
 		align-items: center;
 		object-fit: cover;
 		object-position: center;
+		filter: brightness(0.5); //затемнение фона изображения
 
 		img {
 			//max-height: auto;
@@ -186,8 +187,6 @@ body {
 		font-family: $font-Family;
 		min-width: 295px;
 		max-height: 300px;
-		//width: 100%;
-		//height: 100%;
 		text-align: center;
 		overflow: auto;
 		color: inherit;
@@ -195,10 +194,10 @@ body {
 		justify-content: center;
 		flex-direction: column;
 		@include adaptiv-value("padding", 24, 15, 1);
-		//background: rgba(0, 0, 0, 0.12);
+
 		@media (min-width: $md3+px) {
 			position: absolute;
-			min-width: 350px;
+			min-width: 300px;
 			//@include adaptiv-value("left", 500, 0, 1);
 			@include adaptiv-value("bottom", 240, 0, 1);
 		}
@@ -222,8 +221,11 @@ body {
 		text-transform: uppercase;
 		font-weight: bold;
 		font-family: "Poppins";
-		color: #222533;
+		color: #ffcb0f;
 		padding-bottom: 15px;
+		text-shadow: 0 1px 2px rgb(0 0 0 / 60%);
+		//font-size: 70px;
+		@include adaptiv-value("font-size", 70, 15, 1);
 	}
 }
 .controls-slider-main {

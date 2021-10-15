@@ -44,10 +44,10 @@ if (document.querySelector('.slider-main__body')) {
 		centeredSlides: true,
 		//spaceBetween: 32,
 		watchOverflow: true,
-		speed: 800,
-		loop: true,
-		loopAdditionalSlides: 3,
-		preloadImages: false,
+		//speed: 800,
+		//loop: true,
+		//loopAdditionalSlides: 3,
+		//preloadImages: false,
 		parallax: true,
 		autoHeight: true,
 		// Переключение при клике на слайд
@@ -59,12 +59,12 @@ if (document.querySelector('.slider-main__body')) {
 			onlyInViewport: true,
 		},
 
-		autoplay: {
-			//Пауза между прокруткой
-			delay: 3000,
-			//Закончить на последнем слайде
-			stopOnLastSlide: true,
-		},
+		//autoplay: {
+		//Пауза между прокруткой
+		//delay: 3000,
+		//Закончить на последнем слайде
+		//	stopOnLastSlide: true,
+		//	},
 		//Стрелки
 		navigation: {
 			nextEl: '.slider-main .slider-arrow_next',
