@@ -102,6 +102,12 @@ body {
 .page {
 	flex: 1 1 auto;
 	margin-top: 100px;
+	@media (max-width: $md2+px) {
+		margin-top: 80px;
+	}
+	@media (max-width: $md3+px) {
+		margin-top: 50px;
+	}
 	// .page__main-slider
 	&__main-slider {
 	}
@@ -112,6 +118,7 @@ body {
 	// .main-slider__container
 	&__container {
 		position: relative;
+		max-height: 100%;
 		@media (min-width: $md2+px) {
 			&::before {
 				content: "";
@@ -127,6 +134,7 @@ body {
 	// .main-slider__body
 	&__body {
 		min-width: 0;
+		max-height: 100%;
 	}
 
 	// .main-slider__slider
@@ -135,13 +143,15 @@ body {
 }
 .slider-main {
 	width: 100%;
+	max-height: 100%;
 	display: flex;
 	justify-content: center;
-	//height: 500px;
+
 	// .slider-main__body
 	&__body {
 		overflow: visible;
 		width: 100%;
+		max-height: 100%;
 	}
 
 	// .slider-main__slide
@@ -149,13 +159,10 @@ body {
 		position: relative;
 		min-width: 100%;
 		max-width: 100%;
+		max-height: 100%;
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		background: rgba(0, 0, 0, 0.32);
-		@media (max-width: $md3+px) {
-			//flex-wrap: wrap;
-		}
 	}
 
 	// .slider-main__image
@@ -164,16 +171,11 @@ body {
 		justify-content: center;
 		align-items: center;
 		overflow: hidden;
-		//height: 500px;
+		max-height: 100%;
 		width: 100%;
-		justify-content: center;
-		align-items: center;
-		object-fit: cover;
-		object-position: center;
 		filter: brightness(0.5); //затемнение фона изображения
 
 		img {
-			//max-height: auto;
 			object-fit: cover;
 			object-position: center;
 		}
@@ -205,7 +207,7 @@ body {
 			position: absolute;
 			min-width: 300px;
 			//@include adaptiv-value("left", 500, 0, 1);
-			//@include adaptiv-value("bottom", 140, 0, 1);
+			@include adaptiv-value("bottom", 500px, 0, 1);
 		}
 		@media (max-width: $md3+px) {
 			width: 100%;
@@ -284,7 +286,7 @@ body {
 //</Главный СЛАЙДЕР>=======================================================================================
 
 //<Фотосессии>=============================================================================================
-.sessions {
+.about {
 	padding-top: 50px;
 	height: 720px;
 	display: flex;

@@ -888,14 +888,17 @@ body.ie ._ibg img {
 
 .main-slider__container {
   position: relative;
+  max-height: 100%;
 }
 
 .main-slider__body {
   min-width: 0;
+  max-height: 100%;
 }
 
 .slider-main {
   width: 100%;
+  max-height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -907,12 +910,14 @@ body.ie ._ibg img {
 .slider-main__body {
   overflow: visible;
   width: 100%;
+  max-height: 100%;
 }
 
 .slider-main__slide {
   position: relative;
   min-width: 100%;
   max-width: 100%;
+  max-height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -922,7 +927,6 @@ body.ie ._ibg img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: rgba(0, 0, 0, 0.32);
 }
 
 .slider-main__image {
@@ -936,13 +940,8 @@ body.ie ._ibg img {
       -ms-flex-align: center;
           align-items: center;
   overflow: hidden;
+  max-height: 100%;
   width: 100%;
-  justify-content: center;
-  align-items: center;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
   -webkit-filter: brightness(0.5);
           filter: brightness(0.5);
 }
@@ -1050,7 +1049,7 @@ body.ie ._ibg img {
           transform: translateY(-100%);
 }
 
-.sessions {
+.about {
   padding-top: 50px;
   height: 720px;
   display: -webkit-box;
@@ -1060,7 +1059,7 @@ body.ie ._ibg img {
       flex-wrap: wrap;
 }
 
-.sessions__individual {
+.about__individual {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 50%;
           flex: 0 1 50%;
@@ -1077,7 +1076,7 @@ body.ie ._ibg img {
   color: #fff;
 }
 
-.sessions__companies {
+.about__companies {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 50%;
           flex: 0 1 50%;
@@ -1292,6 +1291,7 @@ body.ie ._ibg img {
   .slider-main__content {
     position: absolute;
     min-width: 300px;
+    bottom: 500pxpx;
   }
 }
 
@@ -1330,6 +1330,10 @@ body.ie ._ibg img {
 
 @media (max-width: 991.98px) {
   .header {
+    height: 80px;
+  }
+
+  .header__wrapper {
     height: 80px;
   }
 
@@ -1451,6 +1455,10 @@ body.ie ._ibg img {
     bottom: calc(50% - 1px);
   }
 
+  .page {
+    margin-top: 80px;
+  }
+
   .slider-main__image__controls {
     margin: 10px 0px 20px 0px;
   }
@@ -1477,6 +1485,10 @@ body.ie ._ibg img {
     height: 50px;
   }
 
+  .header__wrapper {
+    height: 50px;
+  }
+
   .header__body {
     min-height: 100%;
     padding: 0px 0px 0px 0px;
@@ -1484,6 +1496,10 @@ body.ie ._ibg img {
 
   .header__logo {
     font-size: 35px;
+  }
+
+  .page {
+    margin-top: 50px;
   }
 
   .slider-main__content {
@@ -1508,6 +1524,12 @@ body.ie ._ibg img {
 
   .header__button {
     display: none;
+  }
+}
+
+@media (min-width: 767.98px) and (max-width: 1700px) {
+  .slider-main__content {
+    bottom: calc(0px + 500px * ((100vw - 320px) / 1380));
   }
 }
 
