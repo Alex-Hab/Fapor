@@ -41,6 +41,30 @@
 }
 
 @font-face {
+  font-family: "Poppins";
+  font-display: swap;
+  src: url("../fonts/Poppins-Bold.woff") format("woff"), url("../fonts/Poppins-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "futuralt";
+  font-display: swap;
+  src: url("../fonts/futuralt-bold-webfont.woff") format("woff"), url("../fonts/futuralt-bold-webfont.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "futuralt";
+  font-display: swap;
+  src: url("../fonts/futuralt-book-webfont.woff") format("woff"), url("../fonts/futuralt-book-webfont.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "Tahu";
   font-display: swap;
   src: url("../fonts/Tahu_.woff") format("woff"), url("../fonts/Tahu_.woff2") format("woff2");
@@ -721,9 +745,14 @@ body.ie ._ibg img {
   transition: background-color 0.3s ease 0s;
   position: fixed;
   width: 100%;
+  height: 100px;
   left: 0;
   top: 0;
   z-index: 50;
+}
+
+.header__container {
+  height: 100%;
 }
 
 .header__body {
@@ -737,8 +766,7 @@ body.ie ._ibg img {
       -ms-flex-align: center;
           align-items: center;
   padding: 5px 0;
-  min-height: 100px;
-  max-height: 100%;
+  height: 100%;
   position: relative;
 }
 
@@ -780,6 +808,15 @@ body.ie ._ibg img {
 }
 
 .menu__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   height: 100%;
   overflow: auto;
@@ -816,6 +853,7 @@ body.ie ._ibg img {
   -o-transition: all 0.5s ease 0s;
   transition: all 0.5s ease 0s;
   padding: 0px 0px 0px 20px;
+  font-size: 20px;
 }
 
 .menu__sub-link:hover {
@@ -865,10 +903,13 @@ body.ie ._ibg img {
   color: #fff;
   border-radius: 25px;
   font-size: 25px;
+  margin: 15px 0px 15px 0px;
+  border: 1px solid #ffcb0f;
 }
 
 .button:hover {
-  background-color: #ff3c2d;
+  border: 1px solid #ffcb0f;
+  background-color: inherit;
   -webkit-transition: all 0.5s ease 0s;
   -o-transition: all 0.5s ease 0s;
   transition: all 0.5s ease 0s;
@@ -910,7 +951,6 @@ body.ie ._ibg img {
 .slider-main__body {
   overflow: visible;
   width: 100%;
-  max-height: 100%;
 }
 
 .slider-main__slide {
@@ -918,6 +958,7 @@ body.ie ._ibg img {
   min-width: 100%;
   max-width: 100%;
   max-height: 100%;
+  height: 500px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -961,9 +1002,10 @@ body.ie ._ibg img {
 }
 
 .slider-main__content {
-  font-family: "Poppins";
+  font-family: "futuralt";
+  font-weight: bold;
   min-width: 295px;
-  max-height: 300px;
+  max-height: 400px;
   text-align: center;
   overflow: auto;
   color: inherit;
@@ -984,11 +1026,17 @@ body.ie ._ibg img {
   /* Если браузер поддерживает backdrop-filter */
 }
 
+.slider-main__content h1 {
+  font-size: 50px;
+  color: #fff;
+}
+
 .slider-main__title {
   font-size: 50px;
   text-transform: uppercase;
   font-weight: bold;
-  font-family: "Poppins";
+  font-family: "futuralt";
+  font-weight: bold;
   color: #ffcb0f;
   padding-bottom: 15px;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
@@ -1050,7 +1098,6 @@ body.ie ._ibg img {
 }
 
 .about {
-  padding-top: 50px;
   height: 720px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1338,18 +1385,80 @@ body.ie ._ibg img {
   }
 
   .header__body {
-    min-height: 80px;
     padding: 0px 0px 0px 0px;
   }
 
+  .menu__item {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0px 0px 0px 0px;
+  }
+
+  .menu__sub-link {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 16px;
+  }
+
+  .menu__sub-link:hover {
+    border-bottom: none;
+  }
+
+  .page {
+    margin-top: 80px;
+  }
+
+  .slider-main__image__controls {
+    margin: 10px 0px 20px 0px;
+  }
+
+  .controls-slider-main__dotts {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .professional-slider__image__controls {
+    margin: 10px 0px 20px 0px;
+  }
+}
+
+@media (max-width: 991.98px) and (max-width: 1700px) {
+  .menu__sub-link {
+    font-size: calc(10px + 6 * ((100vw - 320px) / 1380));
+  }
+}
+
+@media (max-width: 767.98px) {
+  .header {
+    height: 50px;
+  }
+
+  .header__wrapper {
+    height: 50px;
+  }
+
+  .header__body {
+    padding: 0px 0px 0px 0px;
+  }
+
+  .header__logo {
+    font-size: 35px;
+  }
+
   .menu__body {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     position: fixed;
     width: 100%;
     height: 100%;
     overflow: auto;
     top: 0;
     left: -100%;
-    background-color: #2225335d;
+    background-color: #1b1f33e5;
     -webkit-transition: left 0.3s ease 0s;
     -o-transition: left 0.3s ease 0s;
     transition: left 0.3s ease 0s;
@@ -1377,29 +1486,9 @@ body.ie ._ibg img {
     left: 0;
   }
 
-  .menu__item {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    font-size: 18px;
-    padding-bottom: 30px;
-  }
-
-  .menu__item:first-child {
-    padding-top: 50px;
-    text-align: center;
-  }
-
   .menu__sub-link {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    font-size: 24px;
-    padding: 0px 0px 0px 0px;
-  }
-
-  .menu__sub-link:hover {
-    border-bottom: none;
+    font-size: 20px;
+    padding: 15px 0px 15px 0px;
   }
 
   .icon-menu {
@@ -1456,49 +1545,6 @@ body.ie ._ibg img {
   }
 
   .page {
-    margin-top: 80px;
-  }
-
-  .slider-main__image__controls {
-    margin: 10px 0px 20px 0px;
-  }
-
-  .controls-slider-main__dotts {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-
-  .professional-slider__image__controls {
-    margin: 10px 0px 20px 0px;
-  }
-}
-
-@media (max-width: 991.98px) and (max-width: 1700px) {
-  .icon-menu {
-    margin-left: calc(15px + 17 * ((100vw - 320px) / 1380));
-  }
-}
-
-@media (max-width: 767.98px) {
-  .header {
-    height: 50px;
-  }
-
-  .header__wrapper {
-    height: 50px;
-  }
-
-  .header__body {
-    min-height: 100%;
-    padding: 0px 0px 0px 0px;
-  }
-
-  .header__logo {
-    font-size: 35px;
-  }
-
-  .page {
     margin-top: 50px;
   }
 
@@ -1514,6 +1560,12 @@ body.ie ._ibg img {
   .professional-slider__slide {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 767.98px) and (max-width: 1700px) {
+  .icon-menu {
+    margin-left: calc(15px + 17 * ((100vw - 320px) / 1380));
   }
 }
 
