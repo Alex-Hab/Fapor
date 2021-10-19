@@ -13,7 +13,7 @@
 //</Иконочные шрифты>==========================================================================================
 
 //<Шрифт по умолчанию>==========================================================================================
-$font-Family: "Poppins";
+$font-Family: "futuralt";
 $fontSize: 16;
 //</Шрифт по умолчанию>==========================================================================================
 
@@ -30,10 +30,11 @@ $md4: 479.98;
 
 $mainColor: #000;
 $orangeColor: #ff7300;
-$grayColor: #898989;
+$headerColor: #222533;
 $darkGrayColor: #616161;
 $redColor: #ff3c2d;
 $yelowColor: #ffcb0f;
+$logoColor: #7fbeea;
 
 //</ПЕРЕМЕННЫЕ>===========================================================================================================
 
@@ -84,17 +85,24 @@ body {
 
 //<ОСНОВНОЙ БЛОК>====================================================================================================
 .button {
-	background-color: $yelowColor;
+	background-color: $logoColor;
 	height: 50px;
-	width: 180px;
+	width: auto;
 	color: #fff;
 	border-radius: 25px;
-	font-size: 25px;
+	font-size: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	margin: 15px 0px 15px 0px;
-	border: 1px solid $yelowColor;
+	padding: 0px 10px 0px 10px;
+	border: 1px solid $logoColor;
+	text-transform: uppercase;
+	font-family: $font-Family;
+	font-weight: bold;
 
 	&:hover {
-		border: 1px solid $yelowColor;
+		border: 1px solid $logoColor;
 		background-color: inherit;
 		transition: all 0.5s ease 0s;
 	}
@@ -237,9 +245,9 @@ body {
 		font-size: 50px;
 		text-transform: uppercase;
 		font-weight: bold;
-		font-family: "futuralt";
+		font-family: $font-Family;
 		font-weight: bold;
-		color: $yelowColor;
+		color: $logoColor;
 		padding-bottom: 15px;
 		text-shadow: 0 1px 2px rgb(0 0 0 / 60%);
 		@include adaptiv-value("font-size", 70, 35, 1);
@@ -297,98 +305,57 @@ body {
 }
 //</Главный СЛАЙДЕР>=======================================================================================
 
-//<Фотосессии>=============================================================================================
+//<About>=============================================================================================
 .about {
-	height: 720px;
-	display: flex;
-	flex-wrap: wrap;
-	// .sessions__individual
-	&__individual {
+	min-height: 500px;
+
+	//about-container
+	&__container {
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		flex-wrap: wrap;
+		margin: 20px 0px 20px 0px;
+	}
+	.about-content {
 		flex: 0 1 50%;
-		display: flex;
-		justify-content: center;
-		align-items: flex-start;
-		background-color: #000;
-		color: #fff;
+		//text-align: center;
+		font-family: $font-Family;
+		@media (max-width: $md3+px) {
+			flex: 0 1 90%;
+		}
+		h2 {
+			font-size: 40px;
+			color: $logoColor;
+			text-transform: uppercase;
+			font-weight: bold;
+			margin: 0px 0px 40px 0px;
+		}
+		p {
+			font-size: 30px;
+			color: $headerColor;
+			line-height: 30px;
+			font-weight: bold;
+			padding: 10px 0px 10px 0px;
+		}
 	}
-	// .sessions__block
-	&__block {
-	}
-	// .sessions__companies
-	&__companies {
+	.about-image {
 		flex: 0 1 50%;
-		display: flex;
-		justify-content: center;
-		align-items: flex-start;
-	}
-}
-.block-sessions {
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	// .block-sessions__logo
-
-	&__logo {
-		display: flex;
-		justify-content: center;
-		padding: 50px 0px 0px 0px;
-	}
-
-	// .block-sessions__title
-
-	&__title {
-		display: flex;
-		justify-content: center;
-		font-size: 30px;
-		padding: 20px 0px 0px 0px;
-	}
-
-	// .block-sessions__content
-	&__content {
-		padding: 80px 0px 80px 0px;
-		width: 50%;
-		ol {
-			counter-reset: myCounter;
-		}
-
-		li {
-			list-style: none;
-		}
-		li:before {
-			counter-increment: myCounter;
-			content: counter(myCounter);
-			color: #4e4e4e;
-			display: flex;
-			justify-content: center;
-			width: 35px;
-			font-size: 80px;
-			font-family: $font-Family;
-			display: flex;
-			padding-right: 35px;
-			//transform: translateX(-100%);
-		}
-	}
-
-	// .block-sessions__items
-	&__items {
-	}
-
-	// .block-sessions__item
-	&__item {
+		padding: 10px 0px 10px 0px;
 		display: flex;
 		align-items: center;
-		border-bottom: 1.5px solid #4e4e4e;
-		//transform: border-bottom translate(50%);
-		line-height: 50px;
-		padding-top: 40px;
-		font-size: 18px;
+		justify-content: center;
+		background: url("../img/about/about_bg.png") no-repeat;
+	}
+	.about-button {
+		color: #000;
+		//text-transform: uppercase;
+		width: auto;
+		padding: 0px 10px 0px 10px;
 	}
 }
-.button {
-}
-//</Фотосессии>=============================================================================================
+
+//</About>=============================================================================================
 
 //<Карта>============================================================================================================
 .map {

@@ -16,7 +16,7 @@
 
 	// .header__wrapper
 	&__wrapper {
-		background-color: #222533;
+		background-color: $headerColor;
 		transition: background-color 0.3s ease 0s;
 		position: fixed;
 		width: 100%;
@@ -47,36 +47,56 @@
 		height: 100%;
 		position: relative;
 		@media (max-width: $md2+px) {
-			//height: 80px;
 			padding: 0px 0px 0px 0px;
 		}
 		@media (max-width: $md3+px) {
-			//height: 50px;
 			padding: 0px 0px 0px 0px;
 		}
 	}
 
-	// .header__logo
-	&__logo {
+	&__title {
 		display: flex;
-		justify-content: center;
-		color: #000;
+		align-items: center;
+		justify-content: space-evenly;
+		color: $logoColor;
 		font-family: "Poppins";
 		font-style: italic;
 		font-weight: 700;
-		font-size: 40px;
+		font-size: 25px;
 		position: relative;
-		a {
-			color: #ffcb0f;
-		}
-		//z-index: 5;
+		overflow: hidden;
+		//max-width: 70%;
 		flex: 0 0 calc(315 / 1700 * 100%);
 		@media (max-width: $md3+px) {
-			font-size: 35px;
+			display: none;
 		}
-		@media (max-width: $md4+px) {
-			font-size: 30px;
+	}
+	// .header__logo
+	&__logo {
+		width: 90px;
+		height: auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
 		}
+
+		@media (max-width: $md3+px) {
+			width: 40px;
+		}
+	}
+	.logo {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 50%;
+		overflow: hidden;
+		//width: 100%;
+		//height: 100%;
 	}
 
 	// .header__menu
@@ -96,6 +116,9 @@
 .menu {
 	display: flex;
 	flex: 0 1 calc(1200 / 1700 * 100%);
+	@media (max-width: $md4+px) {
+		flex: 0 1 40%;
+	}
 	&__body {
 		display: flex;
 		justify-content: flex-end;
@@ -107,6 +130,7 @@
 		left: 0;
 		font-family: $font-Family;
 		font-size: $fontSize;
+
 		@media (max-width: $md3+px) {
 			justify-content: center;
 			position: fixed;
@@ -224,7 +248,7 @@
 			width: 100%;
 			height: 10%;
 			transition: all 0.3s ease 0s;
-			background-color: #ffcb0f;
+			background-color: $logoColor;
 			&:first-child {
 				top: 0px;
 			}
