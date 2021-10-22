@@ -317,29 +317,37 @@ body {
 		flex-wrap: wrap;
 		margin: 20px 0px 20px 0px;
 	}
-	.about-content {
+	&__content {
 		flex: 0 1 50%;
 		//text-align: center;
 		font-family: $font-Family;
 		@media (max-width: $md3+px) {
 			flex: 0 1 90%;
+			text-align: center;
 		}
 		h2 {
-			font-size: 40px;
+			@include adaptiv-value("font-size", 40, 30, 1);
 			color: $logoColor;
 			text-transform: uppercase;
 			font-weight: bold;
 			margin: 0px 0px 40px 0px;
+			@media (max-width: $md3+px) {
+				margin: 0px 0px 10px 0px;
+			}
 		}
 		p {
-			font-size: 30px;
+			@include adaptiv-value("font-size", 30, 20, 1);
 			color: $headerColor;
 			line-height: 30px;
 			font-weight: bold;
 			padding: 10px 0px 10px 0px;
+			@media (max-width: $md3+px) {
+				padding: 0px 0px 0px 0px;
+				@include adaptiv-value("line-height", 30, 20, 1);
+			}
 		}
 	}
-	.about-image {
+	&__image {
 		flex: 0 1 50%;
 		padding: 10px 0px 10px 0px;
 		display: flex;
@@ -347,15 +355,27 @@ body {
 		justify-content: center;
 		background: url("../img/about/about_bg.png") no-repeat;
 	}
-	.about-button {
+	&__button {
+		display: flex;
+		justify-content: f;
+		align-items: center;
+		@media (max-width: $md3+px) {
+			justify-content: center;
+		}
+	}
+	.button-about {
 		color: #000;
-		//text-transform: uppercase;
 		width: auto;
-		padding: 0px 10px 0px 10px;
 	}
 }
-
 //</About>=============================================================================================
+
+//<Why>=============================================================================================
+.why {
+	height: 500px;
+	background: #f2f7fa;
+}
+//</Why>=============================================================================================
 
 //<Карта>============================================================================================================
 .map {
