@@ -35,6 +35,9 @@
 	// .header__container
 	&__container {
 		height: 100%;
+		max-width: $maxWidthContainer + px;
+		padding: 0px 15px; //чтобы не прилипало к краям браузера
+		margin: 0 auto;
 	}
 
 	// .header__body
@@ -60,8 +63,7 @@
 		justify-content: space-evenly;
 		color: $logoColor;
 		font-family: "Poppins";
-		font-style: italic;
-		font-weight: 700;
+		//font-style: italic;
 		font-size: 25px;
 		position: relative;
 		overflow: hidden;
@@ -190,7 +192,7 @@
 	&__sub-link {
 		transition: all 0.5s ease 0s;
 		padding: 0px 0px 0px 20px;
-		font-size: 20px;
+		@include adaptiv-value("font-size", 20, 16, 1);
 
 		&:hover {
 			color: #ffcb0f;
