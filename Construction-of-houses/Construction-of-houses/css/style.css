@@ -187,7 +187,7 @@ body._lock {
 ._container {
   max-width: 1700px;
   padding: 0px 15px;
-  margin: 0px 40px 0px 40px;
+  margin: 100px 40px 0px 40px;
 }
 
 ._title {
@@ -932,6 +932,7 @@ h2 {
 h3 {
   font-size: 16px;
   font-weight: 700;
+  color: #616161;
 }
 
 p {
@@ -940,6 +941,7 @@ p {
   line-height: 30px;
   font-weight: bold;
   padding: 10px 0px 10px 0px;
+  color: #616161;
 }
 
 .page {
@@ -1253,10 +1255,7 @@ p {
 .column {
   top: 0;
   left: 0;
-}
-
-.column__title {
-  padding-top: 40px;
+  margin-top: 30px;
 }
 
 .column__title h3 {
@@ -1281,8 +1280,26 @@ p {
   border-radius: 100%;
   -webkit-box-shadow: 0 0 0 10px #56aae6, 0 0 0 20px #7fbeea, 0 0 0 30px #a4cdeb;
           box-shadow: 0 0 0 10px #56aae6, 0 0 0 20px #7fbeea, 0 0 0 30px #a4cdeb;
-  padding: 38px;
+  padding: 29px;
   font-size: 45px;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.column__image .fa {
+  color: #616161;
+}
+
+.portfolio {
+  height: 500px;
 }
 
 .map {
@@ -1498,10 +1515,22 @@ p {
             justify-content: center;
   }
 
+  .why__title h2 {
+    padding: 40px 0px 20px 0px;
+  }
+
+  .columns-why {
+    margin-top: 35px;
+  }
+
   .columns-why__column {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 45%;
             flex: 0 1 45%;
+  }
+
+  .column__title h3 {
+    margin: 50px 0px 15px 0px;
   }
 
   .professional-slider__image__controls {

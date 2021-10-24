@@ -58,6 +58,19 @@ if (document.querySelector('.slider-main__body')) {
 			//только когда слайдер в пределах вьюпорта
 			onlyInViewport: true,
 		},
+		grabCursor: true,
+		effect: "creative",
+		creativeEffect: {
+			prev: {
+				shadow: true,
+				translate: [0, 0, -400],
+			},
+			next: {
+				translate: ["100%", 0, 0],
+			},
+		},
+
+
 
 		autoplay: {
 			//Пауза между прокруткой
@@ -164,8 +177,8 @@ ibg();
 //=================
 //Menu Бургер
 const iconMenu = document.querySelector('.icon-menu');
+const menuBody = document.querySelector('.menu__body');
 if (iconMenu) {
-	const menuBody = document.querySelector('.menu__body');
 	iconMenu.addEventListener('click', function (e) {
 		document.body.classList.toggle('_lock');
 		iconMenu.classList.toggle('_active');
@@ -179,7 +192,34 @@ function menu_close() {
 	menuBody.classList.remove("_active");
 }
 //=================
+//Прокрутка при клике
+const menuLinks = document.querySelectorAll('.menu__sub-link[data-goto]');
+if (menuLinks.length > 0) {
+	menuLinks.forEach(menuLink => {
+		menuLink.addEventListener("click", onMenuLinkClick);
+	});
 
+	function onMenuLinkClick(e) {
+		const menuLink = e.target;
+		if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
+			const gotoBlock = document.querySelector(menuLink.dataset.goto);
+			const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('header').offsetHeight;
+
+			//Для закрыывания меню бургер при прокрутке
+			if (iconMenu.classList.contains('_active')) {
+				document.body.classList.remove('_lock');
+				iconMenu.classList.toggle('_active');
+				menuBody.classList.toggle('_active');
+			}
+
+			window.scrollTo({
+				top: gotoBlockValue,
+				behavior: "smooth"
+			});
+			e.preventDefault();
+		}
+	}
+}
 
 
 // Dynamic Adapt v.1
