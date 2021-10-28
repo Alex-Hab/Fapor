@@ -1,6 +1,54 @@
 @charset "UTF-8";
 
 @font-face {
+  font-family: "Poppins";
+  font-display: swap;
+  src: url("../fonts/Poppins-Bold.woff") format("woff"), url("../fonts/Poppins-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-display: swap;
+  src: url("../fonts/Poppins-Light.woff") format("woff"), url("../fonts/Poppins-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-display: swap;
+  src: url("../fonts/Poppins-Medium.woff") format("woff"), url("../fonts/Poppins-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-display: swap;
+  src: url("../fonts/Poppins-Regular.woff") format("woff"), url("../fonts/Poppins-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-display: swap;
+  src: url("../fonts/Poppins-SemiBold.woff") format("woff"), url("../fonts/Poppins-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-display: swap;
+  src: url("../fonts/Poppins-Bold.woff") format("woff"), url("../fonts/Poppins-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "futuralt";
   font-display: swap;
   src: url("../fonts/futuralt-bold-webfont.woff") format("woff"), url("../fonts/futuralt-bold-webfont.woff2") format("woff2");
@@ -29,6 +77,54 @@
   font-display: swap;
   src: url("../fonts/icons.woff") format("woff"), url("../fonts/icons.woff2") format("woff2");
   font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Rubik";
+  font-display: swap;
+  src: url("../fonts/Rubik-Bold.woff") format("woff"), url("../fonts/Rubik-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Rubik";
+  font-display: swap;
+  src: url("../fonts/Rubik-Light.woff") format("woff"), url("../fonts/Rubik-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Rubik";
+  font-display: swap;
+  src: url("../fonts/Rubik-Medium.woff") format("woff"), url("../fonts/Rubik-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Rubik";
+  font-display: swap;
+  src: url("../fonts/Rubik-Regular.woff") format("woff"), url("../fonts/Rubik-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Rubik";
+  font-display: swap;
+  src: url("../fonts/Rubik-SemiBold.woff") format("woff"), url("../fonts/Rubik-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Rubik";
+  font-display: swap;
+  src: url("../fonts/Rubik-Bold.woff") format("woff"), url("../fonts/Rubik-Bold.woff2") format("woff2");
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -106,7 +202,7 @@ body {
 
 body {
   line-height: 1;
-  font-family: "futuralt";
+  font-family: "Poppins";
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -115,7 +211,7 @@ body {
 input,
 button,
 textarea {
-  font-family: "futuralt";
+  font-family: "Poppins";
   font-size: inherit;
 }
 
@@ -163,7 +259,7 @@ h6 {
 
 body {
   color: #000;
-  font-family: "futuralt";
+  font-family: "Poppins";
   width: 1920;
 }
 
@@ -186,8 +282,7 @@ body._lock {
 
 ._container {
   max-width: 1700px;
-  padding: 0px 15px;
-  margin: 100px 40px 0px 40px;
+  padding: 0px 30px;
 }
 
 ._title {
@@ -810,7 +905,7 @@ body.ie ._ibg img {
   overflow: auto;
   top: 0;
   left: 0;
-  font-family: "futuralt";
+  font-family: "Poppins";
   font-size: 16;
 }
 
@@ -887,7 +982,7 @@ body.ie ._ibg img {
 .button {
   background-color: #7fbeea;
   height: 50px;
-  width: auto;
+  width: 200px;
   color: #fff;
   border-radius: 25px;
   font-size: 20px;
@@ -904,7 +999,7 @@ body.ie ._ibg img {
   padding: 0px 10px 0px 10px;
   border: 1px solid #7fbeea;
   text-transform: uppercase;
-  font-family: "futuralt";
+  font-family: "Poppins";
   font-weight: bold;
 }
 
@@ -919,6 +1014,7 @@ body.ie ._ibg img {
 h1 {
   font-size: 40px;
   font-weight: 700;
+  font-family: "Poppins";
 }
 
 h2 {
@@ -1036,7 +1132,7 @@ p {
   font-family: "futuralt";
   font-weight: bold;
   min-width: 295px;
-  max-height: 400px;
+  max-height: 600px;
   text-align: center;
   overflow: auto;
   color: inherit;
@@ -1066,7 +1162,7 @@ p {
   font-size: 50px;
   text-transform: uppercase;
   font-weight: bold;
-  font-family: "futuralt";
+  font-family: "Poppins";
   font-weight: bold;
   color: #7fbeea;
   padding-bottom: 15px;
@@ -1130,6 +1226,12 @@ p {
 
 .about {
   min-height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .about__container {
@@ -1152,7 +1254,7 @@ p {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 50%;
           flex: 0 1 50%;
-  font-family: "futuralt";
+  font-family: "Poppins";
   text-align: center;
 }
 
@@ -1189,13 +1291,17 @@ p {
 
 .about .button-about {
   color: #000;
-  width: auto;
 }
 
 .why {
-  min-height: 700px;
+  min-height: 600px;
   background: #f2f7fa;
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .why__title {
@@ -1203,15 +1309,28 @@ p {
 }
 
 .why__content {
-  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
   font-size: 15px;
   font-weight: 400;
 }
 
 .why__content p {
+  width: 70%;
+  text-align: center;
   padding: 0px 0px 10px 0px;
   margin: 0px 0px 0px 0px;
-  font-family: "futuralt";
+  font-family: "Poppins";
   font-size: 15px;
   font-weight: 400;
   line-height: 18px;
@@ -1265,7 +1384,7 @@ p {
   text-align: center;
   padding: 0px 0px 10px 0px;
   margin: 0px 0px 0px 0px;
-  font-family: "futuralt";
+  font-family: "Poppins";
   font-size: 15px;
   font-weight: 400;
   line-height: 18px;
@@ -1298,6 +1417,30 @@ p {
 .portfolio {
   min-height: 500px;
   width: 100%;
+  margin-bottom: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.portfolio__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .portfolio__title {
@@ -1305,36 +1448,57 @@ p {
 }
 
 .cards-portfolio {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  max-width: 100%;
+}
+
+.cards-portfolio p {
+  text-align: center;
+  font-size: 16px;
+  width: 90%;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.cards-portfolio__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .cards-portfolio__item {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 30%;
-          flex: 0 1 30%;
+      -ms-flex: 0 1 32%;
+          flex: 0 1 32%;
+  max-height: 100%;
+  width: 100%;
+  position: relative;
 }
 
-.cards-portfolio__image {
-  max-width: 100%;
-}
-
-.cards-portfolio__image img {
-  max-width: 100%;
+.cards-portfolio__item img {
+  max-height: 100%;
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+}
+
+.cards-portfolio__button span {
+  color: #fff;
 }
 
 .map {
@@ -1375,7 +1539,7 @@ p {
 
 .map__title {
   font-size: 30px;
-  font-family: "futuralt";
+  font-family: "Poppins";
   padding: 10px 0px 10px 10px;
   text-align: center;
 }
@@ -1516,6 +1680,10 @@ p {
 }
 
 @media (max-width: 767.98px) {
+  ._container {
+    margin: 0px 20px 0px 20px;
+  }
+
   .header {
     height: 50px;
   }
@@ -1660,10 +1828,27 @@ p {
             flex: 0 1 90%;
   }
 
+  .why__content {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 80%;
+            flex: 0 1 80%;
+  }
+
   .columns-why__column {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 100%;
             flex: 0 1 100%;
+  }
+
+  .cards-portfolio__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+    margin-top: 15px;
+  }
+
+  .cards-portfolio__item:first-child {
+    margin-top: 0px;
   }
 }
 
@@ -1704,6 +1889,41 @@ p {
   .slider-arrow_white:hover {
     background-color: #ff7300;
     color: #fff;
+  }
+
+  .cards-portfolio__item:hover .cards-portfolio__actions {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .cards-portfolio__actions {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    background-color: rgba(3, 33, 80, 0.411);
+    z-index: 3;
+  }
+}
+
+@media (any-hover: none) {
+  .cards-portfolio__actions {
+    padding: 15px 0px 0px 0px;
   }
 }
 
