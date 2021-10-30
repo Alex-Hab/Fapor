@@ -89,22 +89,18 @@ if (document.querySelector('.slider-main__body')) {
 }
 if (document.querySelector('.slider-portfolio__body')) {
 	new Swiper('.slider-portfolio__body', {
-		observer: true,
-		observeParents: true,
-		slidesPerView: 1,
-		watchOverflow: true,
-		slidesPerGroup: 1,
-		initialSlide: 0,
-		centeredSlides: true,
-		watchOverflow: true,
-		speed: 800,
+		//observer: true,
+		//observeParents: true,
+		//slidesPerView: 1,
+		//watchOverflow: true,
+		//slidesPerGroup: 1,
+		//initialSlide: 0,
+		//centeredSlides: true,
+		//watchOverflow: true,
 		loop: true,
-		loopAdditionalSlides: 3,
-		preloadImages: false,
-		parallax: true,
 		autoHeight: true,
 		// Переключение при клике на слайд
-		slideToClickedSlide: true,
+		//slideToClickedSlide: true,
 		//Управление клавиатурой
 		keyboard: {
 			//Включить\выключить

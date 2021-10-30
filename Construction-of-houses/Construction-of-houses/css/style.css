@@ -611,19 +611,10 @@ body.ie ._ibg img {
           align-items: flex-start;
 }
 
-.swiper-container-initialized .swiper-slide {
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-}
-
 .swiper-container-android .swiper-slide,
 .swiper-container-android .swiper-wrapper {
   -webkit-transform: translate3d(0px, 0, 0);
           transform: translate3d(0px, 0, 0);
-}
-
-.swiper-button-lock {
-  display: none !important;
 }
 
 ._tabs-block {
@@ -712,7 +703,7 @@ body.ie ._ibg img {
 .popup__content {
   background-color: #fff;
   color: #000;
-  width: 90%;
+  width: 80%;
   height: auto;
   position: relative;
   -webkit-transition: all 0.8s ease 0s;
@@ -1034,7 +1025,7 @@ body.ie ._ibg img {
      object-position: center;
 }
 
-.slider-main__image__controls {
+.slider-main__controls {
   -ms-flex-item-align: stretch;
       -ms-grid-row-align: stretch;
       align-self: stretch;
@@ -1136,37 +1127,49 @@ body.ie ._ibg img {
           transform: translateY(-100%);
 }
 
-.slider-portfolio__body {
+.portfolio-slider__container {
   width: 100%;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  height: 100%;
+}
+
+.portfolio-slider__body {
+  width: 100%;
+  height: 100%;
+}
+
+.portfolio-slider__slider {
+  width: 100%;
+  height: 100%;
+}
+
+.portfolio-slider .swiper-wrapper {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.slider-portfolio__body {
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .slider-portfolio__slide {
-  background-position: center;
-  background-size: cover;
-  width: 300px;
-  height: 300px;
-}
-
-.slider-portfolio__slide img {
-  display: block;
-  width: 100%;
+  text-align: center;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .slider-portfolio__image {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  overflow: hidden;
+  max-width: 100%;
   max-height: 100%;
-  width: 100%;
+}
+
+.slider-portfolio__image img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+  top: 0;
+  left: 0;
 }
 
 .button {
@@ -1831,7 +1834,7 @@ p {
     border-bottom: none;
   }
 
-  .slider-main__image__controls {
+  .slider-main__controls {
     margin: 10px 0px 20px 0px;
   }
 
