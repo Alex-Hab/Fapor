@@ -68,9 +68,6 @@ if (document.querySelector('.slider-main__body')) {
 				translate: ["100%", 0, 0],
 			},
 		},
-
-
-
 		autoplay: {
 			//Пауза между прокруткой
 			delay: 3000,
@@ -90,8 +87,8 @@ if (document.querySelector('.slider-main__body')) {
 		}
 	});
 }
-if (document.querySelector('.slider-professional__body')) {
-	new Swiper('.slider-professional__body', {
+if (document.querySelector('.slider-portfolio__body')) {
+	new Swiper('.slider-portfolio__body', {
 		observer: true,
 		observeParents: true,
 		slidesPerView: 1,
@@ -99,11 +96,10 @@ if (document.querySelector('.slider-professional__body')) {
 		slidesPerGroup: 1,
 		initialSlide: 0,
 		centeredSlides: true,
-		//spaceBetween: 32,
 		watchOverflow: true,
 		speed: 800,
 		loop: true,
-		loopAdditionalSlides: 5,
+		loopAdditionalSlides: 3,
 		preloadImages: false,
 		parallax: true,
 		autoHeight: true,
@@ -115,18 +111,14 @@ if (document.querySelector('.slider-professional__body')) {
 			//только когда слайдер в пределах вьюпорта
 			onlyInViewport: true,
 		},
-
-		autoplay: {
-			//Пауза между прокруткой
-			delay: 2000,
-			//Закончить на последнем слайде
-			stopOnLastSlide: true,
-		},
-		// Dotts
+		//Стрелки
 		pagination: {
-			el: '.controls-slider-main__dotts',
-			clickable: true,
-			//dynamicBullets: true,
-		}
+			el: ".swiper-pagination",
+			type: "progressbar",
+		},
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
 	});
 }

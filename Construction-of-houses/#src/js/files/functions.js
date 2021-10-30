@@ -57,7 +57,7 @@ function menu_close() {
 	let menuBody = document.querySelector(".menu__body");
 	iconMenu.classList.remove("_active");
 	menuBody.classList.remove("_active");
-}
+};
 //=================
 //Прокрутка при клике
 const menuLinks = document.querySelectorAll('.menu__sub-link[data-goto]');
@@ -86,5 +86,8 @@ if (menuLinks.length > 0) {
 			e.preventDefault();
 		}
 	}
-}
+};
+
+
+
 

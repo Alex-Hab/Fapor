@@ -22,7 +22,7 @@
 								<div class="slider-main__body _swiper">
 									<!-- Слайдер + lazy loading + zoom-->
 									<div class="slider-main__slide">
-										<div class="slider-main__image ">
+										<div class="slider-main__image">
 											<img src="img/main-sliders/slider1.jpg" alt="">
 										</div>
 										<a data-goto=".why" href="#" class="slider-main__content">
@@ -132,44 +132,48 @@
 						</div>
 					</div>
 				</section>
-				<section class="portfolio">					
+
+				<!--Секция портфолио-->
+				<section class="portfolio">	
+					<!--Блок с карточками-->				
 					<div class="portfolio__container _container">
 						<div class="portfolio__title">
 							<h2>Портфолио</h2>
 						</div>						
 						<div class="portfolio__cards cards-portfolio">
 							<div class="cards-portfolio__item">
-								<img src="img/portfolio/example1/house_1-1.jpg" alt="house_1-1">								
-								<div class="cards-portfolio__actions">
-									<a href="" class="cards-portfolio__button button"><span>Подробности</span></a>
-								</div>	
+								<img src="img/portfolio/example1/house_1-1.jpg" alt="house_1-1">			
 								<div class="cards-portfolio__content">
 									<p>Двухэтажный котедж из газобетонных блоков</p>
-								</div>							
-							</div>
-							<div class="cards-portfolio__item">
-								<img src="img/portfolio/example2/house_2-1.jpg" alt="house_2-1">								
+								</div>						
 								<div class="cards-portfolio__actions">
-									<a href="" class="cards-portfolio__button button"><span>Подробности</span></a>
-								</div>	
-								<div class="cards-portfolio__content">
-									<p>Двухэтажный котедж из газобетонных блоков</p>
-								</div>							
+									<a href="#popup_1" class="cards-portfolio__button button popup-link"><span>В галерею</span></a>
+								</div>														
 							</div>	
 							<div class="cards-portfolio__item">
-								<img src="img/portfolio/example3/house_3-1.jpg" alt="house_3-1">								
-								<div class="cards-portfolio__actions">
-									<a href="" class="cards-portfolio__button button"><span>Подробности</span></a>
-								</div>	
+								<img src="img/portfolio/example2/house_2-1.jpg" alt="house_2-1">			
 								<div class="cards-portfolio__content">
 									<p>Двухэтажный котедж из газобетонных блоков</p>
-								</div>							
-							</div>											
+								</div>						
+								<div class="cards-portfolio__actions">
+									<a href="#popup_2" class="cards-portfolio__button button popup-link"><span>В галерею</span></a>
+								</div>														
+							</div>	
+							<div class="cards-portfolio__item">
+								<img src="img/portfolio/example3/house_3-1.jpg" alt="house_3-1">			
+								<div class="cards-portfolio__content">
+									<p>Двухэтажный котедж из газобетонных блоков</p>
+								</div>						
+								<div class="cards-portfolio__actions">
+									<a href="#popup_3" class="cards-portfolio__button button popup-link"><span>В галерею</span></a>
+								</div>														
+							</div>	
 						</div>
-					</div>					
+					</div>
 				</section>
 			</main>
 			@@include('_footer.html',{})
+			@@include('_popup.html',{})
 		</div>
 		@@include('_js.html',{})
 	</body>

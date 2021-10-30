@@ -82,6 +82,7 @@ body {
 //@import "pagging";
 @import "popup";
 @import "header";
+@import "sliders";
 //@import "footer";
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
 
@@ -162,185 +163,6 @@ p {
 	&__main-slider {
 	}
 }
-.main-slider {
-	max-width: $maxWidth;
-	height: 500px;
-	// .main-slider__container
-	&__container {
-		position: relative;
-		max-height: 100%;
-		@media (min-width: $md2+px) {
-			&::before {
-				content: "";
-				position: absolute;
-				top: 0;
-				width: 100vw;
-				right: 376px;
-				height: 100%;
-			}
-		}
-	}
-	// .main-slider__body
-	&__body {
-		min-width: 0;
-		max-height: 100%;
-	}
-
-	// .main-slider__slider
-	&__slider {
-	}
-}
-.slider-main {
-	width: 100%;
-	max-height: 100%;
-	display: flex;
-	justify-content: center;
-
-	// .slider-main__body
-	&__body {
-		overflow: visible;
-		width: 100%;
-		//max-height: 100%;
-		//height: 500px;
-	}
-
-	// .slider-main__slide
-	&__slide {
-		position: relative;
-		min-width: 100%;
-		max-width: 100%;
-		max-height: 100%;
-		height: 500px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-
-	// .slider-main__image
-	&__image {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		overflow: hidden;
-		max-height: 100%;
-		width: 100%;
-		filter: brightness(0.5); //затемнение фона изображения
-
-		img {
-			object-fit: cover;
-			object-position: center;
-		}
-		// .slider-main__controls
-		&__controls {
-			align-self: stretch;
-			margin: 0px 0px 20px 0px;
-			@media (max-width: $md2+px) {
-				margin: 10px 0px 20px 0px;
-			}
-		}
-	}
-
-	// .slider-main__content
-	&__content {
-		font-family: "futuralt";
-		font-weight: bold;
-		min-width: 295px;
-		max-height: 600px;
-		text-align: center;
-		overflow: auto;
-		color: inherit;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
-		@include adaptiv-value("padding", 24, 15, 1);
-
-		@media (min-width: $md3+px) {
-			position: absolute;
-			min-width: 300px;
-			//@include adaptiv-value("left", 500, 0, 1);
-			@include adaptiv-value("bottom", 500px, 0, 1);
-		}
-		@media (max-width: $md3+px) {
-			width: 100%;
-			position: absolute;
-		}
-
-		/* Если браузер поддерживает backdrop-filter */
-		//@supports ((-webkit-backdrop-filter: blur(31px)) or (backdrop-filter: blur(31px))) {
-		//background: rgba(58, 55, 73, 0.72);
-		//backdrop-filter: blur(31px);
-		//}
-		h1 {
-			font-size: 50px;
-			color: #fff;
-		}
-	}
-
-	// .slider-main__title
-	&__title {
-		font-size: 50px;
-		text-transform: uppercase;
-		font-weight: bold;
-		font-family: $font-Family;
-		font-weight: bold;
-		color: $logoColor;
-		padding-bottom: 15px;
-		text-shadow: 0 1px 2px rgb(0 0 0 / 60%);
-		@include adaptiv-value("font-size", 70, 35, 1);
-	}
-}
-.controls-slider-main {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 30px;
-	@media (max-width: $md3+px) {
-		display: none;
-	}
-
-	// .controls-slider-main__dotts
-	.swiper-button-next::after,
-	.swiper-button-prev::after {
-		font-size: 80px;
-		background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5) 0, rgba(0, 0, 0, 0.0001) 100%);
-		background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.5) 0, rgba(0, 0, 0, 0.0001) 100%);
-		background-image: -webkit-gradient(
-			linear,
-			left top,
-			right top,
-			from(rgba(0, 0, 0, 0.5)),
-			to(rgba(0, 0, 0, 0.0001))
-		);
-		background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0, rgba(0, 0, 0, 0.0001) 100%);
-		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
-		background-repeat: repeat-x;
-	}
-	.swiper-button-next:hover,
-	.swiper-button-prev:hover {
-		color: #098494;
-		transition: opacity 0.2s ease-in-out;
-	}
-
-	.swiper-button-next::before,
-	.swiper-button-prev::before {
-		color: #fff;
-	}
-	&__dotts {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		flex: 1 1 auto;
-		transform: translateY(-100%);
-		@media (min-width: $md2+px) {
-			padding: 0px 20px 0px 0px;
-		}
-		@media (max-width: $md2+px) {
-			justify-content: center;
-		}
-	}
-}
-//</Главный СЛАЙДЕР>=======================================================================================
 
 //<About>=============================================================================================
 .about {
@@ -505,10 +327,23 @@ p {
 .portfolio {
 	min-height: 500px;
 	width: 100%;
-	margin-bottom: 50px;
+	//margin-bottom: 50px;
+	padding-bottom: 50px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	background: url("../img/portfolio/portfolio_bg.jpg");
+	background-size: cover;
+	position: relative;
+	&::before {
+		position: absolute;
+		content: "";
+		height: 100%;
+		width: 100%;
+		background: #a4ceeb9a;
+		top: 0;
+		left: 0;
+	}
 	// .portfolio__container
 	&__container {
 		display: flex;
@@ -518,6 +353,10 @@ p {
 	// .portfolio__title
 	&__title {
 		text-align: center;
+		h2 {
+			color: black;
+		}
+		z-index: 5;
 	}
 }
 .cards-portfolio {
@@ -536,6 +375,11 @@ p {
 	&__content {
 		display: flex;
 		justify-content: center;
+		padding: 10px 0px 20px 0px;
+		p {
+			color: #000;
+		}
+		padding-bottom: 0px;
 	}
 
 	// .cards-portfolio__item
@@ -557,6 +401,7 @@ p {
 			width: 100%;
 			object-fit: cover;
 			object-position: center;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 		}
 		@media (any-hover: hover) {
 			&:hover {
@@ -569,6 +414,15 @@ p {
 	}
 	// .cards-portfolio__actions
 	&__actions {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		&:hover {
+		}
+		@media (max-width: $md3+px) {
+			padding: 0px 0px 0px 0px;
+		}
+
 		@media (any-hover: none) {
 			padding: 15px 0px 0px 0px;
 		}
@@ -580,10 +434,7 @@ p {
 			left: 0;
 			width: 100%;
 			height: 100%;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			transition: all 0.3s ease 0s;
+			transition: all 0.5s ease 0s;
 			background-color: rgba(3, 33, 80, 0.411);
 			z-index: 3;
 		}
@@ -593,8 +444,127 @@ p {
 		span {
 			color: #fff;
 		}
+		@media (max-width: $md3+px) {
+			margin: 0px 0px 30px 0px;
+		}
 	}
 }
+
+/* свойства модального окна по умолчанию */
+.modal {
+	position: fixed; /* фиксированное положение */
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.5); /* цвет фона */
+	z-index: 1050;
+	opacity: 0; /* по умолчанию модальное окно прозрачно */
+	-webkit-transition: opacity 200ms ease-in;
+	-moz-transition: opacity 200ms ease-in;
+	transition: opacity 200ms ease-in; /* анимация перехода */
+	pointer-events: none; /* элемент невидим для событий мыши */
+	margin: 0;
+	padding: 0;
+}
+/* при отображении модального окно */
+.modal:target {
+	opacity: 1; /* делаем окно видимым */
+	pointer-events: auto; /* элемент видим для событий мыши */
+	overflow-y: auto; /* добавляем прокрутку по y, когда элемент не помещается на страницу */
+}
+/* ширина модального окна и его отступы от экрана */
+.modal-dialog {
+	position: relative;
+	width: auto;
+	margin: 10px;
+}
+@media (min-width: 576px) {
+	.modal-dialog {
+		max-width: 500px;
+		margin: 30px auto; /* для отображения модального окна по центру */
+	}
+}
+/* свойства для блока, содержащего контент модального окна */
+.modal-content {
+	position: relative;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	background-color: #fff;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	border-radius: 0.3rem;
+	outline: 0;
+}
+@media (min-width: 768px) {
+	.modal-content {
+		-webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+	}
+}
+/* свойства для заголовка модального окна */
+.modal-header {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	padding: 15px;
+	border-bottom: 1px solid #eceeef;
+}
+.modal-title {
+	margin-top: 0;
+	margin-bottom: 0;
+	line-height: 1.5;
+	font-size: 1.25rem;
+	font-weight: 500;
+}
+/* свойства для кнопки "Закрыть" */
+.close {
+	float: right;
+	font-family: sans-serif;
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 1;
+	color: #000;
+	text-shadow: 0 1px 0 #fff;
+	opacity: 0.5;
+	text-decoration: none;
+}
+/* свойства для кнопки "Закрыть" при нахождении её в фокусе или наведении */
+.close:focus,
+.close:hover {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+	opacity: 0.75;
+}
+/* свойства для блока, содержащего основное содержимое окна */
+.modal-body {
+	position: relative;
+	-webkit-box-flex: 1;
+	-webkit-flex: 1 1 auto;
+	-ms-flex: 1 1 auto;
+	flex: 1 1 auto;
+	padding: 15px;
+	overflow: auto;
+}
+
 //</portfolio>=============================================================================================
 
 //<Карта>============================================================================================================
