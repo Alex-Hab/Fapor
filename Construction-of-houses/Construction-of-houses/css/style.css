@@ -1168,8 +1168,8 @@ body.ie ._ibg img {
      object-fit: contain;
   -o-object-position: center;
      object-position: center;
-  top: 0;
-  left: 0;
+  width: 100%;
+  max-width: 800px;
 }
 
 .button {
