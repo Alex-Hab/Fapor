@@ -1,0 +1,557 @@
+//<МИКСИНЫ>===============================================================================================
+@import "mixins";
+//</МИКСИНЫ>===============================================================================================
+
+//<ШРИФТЫ>===============================================================================================
+
+//<Подключаем шрифты>=======================================================================================
+@import "fonts";
+//</Подключаем шрифты>=======================================================================================
+
+//<Иконочные шрифты>==========================================================================================
+@import "icons";
+//</Иконочные шрифты>==========================================================================================
+
+//<Шрифт по умолчанию>==========================================================================================
+$font-Family: "futuralt";
+$fontSize: 16;
+//</Шрифт по умолчанию>==========================================================================================
+
+//</ШРИФТЫ>=======================================================================================================
+
+//<ПЕРЕМЕННЫЕ>===========================================================================================================
+$minWidth: 320px;
+$maxWidth: 1920;
+$maxWidthContainer: 1700;
+$md1: $maxWidthContainer + 12;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+
+$mainColor: #000;
+$orangeColor: #ff7300;
+$headerColor: #222533;
+$darkGrayColor: #616161;
+$redColor: #ff3c2d;
+$yelowColor: #ffcb0f;
+$logoColor: #7fbeea;
+
+//</ПЕРЕМЕННЫЕ>===========================================================================================================
+
+//<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+@import "null";
+body {
+	color: $mainColor;
+	&._lock {
+		overflow: hidden;
+	}
+	font-family: $font-Family;
+	width: $maxWidth;
+}
+
+//</ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+
+//<ОБОЛОЧКА>===========================================================================================================
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+//</ОБОЛОЧКА>===========================================================================================================
+
+//<ОСНОВНАЯ СЕТКА>===========================================================================================================
+._container {
+	max-width: $maxWidthContainer + px;
+	padding: 0px 15px; //чтобы не прилипало к краям браузера
+	margin: 0px 40px 0px 40px;
+}
+//</ОСНОВНАЯ СЕТКА>===========================================================================================================
+
+//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
+//@import "forms";
+@import "ui";
+//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
+
+//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+//@import "datepicker";
+//@import "lightgallery"; //галерея в popup
+//@import "pagging";
+@import "popup";
+@import "header";
+//@import "footer";
+//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+
+//<ОСНОВНОЙ БЛОК>====================================================================================================
+.button {
+	background-color: $logoColor;
+	height: 50px;
+	width: auto;
+	color: #fff;
+	border-radius: 25px;
+	font-size: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 15px 0px 15px 0px;
+	padding: 0px 10px 0px 10px;
+	border: 1px solid $logoColor;
+	text-transform: uppercase;
+	font-family: $font-Family;
+	font-weight: bold;
+
+	&:hover {
+		border: 1px solid $logoColor;
+		background-color: inherit;
+		transition: all 0.5s ease 0s;
+	}
+}
+h1 {
+	font-size: 40px;
+	font-weight: 700;
+}
+h2 {
+	@include adaptiv-value("font-size", 40, 30, 1);
+	color: $logoColor;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin: 0px 0px 40px 0px;
+	@media (max-width: $md3+px) {
+		margin: 0px 0px 10px 0px;
+	}
+}
+h3 {
+	font-size: 16px;
+	font-weight: 700;
+}
+p {
+	@include adaptiv-value("font-size", 30, 20, 1);
+	color: $headerColor;
+	line-height: 30px;
+	font-weight: bold;
+	padding: 10px 0px 10px 0px;
+	@media (max-width: $md3+px) {
+		padding: 0px 0px 0px 0px;
+		@include adaptiv-value("line-height", 30, 20, 1);
+	}
+}
+//</ОСНОВНОЙ БЛОК>====================================================================================================
+
+//<Главный СЛАЙДЕР>=======================================================================================
+.page {
+	flex: 1 1 auto;
+	margin-top: 100px;
+	@media (max-width: $md2+px) {
+		margin-top: 80px;
+	}
+	@media (max-width: $md3+px) {
+		margin-top: 50px;
+	}
+	// .page__main-slider
+	&__main-slider {
+	}
+}
+.main-slider {
+	max-width: $maxWidth;
+	height: 500px;
+	// .main-slider__container
+	&__container {
+		position: relative;
+		max-height: 100%;
+		@media (min-width: $md2+px) {
+			&::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				width: 100vw;
+				right: 376px;
+				height: 100%;
+			}
+		}
+	}
+
+	// .main-slider__body
+	&__body {
+		min-width: 0;
+		max-height: 100%;
+	}
+
+	// .main-slider__slider
+	&__slider {
+	}
+}
+.slider-main {
+	width: 100%;
+	max-height: 100%;
+	display: flex;
+	justify-content: center;
+
+	// .slider-main__body
+	&__body {
+		overflow: visible;
+		width: 100%;
+		//max-height: 100%;
+		//height: 500px;
+	}
+
+	// .slider-main__slide
+	&__slide {
+		position: relative;
+		min-width: 100%;
+		max-width: 100%;
+		max-height: 100%;
+		height: 500px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	// .slider-main__image
+	&__image {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		overflow: hidden;
+		max-height: 100%;
+		width: 100%;
+		filter: brightness(0.5); //затемнение фона изображения
+
+		img {
+			object-fit: cover;
+			object-position: center;
+		}
+		// .slider-main__controls
+		&__controls {
+			align-self: stretch;
+			margin: 0px 0px 20px 0px;
+			@media (max-width: $md2+px) {
+				margin: 10px 0px 20px 0px;
+			}
+		}
+	}
+
+	// .slider-main__content
+	&__content {
+		font-family: "futuralt";
+		font-weight: bold;
+		min-width: 295px;
+		max-height: 400px;
+		text-align: center;
+		overflow: auto;
+		color: inherit;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		@include adaptiv-value("padding", 24, 15, 1);
+
+		@media (min-width: $md3+px) {
+			position: absolute;
+			min-width: 300px;
+			//@include adaptiv-value("left", 500, 0, 1);
+			@include adaptiv-value("bottom", 500px, 0, 1);
+		}
+		@media (max-width: $md3+px) {
+			width: 100%;
+			position: absolute;
+		}
+
+		/* Если браузер поддерживает backdrop-filter */
+		//@supports ((-webkit-backdrop-filter: blur(31px)) or (backdrop-filter: blur(31px))) {
+		//background: rgba(58, 55, 73, 0.72);
+		//backdrop-filter: blur(31px);
+		//}
+		h1 {
+			font-size: 50px;
+			color: #fff;
+		}
+	}
+
+	// .slider-main__title
+	&__title {
+		font-size: 50px;
+		text-transform: uppercase;
+		font-weight: bold;
+		font-family: $font-Family;
+		font-weight: bold;
+		color: $logoColor;
+		padding-bottom: 15px;
+		text-shadow: 0 1px 2px rgb(0 0 0 / 60%);
+		@include adaptiv-value("font-size", 70, 35, 1);
+	}
+}
+.controls-slider-main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 30px;
+	@media (max-width: $md3+px) {
+		display: none;
+	}
+
+	// .controls-slider-main__dotts
+	.swiper-button-next::after,
+	.swiper-button-prev::after {
+		font-size: 80px;
+		background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5) 0, rgba(0, 0, 0, 0.0001) 100%);
+		background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.5) 0, rgba(0, 0, 0, 0.0001) 100%);
+		background-image: -webkit-gradient(
+			linear,
+			left top,
+			right top,
+			from(rgba(0, 0, 0, 0.5)),
+			to(rgba(0, 0, 0, 0.0001))
+		);
+		background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0, rgba(0, 0, 0, 0.0001) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
+		background-repeat: repeat-x;
+	}
+	.swiper-button-next:hover,
+	.swiper-button-prev:hover {
+		color: #098494;
+		transition: opacity 0.2s ease-in-out;
+	}
+
+	.swiper-button-next::before,
+	.swiper-button-prev::before {
+		color: #fff;
+	}
+	&__dotts {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex: 1 1 auto;
+		transform: translateY(-100%);
+		@media (min-width: $md2+px) {
+			padding: 0px 20px 0px 0px;
+		}
+		@media (max-width: $md2+px) {
+			justify-content: center;
+		}
+	}
+}
+//</Главный СЛАЙДЕР>=======================================================================================
+
+//<About>=============================================================================================
+.about {
+	min-height: 500px;
+
+	//about-container
+	&__container {
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		flex-wrap: wrap;
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+	&__content {
+		flex: 0 1 50%;
+		//text-align: center;
+		font-family: $font-Family;
+		text-align: center;
+		@media (max-width: $md3+px) {
+			flex: 0 1 90%;
+		}
+	}
+	&__image {
+		flex: 0 1 50%;
+		padding: 10px 0px 10px 0px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: url("../img/about/about_bg.png") no-repeat;
+	}
+	&__button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.button-about {
+		color: #000;
+		width: auto;
+	}
+}
+//</About>=============================================================================================
+
+//<Why>=============================================================================================
+.why {
+	min-height: 700px;
+	background: #f2f7fa;
+	display: block;
+
+	// .why__container
+	&__container {
+	}
+
+	// .why__title
+	&__title {
+		text-align: center;
+		h2 {
+			padding: 70px 0px 40px 0px;
+			margin: 0px 0px 0px 0px;
+		}
+	}
+
+	// .why__content
+	&__content {
+		text-align: center;
+		font-size: 15px;
+		font-weight: 400;
+		p {
+			padding: 0px 0px 10px 0px;
+			margin: 0px 0px 0px 0px;
+			font-family: $font-Family;
+			font-size: 15px;
+			font-weight: 400;
+			line-height: 18px;
+		}
+	}
+
+	// .why__columns
+	&__columns {
+	}
+}
+
+.columns-why {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-top: 55px;
+	// .columns-why__column
+
+	&__column {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+		flex: 0 1 23%;
+		padding: 10px 20px 10px 20px;
+		@media (max-width: $md2+px) {
+			flex: 0 1 45%;
+		}
+		@media (max-width: $md3+px) {
+			flex: 0 1 100%;
+		}
+	}
+}
+.column {
+	top: 0;
+	left: 0;
+	&__title {
+		padding-top: 40px;
+		h3 {
+			text-transform: uppercase;
+			margin: 50px 0px 30px 0px;
+			text-align: center;
+		}
+	}
+	&__content {
+		p {
+			text-align: center;
+			padding: 0px 0px 10px 0px;
+			margin: 0px 0px 0px 0px;
+			font-family: $font-Family;
+			font-size: 15px;
+			font-weight: 400;
+			line-height: 18px;
+		}
+	}
+	&__image {
+		width: 100px;
+		height: 100px;
+		border-radius: 100%;
+		box-shadow: 0 0 0 10px #56aae6, 0 0 0 20px $logoColor, 0 0 0 30px #a4cdeb;
+		padding: 38px;
+		font-size: 45px;
+	}
+}
+
+//</Why>=============================================================================================
+
+//<Карта>============================================================================================================
+.map {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	//position: relative;
+	// .map__content
+	&__content {
+		width: 350px;
+		height: 125px;
+		z-index: 15;
+		position: absolute;
+		background-color: #ffffff;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		transform: translate(-120%, 70%);
+	}
+	// .map__title
+	&__title {
+		//color: #fff;
+		font-size: 30px;
+		font-family: $font-Family;
+		padding: 10px 0px 10px 10px;
+		text-align: center;
+	}
+}
+.button {
+}
+//</Карта>============================================================================================================
+
+//Професиональные фотки
+.professional {
+	width: 100%;
+	height: 500px;
+}
+.professional-slider {
+	&__body {
+		//display: flex;
+		//width: 50%;
+		//flex-wrap: wrap;
+		min-width: 0;
+		top: 0;
+		left: 0px;
+	}
+	&__slide {
+		position: relative;
+		min-width: 100%;
+		max-width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@media (max-width: $md3+px) {
+			flex-wrap: wrap;
+		}
+	}
+
+	// .slider-main__image
+	&__image {
+		display: flex;
+		justify-content: center;
+		overflow: hidden;
+		height: 500px;
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+		object-fit: cover;
+		object-position: center;
+
+		img {
+			//max-height: auto;
+			object-fit: cover;
+			object-position: center;
+		}
+		// .slider-main__controls
+		&__controls {
+			align-self: stretch;
+			margin: 0px 0px 20px 0px;
+			@media (max-width: $md2+px) {
+				margin: 10px 0px 20px 0px;
+			}
+		}
+	}
+}

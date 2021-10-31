@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,regular,500,700&display=swap&subset=cirillic-ext");
+body {
+  color: #000;
+  font-size: 15px;
+}
+body._lock {
+  overflow: hidden;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+._container {
+  margin: 0 auto;
+  padding: 0px 20px;
+}

@@ -1,0 +1,31 @@
+.managment{
+	min-height: 651px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	&__title {
+		font-family: "Raleway";
+		padding-bottom: 30px;
+	}
+	&__columns{
+		display: flex;
+		flex-wrap: wrap;
+		padding-top: 40px;
+	}
+	&__column{
+		padding: 0 50px 0 50px;
+		img {
+			padding-bottom: 30px;
+		}
+	}
+	&__name{
+		text-transform: uppercase;
+		font-size: 16px;
+	}
+	&__work{
+		font-size: 14px;
+		color: #b5a263;
+	}
+
+}

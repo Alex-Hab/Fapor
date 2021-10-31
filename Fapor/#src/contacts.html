@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="icon" href="favicon.ico">
+	<title>FAPOR</title>
+	<link href="css/style.min.css" rel="stylesheet">
+</head>
+
+<body>
+	<div class="wrapper">
+		@@include('_header.html',{})
+		<div class="services-page">
+			<div class="services-page__top">
+				<div class="services-page__row">
+					<div class="services-page__header">
+						<h2 class="h2__services">Контакты</h2>
+					</div>
+					<div class="services-page__content">Мы всегда готовы ответить на все интересующие Вас вопросы</div>
+				</div>
+			</div>
+
+			<div class="contacts">
+				<div class="contacts__column-1">
+					<div class="contacts-info">Контактная информация</div>
+					<form action="#" method="post" enctype="multipart/form-data">
+						<input type="text" name="username" placeholder="Введите Ваше имя" value="">
+						<input type="text" name="username" placeholder="Введите e-mail" value="">
+						<textarea name="text" rows="12" placeholder="Напишите текст обращения"></textarea>
+					</form>
+					<button class="contacts__button content-slider__button">
+						<a href="#">Отправить</a>
+					</button>
+					<div class="adress">
+						<p>Город Хабаровск ул.Ленина д.1, телефон: 8-924-888-88-88</p>
+						<p>электронная почта: sam-climate@mail.ru</p>
+					</div>
+				</div>
+				<div class="contacts__column-2">
+					<div class="map" style="width: 100%; max-height: 100%">
+						<script type="text/javascript" charset="utf-8" async
+							src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A21bca07d27a84e8316d4620f5d213d53718c04ffbe65ba517a434c78e3a152cd&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=false"></script>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		@@include('_footer.html',{})
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="js/script.min.js"></script>
+</body>
+
+</html>
