@@ -91,9 +91,9 @@ if (document.querySelector('.slider-portfolio__body')) {
 	new Swiper('.slider-portfolio__body', {
 		//observer: true,
 		//observeParents: true,
-		//slidesPerView: 1,
+		slidesPerView: 1,
 		//watchOverflow: true,
-		//slidesPerGroup: 1,
+		slidesPerGroup: 1,
 		//initialSlide: 0,
 		//centeredSlides: true,
 		//watchOverflow: true,

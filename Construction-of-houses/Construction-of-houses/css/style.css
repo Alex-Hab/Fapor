@@ -285,29 +285,6 @@ body._lock {
   padding: 0px 30px;
 }
 
-._title {
-  font-size: 40px;
-  font-weight: 700;
-  line-height: 120%;
-  text-align: center;
-}
-
-._flyImage._ibg {
-  opacity: 1;
-  position: fixed;
-  z-index: 100;
-  -webkit-transition: all 1s ease 0s;
-  -o-transition: all 1s ease 0s;
-  transition: all 1s ease 0s;
-}
-
-._footer-title {
-  font-size: 24px;
-  line-height: 120.8333333333%;
-  color: #000;
-  font-weight: 700;
-}
-
 .slider-arrows {
   display: -ms-grid;
   display: grid;
@@ -319,11 +296,13 @@ body._lock {
 }
 
 .slider-arrow {
+  height: 50px;
+  width: 50px;
   pointer-events: auto;
   border-radius: 50%;
   height: 48px;
   background-color: rgba(232, 159, 113, 0.3);
-  color: #ff7300;
+  color: #fff;
   font-size: 12px;
   cursor: pointer;
   -webkit-transition: all 0.3s ease 0s;
@@ -1049,29 +1028,6 @@ body.ie ._ibg img {
   height: 30px;
 }
 
-.controls-slider-main .swiper-button-next::after,
-.controls-slider-main .swiper-button-prev::after {
-  font-size: 80px;
-  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.5) 0, rgba(0, 0, 0, 0.0001) 100%);
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(0, rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.0001)));
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0, rgba(0, 0, 0, 0.0001) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#80000000", endColorstr="#00000000", GradientType=1);
-  background-repeat: repeat-x;
-}
-
-.controls-slider-main .swiper-button-next:hover,
-.controls-slider-main .swiper-button-prev:hover {
-  color: #098494;
-  -webkit-transition: opacity 0.2s ease-in-out;
-  -o-transition: opacity 0.2s ease-in-out;
-  transition: opacity 0.2s ease-in-out;
-}
-
-.controls-slider-main .swiper-button-next::before,
-.controls-slider-main .swiper-button-prev::before {
-  color: #fff;
-}
-
 .controls-slider-main__dotts {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1771,14 +1727,6 @@ p {
 }
 
 @media (max-width: 1700px) {
-  ._title {
-    font-size: calc(24px + 16 * ((100vw - 320px) / 1380));
-  }
-
-  ._footer-title {
-    font-size: calc(20px + 4 * ((100vw - 320px) / 1380));
-  }
-
   .menu__sub-link {
     font-size: calc(16px + 4 * ((100vw - 320px) / 1380));
   }
