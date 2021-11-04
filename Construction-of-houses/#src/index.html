@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="favicon.ico">
 		<link rel="stylesheet" href="css/style.min.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 		<title>Ze.строй</title>
@@ -21,6 +22,12 @@
 								<!-- Обязательная оболочка - этот класс указать в js-->
 								<div class="slider-main__body _swiper">
 									<!-- Слайдер + lazy loading + zoom-->
+									<div class="slider-main__controls controls-slider-main slider-arrows">
+										<div class="slider-arrow slider-arrow-prev _icon-arrow-down swiper-button-prev"></div>
+										<div class="slider-arrow slider-arrow-next _icon-arrow-down swiper-button-next"></div>
+									</div>
+									
+									<div class="slider-main__dotts swiper-pagination"></div>
 									<div class="slider-main__slide">
 										<div class="slider-main__image">
 											<img src="img/main-sliders/slider1.jpg" alt="">
@@ -54,7 +61,8 @@
 												<span>Подробности</span>					
 											</button>
 										</a>
-									</div>																
+									</div>	
+																								
 								</div>	
 								<!--<div class="slider-main__controls controls-slider-main">
 									<div class="controls-slider-main__dotts"></div>
@@ -66,7 +74,7 @@
 				<section id="about" class="about">
 					<div class="about__container _container">
 						<div class="about__content">
-							<h2>Добро пожаловать в нашу компанию</h2>
+							<h2>Добро пожаловать на сайт нашей компании</h2>
 							<p>Мы осуществляем строительство малоэтажных домов, коттеджей, бань</p>
 							<p>Выполняем проектирование здания и сметный расчёт</p>		
 							<div class="about__button button-about">							
@@ -124,12 +132,35 @@
 								<div class="column__image">
 									<span class="fa fa-group"></span>
 								</div>
-								<div class="column__title"><h3>Мы профессионалы своего дела</h3></div>
+								<div class="column__title"><h3>Профессионализм</h3></div>
 								<div class="column__content">
 									<p>В нашей команде работают профессионалы в области малоэтажного строительства</p>
 								</div>
 							</div>
 						</div>
+					</div>
+				</section>
+				<section class="contact-form">
+					<div class="contact-form__container _container">
+						<div class="contact-form__title">
+							<h2>У Вас всё ещё остались вопросы?</h2>
+							<h3>Тогда свяжитесь с нами по e-mail</h3>
+						</div>
+						<form class="form" action="mailer/smart.php" method="POST">
+							<label for="name2">Ваше имя:</label>
+							<input type="text" id="name2" name="name" class="form-input" />
+							<label for="phone2">Номер телефона:</label>
+							<input type="text" id="phone2" name="phone" class="form-input" />
+							<label for="email2">E-mail:</label>
+							<input type="text" id="email2" name="email" class="form-input" />
+							<label for="message2">Сообщение:</label>
+							<textarea class="form-input" id="message2" name="message" rows="5"></textarea>
+							<div class="btn">
+								<button class="form-btn button" type="submit">
+									Отправить
+								</button>
+							</div>
+						</form>
 					</div>
 				</section>
 

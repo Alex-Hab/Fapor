@@ -79,38 +79,36 @@ if (document.querySelector('.slider-main__body')) {
 			nextEl: '.slider-main .slider-arrow_next',
 			prevEl: '.slider-main .slider-arrow_prev',
 		},
-		// Dotts
 		pagination: {
 			el: '.controls-slider-main__dotts',
 			clickable: true,
-			//dynamicBullets: true,
-		}
+		},
 	});
 }
 if (document.querySelector('.slider-portfolio__body')) {
 	new Swiper('.slider-portfolio__body', {
-		//observer: true,
-		//observeParents: true,
+		observer: true,
+		observeParents: true,
 		slidesPerView: 1,
-		//watchOverflow: true,
+		watchOverflow: true,
 		slidesPerGroup: 1,
-		//initialSlide: 0,
-		//centeredSlides: true,
-		//watchOverflow: true,
+		initialSlide: 0,
+		centeredSlides: true,
+		watchOverflow: true,
+		speed: 800,
 		loop: true,
+		loopAdditionalSlides: 3,
+		//preloadImages: false,
 		autoHeight: true,
-		// Переключение при клике на слайд
-		//slideToClickedSlide: true,
+		grabCursor: true,
 		//Управление клавиатурой
 		keyboard: {
-			//Включить\выключить
-			//только когда слайдер в пределах вьюпорта
 			onlyInViewport: true,
 		},
 		//Стрелки
 		pagination: {
 			el: ".swiper-pagination",
-			type: "progressbar",
+			clickable: true,
 		},
 		navigation: {
 			nextEl: ".swiper-button-next",
