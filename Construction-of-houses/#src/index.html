@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="icon" href="favicon.ico">
+		<link rel="icon" href="img/favicon.ico">
 		<link rel="stylesheet" href="css/style.min.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 		<title>Ze.строй</title>
@@ -140,30 +140,7 @@
 						</div>
 					</div>
 				</section>
-				<section class="contact-form">
-					<div class="contact-form__container _container">
-						<div class="contact-form__title">
-							<h2>У Вас всё ещё остались вопросы?</h2>
-							<h3>Тогда свяжитесь с нами по e-mail</h3>
-						</div>
-						<form class="form" action="mailer/smart.php" method="POST">
-							<label for="name2">Ваше имя:</label>
-							<input type="text" id="name2" name="name" class="form-input" />
-							<label for="phone2">Номер телефона:</label>
-							<input type="text" id="phone2" name="phone" class="form-input" />
-							<label for="email2">E-mail:</label>
-							<input type="text" id="email2" name="email" class="form-input" />
-							<label for="message2">Сообщение:</label>
-							<textarea class="form-input" id="message2" name="message" rows="5"></textarea>
-							<div class="btn">
-								<button class="form-btn button" type="submit">
-									Отправить
-								</button>
-							</div>
-						</form>
-					</div>
-				</section>
-
+				
 				<!--Секция портфолио-->
 				<section class="portfolio">	
 					<!--Блок с карточками-->				
@@ -201,6 +178,29 @@
 							</div>	
 						</div>
 					</div>
+				</section>
+
+				<!--Секция с формой-->
+				<section class="contact-form">
+					<div class="contact-form__container _container">
+						<div class="contact-form__title">
+							<p>У Вас всё ещё остались вопросы?</p>
+							<p>Тогда свяжитесь с нами по e-mail</p>
+						</div>
+						<div class="contact-form__form">
+							<form class="form" action="mailer/smart.php" method="POST">
+							<input type="text" id="name" placeholder="Ваше имя:" name="name" class="form-input" required/>
+							<input type="text" id="phone" placeholder="Номер телефона:" name="phone" class="form-input" required />
+							<input type="text" id="email" placeholder="E-mail:" name="email" class="form-input" required/>
+							<textarea class="form-input" id="message" placeholder="Сообщение:" name="message" rows="3"></textarea>
+							<div class="btn">
+								<button class="button" type="submit" name="submit">
+									<span>Отправить</span>					
+								</button>
+							</div>
+						</form>
+					</div>
+						</div>
 				</section>
 			</main>
 			@@include('_footer.html',{})
