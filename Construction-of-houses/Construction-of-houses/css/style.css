@@ -1723,9 +1723,13 @@ p {
   overflow: auto;
 }
 
+._no-webp .contact-form{
+  background: url("../img/contact-form/testimonial_bg.jpg") 100% 100% no-repeat; }
+
 .contact-form {
   padding-top: 50px;
   background-color: #f2f7fa;
+  background-size: cover;
 }
 
 .contact-form__container {
@@ -1802,47 +1806,8 @@ p {
   padding: 10px;
 }
 
-.map {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.map__content {
-  width: 350px;
-  height: 125px;
-  z-index: 15;
-  position: absolute;
-  background-color: #ffffff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-transform: translate(-120%, 70%);
-      -ms-transform: translate(-120%, 70%);
-          transform: translate(-120%, 70%);
-}
-
-.map__title {
-  font-size: 30px;
-  font-family: "Poppins";
-  padding: 10px 0px 10px 10px;
-  text-align: center;
+.contacts {
+  height: 500px;
 }
 
 @media (min-width: 576px) {
@@ -2238,3 +2203,5 @@ p {
 ._webp .about__image{ background: url(../img/about/about_bg.webp) no-repeat; }
 
 ._webp .portfolio{ background: url(../img/portfolio/portfolio_bg.webp); }
+
+._webp .contact-form{ background: url(../img/contact-form/testimonial_bg.webp) 100% 100% no-repeat; }
