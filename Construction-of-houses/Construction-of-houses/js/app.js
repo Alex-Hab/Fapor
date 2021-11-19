@@ -1,6 +1,4 @@
-jQuery(function ($) {
-	$("input[name=phone]").mask("+7 (999) 999-99-99");
-});
+
 //BildSlider
 let sliders = document.querySelectorAll('._swiper');
 if (sliders) {
