@@ -25,6 +25,10 @@
 	}
 }
 
+._icon-mail:before {
+	content: "\e90b";
+	color: #fff;
+}
 ._icon-vk:before {
 	content: "\e900";
 	color: #7fbeea;
@@ -45,10 +49,13 @@
 }
 ._icon-location:before {
 	content: "\e909";
+	color: #fff;
 }
 ._icon-phone:before {
 	content: "\e907";
+	color: #fff;
 }
 ._icon-share:before {
 	content: "\e908";
+	color: #fff;
 }

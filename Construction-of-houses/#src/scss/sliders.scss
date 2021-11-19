@@ -33,6 +33,9 @@
 	display: flex;
 	justify-content: center;
 	position: relative;
+	a {
+		color: #fff;
+	}
 
 	// .slider-main__body
 	&__body {
@@ -112,7 +115,10 @@
 			color: #fff;
 		}
 	}
-
+	&__sub-link {
+		padding: 0px 0px 0px 0px;
+		color: #fff;
+	}
 	// .slider-main__title
 	&__title {
 		font-size: 50px;

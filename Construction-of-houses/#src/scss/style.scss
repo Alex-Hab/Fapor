@@ -83,7 +83,7 @@ body {
 @import "popup";
 @import "header";
 @import "sliders";
-//@import "footer";
+@import "footer";
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
 
 //<ОСНОВНОЙ БЛОК>====================================================================================================
@@ -122,7 +122,7 @@ h2 {
 	text-transform: uppercase;
 	font-weight: bold;
 	margin: 0px 0px 40px 0px;
-	padding: 70px 0px 40px 0px;
+	padding: 40px 0px 30px 0px;
 	margin: 0px 0px 0px 0px;
 	@media (max-width: $md2+px) {
 		padding: 40px 0px 20px 0px;
@@ -211,7 +211,7 @@ p {
 
 //<Why>=============================================================================================
 .why {
-	min-height: 600px;
+	min-height: 5ы00px;
 	background: #f2f7fa;
 	display: flex;
 	justify-content: center;
@@ -256,7 +256,7 @@ p {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	margin-top: 55px;
+	margin-top: 25px;
 	@media (max-width: $md2+px) {
 		margin-top: 35px;
 	}
@@ -314,11 +314,12 @@ p {
 		top: 0;
 		left: 0;
 		display: flex;
-		justify-self: center;
+		justify-content: center;
 		align-items: center;
 
 		.fa {
 			color: $darkGrayColor;
+			text-align: center;
 		}
 	}
 }
@@ -568,7 +569,7 @@ p {
 
 //<contact-form>=============================================================================================
 .contact-form {
-	padding-top: 50px;
+	padding: 20px 0px 20px 0px;
 	background-color: #f2f7fa;
 	background: url("../img/contact-form/testimonial_bg.jpg") 100% 100% no-repeat;
 	background-size: cover;
@@ -623,12 +624,91 @@ p {
 		border-radius: 10px;
 		padding: 10px;
 	}
+	.button-form {
+		&:hover {
+			transition: all 0.5s ease 0s;
+			color: #000;
+		}
+	}
 }
 
 //</contact-form>=============================================================================================
 
 //<contact>============================================================================================================
 .contacts {
-	height: 500px;
+	height: 200px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	background: url("../img/contacts/footer_bg.jpg") center no-repeat;
+	background-size: cover;
+	position: relative;
+	&::after {
+		background: rgba(34, 37, 51, 0.9) none repeat scroll 0 0;
+		content: "";
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
+	&__column {
+		flex: 0 1 50%;
+		padding: 0px 40px 0px 40px;
+		z-index: 35;
+		@media (max-width: $md3+px) {
+			padding: 0px 15px 0px 15px;
+			flex: 0 1 100%;
+		}
+		h3 {
+			text-align: center;
+			color: #fff;
+		}
+		p {
+			font-size: 16px;
+			line-height: 16px;
+			text-align: center;
+			color: #fff;
+		}
+	}
 }
+.contacts {
+	// .contacts__column
+	&__column {
+	}
+}
+.column-contacts {
+	// .column-contacts__adress
+	&__adress {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	// .column-contacts__telephone
+	&__telephone {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	// .column-contacts__mail
+	&__mail {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+.social {
+	// .social__item
+	&__item {
+	}
+}
+
+.social-contacts {
+	// .social__list
+	&__list {
+		justify-content: center;
+	}
+}
+
 //</contact>============================================================================================================

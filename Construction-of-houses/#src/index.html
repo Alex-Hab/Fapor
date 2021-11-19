@@ -33,13 +33,13 @@
 										<div class="slider-main__image">
 											<img src="img/main-sliders/slider1.jpg" alt="">
 										</div>
-										<a data-goto=".why" href="#" class="slider-main__content">
+										<div href="#" class="slider-main__content">
 											<div class="slider-main__title">Строительная<br>компания</div>
 											<h1>Ze.Stroy</h1>
 											<button type="button" class="button">
-												<span>Подробности</span>					
+												<a data-goto=".about" href="#" class="slider-main__sub-link">Подробности</a>				
 											</button>
-										</a>
+										</div>
 									</div>	
 									<div class="slider-main__slide">
 										<div class="slider-main__image ">
@@ -78,7 +78,8 @@
 						<div class="about__content">
 							<h2>Добро пожаловать на сайт нашей компании</h2>
 							<p>Мы осуществляем строительство малоэтажных домов, коттеджей, бань</p>
-							<p>Выполняем проектирование здания и сметный расчёт</p>		
+							<p>Выполняем проектирование здания и сметный расчёт</p>	
+							<p>Поможем реализовать Ваши идеи строительства собственного дома</p>	
 							<div class="about__button button-about">							
 								<!--<button class="button-about button">Узнать больше</button>	-->
 							</div>										
@@ -164,7 +165,7 @@
 							<div class="cards-portfolio__item">
 								<img src="img/portfolio/example2/house_2-1.jpg" alt="house_2-1">			
 								<div class="cards-portfolio__content">
-									<p>Двухэтажный котедж из газобетонных блоков</p>
+									<p>Двухэтажный котедж из кирпича</p>
 								</div>						
 								<div class="cards-portfolio__actions">
 									<a href="#popup_2" class="cards-portfolio__button button popup-link"><span>В галерею</span></a>
@@ -173,7 +174,7 @@
 							<div class="cards-portfolio__item">
 								<img src="img/portfolio/example3/house_3-1.jpg" alt="house_3-1">			
 								<div class="cards-portfolio__content">
-									<p>Двухэтажный котедж из газобетонных блоков</p>
+									<p>Одноэтажный дом из газобетонных блоков</p>
 								</div>						
 								<div class="cards-portfolio__actions">
 									<a href="#popup_3" class="cards-portfolio__button button popup-link"><span>В галерею</span></a>
@@ -188,16 +189,16 @@
 					<div class="contact-form__container _container">
 						<div class="contact-form__title">
 							<p>У Вас всё ещё остались вопросы?</p>
-							<p>Тогда свяжитесь с нами по e-mail</p>
+							<p>Тогда отправьте нам сообщение </p>
 						</div>
 						<div class="contact-form__form">
 							<form class="form" action="mailer/smart.php" method="POST">
 							<input type="text" id="name" placeholder="Ваше имя:" name="name" class="form-input" required/>
-							<input type="text" id="phone" placeholder="Номер телефона:" name="phone" class="form-input" required />
+							<input type="text" id="phone" placeholder="Номер телефона:" name="phone" class="form-input tel" required />
 							<input type="text" id="email" placeholder="E-mail:" name="email" class="form-input" required/>
 							<textarea class="form-input" id="message" placeholder="Сообщение:" name="message" rows="3"></textarea>
 							<div class="btn">
-								<button class="button" type="submit" name="submit">
+								<button class="button button-form" type="submit" name="submit">
 									<span>Отправить</span>					
 								</button>
 							</div>
@@ -208,7 +209,37 @@
 
 				<!--Секция с контактами-->
 				<section class="contacts">
-
+					<div class="contacts__column column-info">
+						<h3>Строительная компания Ze.Stroy</h3>
+						<p>Строительство малоэтажных домов, коттеджей, бань.<br>Проектирование зданий,сметный расчёт.<br>Сооружение фундамента и кровли.</p>
+						<div class="contacts__social social-contacts social">
+							<ul class="social-contacts__list social__list ">
+								<li class="social__item">
+									<a href="#" class="social__item _icon-facebook"></a>
+								</li>
+								<li class="social__item">
+									<a href="https://www.instagram.com/ze.stroy/" class="social-header__item _icon-instagram"></a>
+								</li>
+								<li class="social__item">
+									<a href="#" class="vk _icon-vk"></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="contacts__column column-contacts">
+						<div class="column-contacts__adress">
+							<a href="#" class="social__item _icon-location"></a>
+							<p>Город Хабаровск, ул.Блюхера</p>
+						</div>
+						<div class="column-contacts__telephone">
+							<a href="#" class="social__item _icon-phone"></a>
+							<p>8-924-204-65-97</p>
+						</div>
+						<div class="column-contacts__mail">
+							<a href="#" class="social__item _icon-mail"></a>
+							<p>Egor@mail.ru</p>
+						</div>
+					</div>
 				</section>
 			</main>
 			@@include('_footer.html',{})

@@ -1,0 +1,11 @@
+.footer {
+	height: 50px;
+	background-color: $headerColor;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	p {
+		font-size: 16px;
+		color: $logoColor;
+	}
+}
