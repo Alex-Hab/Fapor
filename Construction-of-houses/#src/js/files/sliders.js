@@ -45,10 +45,20 @@ if (document.querySelector('.slider-main__body')) {
 		watchOverflow: true,
 		speed: 800,
 		loop: true,
-		loopAdditionalSlides: 3,
+		loopAdditionalSlides: 1,
 		preloadImages: false,
 		parallax: true,
 		autoHeight: true,
+		// Включение / Отключение 
+		// перетаскивание на ПК
+		simulateTouch: true,
+		// Чувствительность свайба
+		touchRatio: 1,
+		// Угол срабатывания свайпа /перетаскивания
+		touchAngle: 45,
+		// Курсор перетаскивания
+		grabCursor: true,
+
 		// Переключение при клике на слайд
 		slideToClickedSlide: true,
 		//Управление клавиатурой
@@ -70,9 +80,9 @@ if (document.querySelector('.slider-main__body')) {
 		},
 		autoplay: {
 			//Пауза между прокруткой
-			delay: 3000,
+			//delay: 3000,
 			//Закончить на последнем слайде
-			stopOnLastSlide: true,
+			stopOnLastSlide: false,
 		},
 		//Стрелки
 		navigation: {
@@ -100,7 +110,18 @@ if (document.querySelector('.slider-portfolio__body')) {
 		loopAdditionalSlides: 3,
 		//preloadImages: false,
 		autoHeight: true,
+		// Включение / Отключение 
+		// перетаскивание на ПК
+		simulateTouch: true,
+		// Чувствительность свайба
+		touchRatio: 1,
+		// Угол срабатывания свайпа /перетаскивания
+		touchAngle: 45,
+		// Курсор перетаскивания
 		grabCursor: true,
+
+		// Переключение при клике на слайд
+		slideToClickedSlide: true,
 		//Управление клавиатурой
 		keyboard: {
 			onlyInViewport: true,
