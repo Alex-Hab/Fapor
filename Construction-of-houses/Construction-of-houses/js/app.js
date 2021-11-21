@@ -36,10 +36,10 @@ function sliders_bild_callback(params) { }
 
 if (document.querySelector('.slider-main__body')) {
 	new Swiper('.slider-main__body', {
-		observer: true,
-		observeParents: true,
+		//observer: true,
+		//observeParents: true,
 		slidesPerView: 1,
-		watchOverflow: true,
+		//watchOverflow: true,
 		slidesPerGroup: 1,
 		initialSlide: 0,
 		centeredSlides: true,
@@ -47,12 +47,12 @@ if (document.querySelector('.slider-main__body')) {
 		speed: 800,
 		loop: true,
 		loopAdditionalSlides: 1,
-		preloadImages: false,
+		//preloadImages: false,
 		parallax: true,
 		autoHeight: true,
 		// Включение / Отключение 
 		// перетаскивание на ПК
-		simulateTouch: true,
+		//simulateTouch: true,
 		// Чувствительность свайба
 		touchRatio: 1,
 		// Угол срабатывания свайпа /перетаскивания
@@ -61,14 +61,14 @@ if (document.querySelector('.slider-main__body')) {
 		grabCursor: true,
 
 		// Переключение при клике на слайд
-		slideToClickedSlide: true,
+		//slideToClickedSlide: true,
 		//Управление клавиатурой
 		keyboard: {
 			//Включить\выключить
 			//только когда слайдер в пределах вьюпорта
 			onlyInViewport: true,
 		},
-		grabCursor: true,
+		//grabCursor: true,
 		effect: "creative",
 		creativeEffect: {
 			prev: {
@@ -81,9 +81,7 @@ if (document.querySelector('.slider-main__body')) {
 		},
 		autoplay: {
 			//Пауза между прокруткой
-			//delay: 3000,
-			//Закончить на последнем слайде
-			stopOnLastSlide: false,
+			delay: 3000,
 		},
 		//Стрелки
 		navigation: {
