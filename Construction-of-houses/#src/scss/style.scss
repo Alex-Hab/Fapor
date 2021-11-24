@@ -594,6 +594,8 @@ p {
 			flex: 0 1 100%;
 		}
 	}
+
+	// .contact-form__form
 	&__form {
 		flex: 0 1 40%;
 		display: flex;
@@ -602,7 +604,7 @@ p {
 		@media (max-width: $md3+px) {
 			flex: 0 1 100%;
 		}
-		.form {
+		form {
 			width: 90%;
 			display: flex;
 			justify-content: center;
@@ -613,8 +615,7 @@ p {
 			text-align: center;
 		}
 	}
-	.form-input,
-	.form-textarea {
+	.form-input {
 		text-align: center;
 		display: block;
 		margin: 10px 0;
@@ -623,6 +624,10 @@ p {
 		border: 1px solid #dddddd;
 		border-radius: 10px;
 		padding: 10px;
+		resize: vertical;
+	}
+	.form-input._error {
+		box-shadow: 0 0 15px red;
 	}
 	.button-form {
 		&:hover {
@@ -631,7 +636,66 @@ p {
 		}
 	}
 }
-
+.form__body {
+	position: relative;
+}
+.form__body::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(51, 51, 51, 0.9) url("../img/loading.gif") center / 50px no-repeat;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.5s ease 0s;
+}
+.form__body._sending::after {
+	opacity: 1;
+	visibility: visible;
+}
+.checkbox {
+	&__input {
+		display: none;
+	}
+	&__label {
+		font-size: 16px;
+		line-height: 140%;
+		display: inline-flex;
+		align-items: center;
+		position: relative;
+		cursor: pointer;
+		&::before {
+			content: "";
+			align-self: flex-start;
+			flex: 0 0 24px;
+			height: 24px;
+			background-color: #fff;
+			border: 1px #000 solid;
+			border-radius: 4px;
+			margin: 0px 10px 0px 0px;
+		}
+		&::after {
+			transition: transform 0.5s ease 0s;
+			content: "";
+			width: 16px;
+			height: 16px;
+			position: absolute;
+			top: 4px;
+			left: 4px;
+			background-color: #000;
+			border-radius: 4px;
+			transform: scale(0);
+		}
+	}
+}
+.checkbox__input:checked + .checkbox__label::after {
+	transform: scale(1);
+}
+.checkbox._error .checkbox__label::before {
+	box-shadow: 0 0 15px red;
+}
 //</contact-form>=============================================================================================
 
 //<contact>============================================================================================================
