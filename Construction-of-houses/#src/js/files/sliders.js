@@ -38,9 +38,9 @@ if (document.querySelector('.slider-main__body')) {
 		loop: true,
 		loopAdditionalSlides: 1,
 		preloadImages: false,
-		parallax: true,
 		autoHeight: true,
-		// Включение / Отключение 
+		simulateTouch: true,
+
 		// перетаскивание на ПК
 		simulateTouch: true,
 		// Чувствительность свайба
@@ -58,28 +58,18 @@ if (document.querySelector('.slider-main__body')) {
 			//только когда слайдер в пределах вьюпорта
 			onlyInViewport: true,
 		},
-		//grabCursor: true,
-		//effect: "creative",
-		//creativeEffect: {
-		//prev: {
-		//shadow: true,
-		//translate: [0, 0, -400],
-		//	},
-		//next: {
-		//	translate: ["100%", 0, 0],
-		//},
-		//},
 		autoplay: {
 			//Пауза между прокруткой
-			delay: 2500,
+			delay: 3000,
 		},
 		//Стрелки
 		navigation: {
-			nextEl: '.slider-main .slider-arrow_next',
-			prevEl: '.slider-main .slider-arrow_prev',
+			nextEl: '.slider-arrow-prev',
+			prevEl: '.slider-arrow-prev',
 		},
+		// Dotts
 		pagination: {
-			el: '.controls-slider-main__dotts',
+			el: '.slider-main__dotts',
 			clickable: true,
 		},
 	});

@@ -27,7 +27,7 @@ window.onload = function () {
 			addToCart(targetElement, productId);
 			e.preventDefault();
 		}
-		//на 03.58
+
 		if (targetElement.classList.contains('cart-header__icon') || targetElement.closest('.cart-header__icon')) {
 			if (document.querySelector('.cart-list').children.length > 0) {
 				document.querySelector('.cart-header').classList.toggle('_active');
@@ -62,17 +62,17 @@ window.onload = function () {
 
 	// Load More Products
 	async function getProducts(button) {
-		if (!button.classList.contains('_hold')) {//если у кнопки нет класса _hold
-			button.classList.add('_hold');//то добовляем класс _hold
-			const file = "json/products.json";//указываем путь к файлу json
-			let response = await fetch(file, {//выполняем GET-запрос этого файла
+		if (!button.classList.contains('_hold')) {
+			button.classList.add('_hold');
+			const file = "json/products.json";
+			let response = await fetch(file, {
 				method: "GET"
 			});
-			if (response.ok) {//проверяем есть ли файл json
-				let result = await response.json();//подгружаем содержание файла в переменныю result
-				loadProducts(result);//результат отправляем в функцию loadProducts
-				button.classList.remove('_hold');//убираем класс у кнопки
-				button.remove();//если файла нет то выводим ошибку
+			if (response.ok) {
+				let result = await response.json();
+				loadProducts(result);
+				button.classList.remove('_hold');
+				button.remove();
 			} else {
 				alert("Ошибка");
 			}
@@ -83,7 +83,7 @@ window.onload = function () {
 		const productsItems = document.querySelector('.products__items');
 
 		data.products.forEach(item => {
-			const productId = item.id;//эта константа получит id товара
+			const productId = item.id;
 			const productUrl = item.url;
 			const productImage = item.image;
 			const productTitle = item.title;
@@ -181,26 +181,26 @@ window.onload = function () {
 			const product = document.querySelector(`[data-pid="${productId}"]`);
 			const productImage = product.querySelector('.item-product__image');
 
-			const productImageFly = productImage.cloneNode(true);//создаём клона карточки товара
+			const productImageFly = productImage.cloneNode(true);
 
-			const productImageFlyWidth = productImage.offsetWidth;//Получаем ширину оригинальной картинку
+			const productImageFlyWidth = productImage.offsetWidth;
 			const productImageFlyHeight = productImage.offsetHeight;
-			const productImageFlyTop = productImage.getBoundingClientRect().top;//Получаем позицию картинки сверху и слева
+			const productImageFlyTop = productImage.getBoundingClientRect().top;
 			const productImageFlyLeft = productImage.getBoundingClientRect().left;
 
 			productImageFly.setAttribute('class', '_flyImage _ibg');
-			productImageFly.style.cssText = //присвоение размеров
+			productImageFly.style.cssText =
 				`
-			left: ${productImageFlyLeft}px; 
+			left: ${productImageFlyLeft}px;
 			top: ${productImageFlyTop}px;
 			width: ${productImageFlyWidth}px;
 			height: ${productImageFlyHeight}px;
 		`;
 
-			document.body.append(productImageFly); //отправление клона в корзину
+			document.body.append(productImageFly);
 
-			const cartFlyLeft = cart.getBoundingClientRect().left; //позиция слева
-			const cartFlyTop = cart.getBoundingClientRect().top; //позиция сверху
+			const cartFlyLeft = cart.getBoundingClientRect().left;
+			const cartFlyTop = cart.getBoundingClientRect().top;
 
 			productImageFly.style.cssText =
 				`
@@ -211,9 +211,9 @@ window.onload = function () {
 			opacity:0;
 		`;
 
-			productImageFly.addEventListener('transitionend', function () { //вывод количества в корзине
-				if (productButton.classList.contains('_fly')) { //проверка наличия класса fly
-					productImageFly.remove(); //удаление долетевшего до корзины клона
+			productImageFly.addEventListener('transitionend', function () {
+				if (productButton.classList.contains('_fly')) {
+					productImageFly.remove();
 					updateCart(productButton, productId);
 					productButton.classList.remove('_fly');
 				}
@@ -221,25 +221,24 @@ window.onload = function () {
 		}
 	}
 
-	function updateCart(productButton, productId, productAdd = true) { //добавление в корзину
+	function updateCart(productButton, productId, productAdd = true) {
 		const cart = document.querySelector('.cart-header');
 		const cartIcon = cart.querySelector('.cart-header__icon');
 		const cartQuantity = cartIcon.querySelector('span');
-		const cartProduct = document.querySelector(`[data-cart-pid="${productId}"]`);//товар находящийся в списке корзины
-		const cartList = document.querySelector('.cart-list');//оболочка списка товаров
+		const cartProduct = document.querySelector(`[data-cart-pid="${productId}"]`);
+		const cartList = document.querySelector('.cart-list');
 
 		//Добавляем
-		if (productAdd) { //проверяем существует ли span
+		if (productAdd) {
 			if (cartQuantity) {
-				cartQuantity.innerHTML = ++cartQuantity.innerHTML; //если существует span то увеличиваем его содержимое на 1
+				cartQuantity.innerHTML = ++cartQuantity.innerHTML;
 			} else {
-				cartIcon.insertAdjacentHTML('beforeend', `<span>1</span>`);//если не существует тогда создаём этот span со значением 1
+				cartIcon.insertAdjacentHTML('beforeend', `<span>1</span>`);
 			}
-			if (!cartProduct) { //проверяем существование добавленного товара
+			if (!cartProduct) {
 				const product = document.querySelector(`[data-pid="${productId}"]`);
 				const cartProductImage = product.querySelector('.item-product__image').innerHTML;
 				const cartProductTitle = product.querySelector('.item-product__title').innerHTML;
-				//если нет то формируется этот список
 				const cartProductContent = `
 			<a href="" class="cart-list__image _ibg">${cartProductImage}</a>
 			<div class="cart-list__body">
@@ -247,25 +246,24 @@ window.onload = function () {
 				<div class="cart-list__quantity">Quantity: <span>1</span></div>
 				<a href="" class="cart-list__delete">Delete</a>
 			</div>`;
-				//интеграция выше указанного в html код	
 				cartList.insertAdjacentHTML('beforeend', `<li data-cart-pid="${productId}" class="cart-list__item">${cartProductContent}</li>`);
 			} else {
 				const cartProductQuantity = cartProduct.querySelector('.cart-list__quantity span');
 				cartProductQuantity.innerHTML = ++cartProductQuantity.innerHTML;
 			}
 
-			// После всех действий убираем класс hold
+			// После всех действий
 			productButton.classList.remove('_hold');
-		} else {  //удаление из корзины
+		} else {
 			const cartProductQuantity = cartProduct.querySelector('.cart-list__quantity span');
-			cartProductQuantity.innerHTML = --cartProductQuantity.innerHTML; //уменьшение количества на 1
+			cartProductQuantity.innerHTML = --cartProductQuantity.innerHTML;
 			if (!parseInt(cartProductQuantity.innerHTML)) {
 				cartProduct.remove();
 			}
 
 			const cartQuantityValue = --cartQuantity.innerHTML;
 
-			if (cartQuantityValue) { //если количество больше 0 то изменяем количество в кружке
+			if (cartQuantityValue) {
 				cartQuantity.innerHTML = cartQuantityValue;
 			} else {
 				cartQuantity.remove();
@@ -276,9 +274,9 @@ window.onload = function () {
 
 	// Furniture Gallery
 	const furniture = document.querySelector('.furniture__body');
-	if (furniture && !isMobile.any()) { //проверка существования .furniture__body
+	if (furniture && !isMobile.any()) {
 		const furnitureItems = document.querySelector('.furniture__items');
-		const furnitureColumn = document.querySelectorAll('.furniture__column');//считает количество колонок
+		const furnitureColumn = document.querySelectorAll('.furniture__column');
 
 		// Скорость анимации
 		const speed = furniture.dataset.speed;
@@ -307,7 +305,6 @@ window.onload = function () {
 				furniture.classList.remove('_init');
 			}
 		}
-		//Прослушка движения мыши
 		furniture.addEventListener("mousemove", function (e) {
 			// Получение ширины
 			const furnitureWidth = furniture.offsetWidth;

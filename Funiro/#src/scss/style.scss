@@ -75,7 +75,7 @@ body {
 
 //<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
 //@import "datepicker";
-@import "lightgallery"; //галерея в popup
+@import "lightgallery";
 //@import "pagging";
 @import "popup";
 @import "header";
@@ -373,10 +373,7 @@ body {
 	&__items {
 		display: grid;
 		gap: 32px;
-		//gap это отступы по горизонтали и по вертикали
 		grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
-		//autofit - распространит товар по всему контейнеру, minmax это минимальный и максимальный размер ячейки
-		//1fr это 1 фрагмент
 	}
 	// .products__item
 	&__item {
@@ -446,7 +443,7 @@ body {
 	}
 	// .item-product__body
 	&__body {
-		flex: 1 1 auto; //чтобы при увеличении объёма текста увеличился и контейнер
+		flex: 1 1 auto;
 		padding: 16px 16px 30px 16px;
 		display: flex;
 		flex-direction: column;
@@ -600,7 +597,7 @@ body {
 	// .rooms__slider
 	&__slider {
 		flex: 1 1 auto;
-		min-width: 0; //чтобф нормально работал swiper
+		min-width: 0;
 		align-self: flex-start;
 		@media (max-width: $md4+px) {
 			margin: 0px -15px;
@@ -611,7 +608,7 @@ body {
 	position: relative;
 	// .slider-rooms__body
 	&__body {
-		overflow: visible; //для показа слайдов за пределами контейнера
+		overflow: visible;
 		position: relative;
 		&::before {
 			content: "";
@@ -627,13 +624,13 @@ body {
 	}
 	// .slider-rooms__slide
 	&__slide {
-		width: 372px; //фиксированная ширина слайда
+		width: 372px;
 		position: relative;
-		overflow: hidden; //поможет более качественно показывать анимацию появления
+		overflow: hidden;
 		@include adaptiv-value("min-height", 585, 400, 1);
 		&.swiper-slide-active {
 			.slider-rooms__image {
-				height: 100%; //размер активного слайда
+				height: 100%;
 			}
 		}
 		@media (max-width: $md4+px) {
@@ -642,10 +639,10 @@ body {
 	}
 	// .slider-rooms__image
 	&__image {
-		transition: height 0.8s ease 0s; //изменение высоты слайда
+		transition: height 0.8s ease 0s;
 		height: 100%;
 		@media (min-width: $md3+px) {
-			height: 83%; //уменьшение не активных слайдов
+			height: 83%;
 		}
 	}
 	// .slider-rooms__content
@@ -657,7 +654,7 @@ body {
 		@include adaptiv-value("bottom", 24, 15, 1);
 		@include adaptiv-value("padding", 32, 15, 1);
 		background: rgba(255, 255, 255, 0.9);
-		// Если браузер поддерживает backdrop-filter
+		/* Если браузер поддерживает backdrop-filter */
 		@supports ((-webkit-backdrop-filter: blur(31px)) or (backdrop-filter: blur(31px))) {
 			background: rgba(255, 255, 255, 0.72);
 			backdrop-filter: blur(31px);
@@ -753,7 +750,6 @@ body {
 	position: relative;
 	// .slider-tips__body
 	&__body {
-		//для того чтобы не обрезать тени карточки
 		@include adaptiv-value("margin-left", -32, -15, 1);
 		@include adaptiv-value("margin-right", -32, -15, 1);
 		@include adaptiv-value("padding", 32, 15, 1);
@@ -859,8 +855,8 @@ body {
 	// .furniture__items
 	&__items {
 		display: grid;
-		grid-template-columns: auto; //
-		grid-auto-flow: column; //по умолчанию наращиваются колонки
+		grid-template-columns: auto;
+		grid-auto-flow: column;
 		align-items: center;
 		gap: 16px;
 		@media (any-hover: hover) {
@@ -881,7 +877,7 @@ body {
 	&__row {
 		display: inline-grid;
 		padding: 0px 8px;
-		gap: 16px; //отступ
+		gap: 16px;
 		grid-template-columns: auto;
 		grid-auto-flow: column;
 		&:not(:last-child) {
@@ -917,7 +913,7 @@ body {
 		@media (any-hover: hover) {
 			img {
 				transition: all 0.8s ease 0s;
-				filter: grayscale(1); //бесцветность
+				filter: grayscale(1);
 			}
 			&:hover {
 				img {

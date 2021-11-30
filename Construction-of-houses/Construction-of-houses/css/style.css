@@ -313,57 +313,6 @@ body._lock {
   padding: 0px 30px;
 }
 
-.slider-arrows {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (48px)[2];
-  grid-template-columns: repeat(2, 48px);
-  -webkit-column-gap: 100%;
-     -moz-column-gap: 100%;
-          column-gap: 100%;
-}
-
-.slider-arrow {
-  height: 100%;
-  pointer-events: auto;
-  color: red;
-  font-size: 16px;
-  cursor: pointer;
-  -webkit-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.slider-arrow-next::before {
-  -webkit-transform: rotate(-90deg);
-      -ms-transform: rotate(-90deg);
-          transform: rotate(-90deg);
-  z-index: 31px;
-}
-
-.slider-arrow-prev::before {
-  -webkit-transform: rotate(90deg);
-      -ms-transform: rotate(90deg);
-          transform: rotate(90deg);
-}
-
-.swiper-pagination-bullets {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
 .swiper-pagination-bullet {
   cursor: pointer;
   -webkit-box-flex: 0;
@@ -952,6 +901,8 @@ body.ie ._ibg img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1017,19 +968,23 @@ body.ie ._ibg img {
      object-position: center;
 }
 
-.slider-main__controls {
+.slider-main__dotts {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 100%;
+          flex: 0 1 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: absolute;
-  width: 100%;
-  height: 100%;
+  z-index: 500;
+  -webkit-transform: translateY(-50px);
+      -ms-transform: translateY(-50px);
+          transform: translateY(-50px);
 }
 
 .slider-main__content {
@@ -2150,10 +2105,6 @@ p {
 
   .menu__sub-link:hover {
     border-bottom: none;
-  }
-
-  .slider-main__controls {
-    margin: 10px 0px 20px 0px;
   }
 
   h2 {
