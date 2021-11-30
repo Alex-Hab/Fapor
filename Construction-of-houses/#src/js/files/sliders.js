@@ -18,15 +18,6 @@ if (sliders) {
 			slider.innerHTML = '';
 			slider.appendChild(slider_wrapper);
 			slider.classList.add('swiper-bild');
-
-			if (slider.classList.contains('_swiper_scroll')) {
-				let sliderScroll = document.createElement('div');
-				sliderScroll.classList.add('swiper-scrollbar');
-				slider.appendChild(sliderScroll);
-			}
-		}
-		if (slider.classList.contains('_gallery')) {
-			//slider.data('lightGallery').destroy(true);
 		}
 	}
 	sliders_bild_callback();
@@ -35,10 +26,10 @@ function sliders_bild_callback(params) { }
 
 if (document.querySelector('.slider-main__body')) {
 	new Swiper('.slider-main__body', {
-		//observer: true,
-		//observeParents: true,
+		observer: true,
+		observeParents: true,
 		slidesPerView: 1,
-		//watchOverflow: true,
+		watchOverflow: true,
 		slidesPerGroup: 1,
 		initialSlide: 0,
 		centeredSlides: true,
@@ -46,12 +37,12 @@ if (document.querySelector('.slider-main__body')) {
 		speed: 800,
 		loop: true,
 		loopAdditionalSlides: 1,
-		//preloadImages: false,
+		preloadImages: false,
 		parallax: true,
 		autoHeight: true,
 		// Включение / Отключение 
 		// перетаскивание на ПК
-		//simulateTouch: true,
+		simulateTouch: true,
 		// Чувствительность свайба
 		touchRatio: 1,
 		// Угол срабатывания свайпа /перетаскивания
@@ -60,7 +51,7 @@ if (document.querySelector('.slider-main__body')) {
 		grabCursor: true,
 
 		// Переключение при клике на слайд
-		//slideToClickedSlide: true,
+		slideToClickedSlide: true,
 		//Управление клавиатурой
 		keyboard: {
 			//Включить\выключить
@@ -68,19 +59,19 @@ if (document.querySelector('.slider-main__body')) {
 			onlyInViewport: true,
 		},
 		//grabCursor: true,
-		effect: "creative",
-		creativeEffect: {
-			prev: {
-				shadow: true,
-				translate: [0, 0, -400],
-			},
-			next: {
-				translate: ["100%", 0, 0],
-			},
-		},
+		//effect: "creative",
+		//creativeEffect: {
+		//prev: {
+		//shadow: true,
+		//translate: [0, 0, -400],
+		//	},
+		//next: {
+		//	translate: ["100%", 0, 0],
+		//},
+		//},
 		autoplay: {
 			//Пауза между прокруткой
-			delay: 3000,
+			delay: 2500,
 		},
 		//Стрелки
 		navigation: {
