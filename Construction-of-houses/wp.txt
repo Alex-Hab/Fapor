@@ -1,0 +1,7 @@
+имя бд - Construction-of-houses
+имя пользователя - admin
+пароль - 0912
+
+название сайта - Ze.Stroy
+имя пользователя - egor
+пароль - Ze.Stroy

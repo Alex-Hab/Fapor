@@ -981,7 +981,7 @@ body.ie ._ibg img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  z-index: 500;
+  z-index: 19;
   -webkit-transform: translateY(-50px);
       -ms-transform: translateY(-50px);
           transform: translateY(-50px);
@@ -1938,7 +1938,7 @@ p {
       -ms-flex: 0 1 50%;
           flex: 0 1 50%;
   padding: 0px 40px 0px 40px;
-  z-index: 35;
+  z-index: 1;
 }
 
 .contacts__column h3 {
