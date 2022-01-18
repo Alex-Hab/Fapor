@@ -70,7 +70,12 @@ if (document.querySelector('.slider-main__body')) {
 		navigation: {
 			nextEl: '.slider-main .slider-arrow_next',
 			prevEl: '.slider-main .slider-arrow_prev',
-		}
+		},
+		// Dotts
+		pagination: {
+			el: '.controls-slider-main__dotts',
+			clickable: true,
+		},
 	});
 }
 if (document.querySelector('.slider-professional__body')) {
