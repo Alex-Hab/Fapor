@@ -40,7 +40,9 @@ $buttonColor: #09a66d;
 
 //<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
 @import "null";
+
 body {
+	
 	color: $mainColor;
 	&._lock {
 		overflow: hidden;
@@ -158,13 +160,11 @@ h3 {
 	color: $darkGrayColor;
 }
 p {
-	@include adaptiv-value("font-size", 30, 20, 1);
-	color: $headerColor;
-	font-size: 16px;
+	@include adaptiv-value("font-size", 18, 14, 1);	
+	color: #555555;
 	line-height: 28px;
 	font-weight: 400;
 	padding: 10px 0px 10px 0px;
-	color: $darkGrayColor;
 	@media (max-width: $md3+px) {
 		padding: 0px 0px 0px 0px;
 		@include adaptiv-value("line-height", 30, 20, 1);
@@ -254,7 +254,7 @@ p {
 		justify-content: center;
 		align-items: center;
 		p {
-			font-size: 18px;
+			//font-size: 18px;
 			font-weight: 700;
 			color: #222222;
 			margin: 0px 20px 0px 0px;
@@ -496,4 +496,45 @@ p {
 	min-height: 832px;
 	background-color: #F3FBF8;
 	padding: 85px 100px 85px 100px;
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	// .explore__image
+	&__image {
+		flex: 0 1 40%;
+		
+	}
+	// .explore__content
+	&__content {
+		flex: 0 1 60%;
+		padding: 45px 50px 0px 50px;
+	}
+	// .explore__title
+	&__title {
+		h2{
+			//font-size: 60px;
+		}
+
+	}
+	// .explore__text
+	&__text {
+		padding: 50px 0px 50px 0px;
+	}
+	// .explore__buttton
+	&__button {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		
+		p {
+			font-weight: 700;
+			color: #222222;
+			margin: 0 20px 0 0;			
+		}
+	}
+	&__fresh {
+		position: absolute;
+		transform: translate(30%, -40%);
+		
+	}
 }

@@ -754,13 +754,11 @@ h3 {
 }
 
 p {
-  font-size: 30px;
-  color: #222533;
-  font-size: 16px;
+  font-size: 18px;
+  color: #555555;
   line-height: 28px;
   font-weight: 400;
   padding: 10px 0px 10px 0px;
-  color: #616161;
 }
 
 .page__main {
@@ -876,7 +874,6 @@ p {
 }
 
 .content__button p {
-  font-size: 18px;
   font-weight: 700;
   color: #222222;
   margin: 0px 20px 0px 0px;
@@ -1161,6 +1158,57 @@ p {
   min-height: 832px;
   background-color: #F3FBF8;
   padding: 85px 100px 85px 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.explore__image {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 40%;
+          flex: 0 1 40%;
+}
+
+.explore__content {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 60%;
+          flex: 0 1 60%;
+  padding: 45px 50px 0px 50px;
+}
+
+.explore__text {
+  padding: 50px 0px 50px 0px;
+}
+
+.explore__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.explore__button p {
+  font-weight: 700;
+  color: #222222;
+  margin: 0 20px 0 0;
+}
+
+.explore__fresh {
+  position: absolute;
+  -webkit-transform: translate(30%, -40%);
+      -ms-transform: translate(30%, -40%);
+          transform: translate(30%, -40%);
 }
 
 @media (min-width: 991.98px) {
@@ -1219,7 +1267,7 @@ p {
   }
 
   p {
-    font-size: calc(20px + 10 * ((100vw - 320px) / 1380));
+    font-size: calc(14px + 4 * ((100vw - 320px) / 1380));
   }
 }
 
