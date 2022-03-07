@@ -141,8 +141,8 @@ if (document.querySelector('.slider-main__body')) {
 		},
 		//Стрелки
 		navigation: {
-			nextEl: '.slider-arrow-prev',
-			prevEl: '.slider-arrow-prev',
+			nextEl: '.slider-main .slider-arrow-prev',
+			prevEl: '.slider-main .slider-arrow-prev',
 		},
 		// Dotts
 		pagination: {

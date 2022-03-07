@@ -219,7 +219,7 @@ section {
 }
 
 html {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 html,
@@ -801,7 +801,7 @@ body.ie ._ibg img {
   top: 0;
   left: 0;
   font-family: "Poppins";
-  font-size: 16;
+  font-size: 18;
 }
 
 .menu__item {
@@ -2100,7 +2100,7 @@ p {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .menu__sub-link:hover {
@@ -2132,7 +2132,7 @@ p {
 
 @media (max-width: 991.98px) and (max-width: 1700px) {
   .menu__sub-link {
-    font-size: calc(10px + 6 * ((100vw - 320px) / 1380));
+    font-size: calc(10px + 8 * ((100vw - 320px) / 1380));
   }
 }
 

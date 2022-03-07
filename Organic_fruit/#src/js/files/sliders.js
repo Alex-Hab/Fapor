@@ -24,8 +24,8 @@ if (sliders) {
 }
 function sliders_bild_callback(params) { }
 
-if (document.querySelector('.slider-main__body')) {
-	new Swiper('.slider-main__body', {
+if (document.querySelector('.slider-feedback__body')) {
+	new Swiper('.slider-feedback__body', {
 		observer: true,
 		observeParents: true,
 		slidesPerView: 1,
@@ -34,12 +34,11 @@ if (document.querySelector('.slider-main__body')) {
 		initialSlide: 0,
 		centeredSlides: true,
 		watchOverflow: true,
-		speed: 800,
-		loop: true,
-		loopAdditionalSlides: 1,
+		//speed: 800,
+		//loop: true,
+		//loopAdditionalSlides: 1,
 		preloadImages: false,
 		autoHeight: true,
-		simulateTouch: true,
 
 		// перетаскивание на ПК
 		simulateTouch: true,
@@ -60,59 +59,17 @@ if (document.querySelector('.slider-main__body')) {
 		},
 		autoplay: {
 			//Пауза между прокруткой
-			delay: 3000,
+			//delay: 3000,
 		},
 		//Стрелки
-		navigation: {
-			nextEl: '.slider-main .slider-arrow-prev',
-			prevEl: '.slider-main .slider-arrow-prev',
-		},
+		//navigation: {
+			//nextEl: '.slider-main .slider-arrow-prev',
+			//prevEl: '.slider-main .slider-arrow-prev',
+		//},
 		// Dotts
-		pagination: {
-			el: '.slider-main__dotts',
+		pagination: { 
+			el: '.slider-feedback__dotts',
 			clickable: true,
-		},
-	});
-}
-if (document.querySelector('.slider-portfolio__body')) {
-	new Swiper('.slider-portfolio__body', {
-		observer: true,
-		observeParents: true,
-		slidesPerView: 1,
-		watchOverflow: true,
-		slidesPerGroup: 1,
-		initialSlide: 0,
-		centeredSlides: true,
-		watchOverflow: true,
-		speed: 800,
-		loop: true,
-		loopAdditionalSlides: 3,
-		//preloadImages: false,
-		autoHeight: true,
-		// Включение / Отключение 
-		// перетаскивание на ПК
-		simulateTouch: true,
-		// Чувствительность свайба
-		touchRatio: 1,
-		// Угол срабатывания свайпа /перетаскивания
-		touchAngle: 45,
-		// Курсор перетаскивания
-		grabCursor: true,
-
-		// Переключение при клике на слайд
-		slideToClickedSlide: true,
-		//Управление клавиатурой
-		keyboard: {
-			onlyInViewport: true,
-		},
-		//Стрелки
-		pagination: {
-			el: ".swiper-pagination",
-			clickable: true,
-		},
-		navigation: {
-			nextEl: ".swiper-button-next",
-			prevEl: ".swiper-button-prev",
 		},
 	});
 }
