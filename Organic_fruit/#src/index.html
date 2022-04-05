@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="img/favicon.ico" />
     <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
@@ -182,42 +183,34 @@
             </div>
           </div>
         </section>
-        <section class="feedback">
+        <section class="feedback-slider">
           <!--Флекс контейнер-->
           <div class="feedback-slider__container">
             <!--Флекс элемент-->
             <div class="feedback-slider__body">
               <!-- Главный контейнер -->
-              <div class="feedback-slider__slider slider-feedback">
+              <div class="feedback-slider slider-feedback">
+                <!-- Обязательная оболочка - этот класс указать в js-->
                 <div class="slider-feedback__body _swiper">
-                  <div class="slider-feedback__slide">
-                     <div class="slider-feedback__image">
-                        <img src="img/feedback-slider/feedback-man.png" alt="feedback-man.png"/>
-                     </div>
-                     <div class="slider-feedback__content">
-                        <div class="slider-feedback__title">Строительная компания</div>
-                     </div>
-                  </div>
-						<div class="slider-feedback__slide">
-                     <div class="slider-feedback__image">
-                      <img
-                        src="img/feedback-slider/feedback-man.png"
-                        alt="feedback-man.png"
-                      />
-                     </div>
-                     <div class="slider-feedback__content">
-                      <div class="slider-feedback__title">
-                        Строительная<br />компания
+                  <div class="swiper-wrapper">
+                    <div class="slider-feedback__slide">
+                      <div class="slider-feedback__image">
+                        <img
+                          src="img/feedback-slider/feedback-man.png"
+                          alt=""
+                        />
                       </div>
-                      <button type="button" class="button">
-                        <a href="" class="slider-feedback__sub-link"
-                          >Подробности</a
-                        >
-                      </button>
-                     </div>
+                    </div>
+                    <div class="slider-feedback__slide">
+                      <div class="slider-feedback__image">
+                        <img
+                          src="img/feedback-slider/feedback-man.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div class="slider-feedback__dotts"></div>
               </div>
             </div>
           </div>

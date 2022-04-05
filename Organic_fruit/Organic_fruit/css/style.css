@@ -225,10 +225,6 @@ body._lock {
   padding: 0px 100px;
 }
 
-._swiper {
-  overflow: hidden;
-}
-
 .header {
   width: 100%;
   top: 0;
@@ -1087,10 +1083,6 @@ p {
   -webkit-transform: translate(30%, -40%);
       -ms-transform: translate(30%, -40%);
           transform: translate(30%, -40%);
-}
-
-.slider-feedback {
-  height: 700px;
 }
 
 @media (min-width: 767.98px) {
