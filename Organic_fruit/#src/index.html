@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="img/favicon.ico" />
     <link rel="stylesheet" href="css/style.min.css" />
-    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
@@ -191,24 +194,54 @@
               <!-- Главный контейнер -->
               <div class="feedback-slider slider-feedback">
                 <!-- Обязательная оболочка - этот класс указать в js-->
-                <div class="slider-feedback__body _swiper">
-                  <div class="swiper-wrapper">
-                    <div class="slider-feedback__slide">
-                      <div class="slider-feedback__image">
-                        <img
-                          src="img/feedback-slider/feedback-man.png"
-                          alt=""
-                        />
+                <div class="slider-feedback__body swiper">
+                  <div class="slider-feedback__wrapper swiper-wrapper">
+                    <div class="slider-feedback__slide swiper-slide">
+                      <div class="slider-feedback__content">
+                        <div class="slider-feedback__title">
+                          <h2>Что говорят О Нас Наши Клиенты</h2>
+                        </div>
+                        <div class="slider-feedback__text">
+                          <p>
+                            Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry. Lorem Ipsum has been the
+                            industry's standard dummy text ever since the 1500s,
+                            when an unknown printer took a galley of type and
+                            scrambled it to make a type specimen book. It has
+                            survived not only five centuries, but also the leap
+                            into electronic typesetting, remaining essentially
+                            unchanged. It was popularis
+                          </p>
+                        </div>
                       </div>
-                    </div>
-                    <div class="slider-feedback__slide">
                       <div class="slider-feedback__image">
-                        <img
-                          src="img/feedback-slider/feedback-man.png"
-                          alt=""
-                        />
-                      </div>
+								 <img src="img/feedback-slider/feedback-man.png" alt="">
+							 </div>
                     </div>
+                    <div class="slider-feedback__slide swiper-slide">
+                      <div class="slider-feedback__content">
+                        <div class="slider-feedback__title">
+                          <h2>Что говорят О Нас Наши Клиенты</h2>
+                        </div>
+                        <div class="slider-feedback__text">
+                          <p>
+                            Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry. Lorem Ipsum has been the
+                            industry's standard dummy text ever since the 1500s,
+                            when an unknown printer took a galley of type and
+                            scrambled it to make a type specimen book. It has
+                            survived not only five centuries, but also the leap
+                            into electronic typesetting, remaining essentially
+                            unchanged. It was popularis
+                          </p>
+                        </div>
+                      </div>
+							<div class="slider-feedback__image"></div>
+                    </div>
+                  </div>
+                  <div class="slider-feedback__button">
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                   </div>
                 </div>
               </div>

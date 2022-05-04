@@ -148,10 +148,8 @@ DynamicAdapt.prototype.arraySort = function (arr) {
 				if (a.place === "last" || b.place === "first") {
 					return -1;
 				}
-
 				return b.place - a.place;
 			}
-
 			return b.breakpoint - a.breakpoint;
 		});
 		return;

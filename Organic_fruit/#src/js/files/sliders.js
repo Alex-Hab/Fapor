@@ -1,20 +1,29 @@
-//BildSlider
-let sliders = document.querySelectorAll('._swiper');
+//feedback-slider
+const swiper = new Swiper('.slider-feedback__body', {
+  // Optional parameters
+	direction: 'horizontal',
+	slidesPerGroup: 2,
+	sliderPerView: 2,
+	initialSlide: 0,
+	enteredSlides: true,
+	watchOverflow: true,
+ 	preloadImages: false,
+	//autoHeight: true,
+	simulateTouch: true,
 
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
 
-if (document.querySelector('.slider-feedback__body')) {
-	new Swiper('.slider-feedback__body', {
-		direction: 'horizontal',
-   	loop: true,
-		//Стрелки
-		navigation: {
-			nextEl: '.slider-main .slider-arrow-prev',
-			prevEl: '.slider-main .slider-arrow-prev',
-		},
-		// Dotts
-		pagination: {
-			el: '.slider-main__dotts',
-			clickable: true,
-		},
-	});
-}
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
