@@ -483,6 +483,29 @@ body._lock {
   border: 1px solid #000;
 }
 
+.slider-feedback__button {
+  color: #000;
+}
+
+.swiper-button {
+  border: #cccccc 1px solid;
+  border-radius: 30px;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  color: #cccccc;
+  border: #cccccc 1px solid;
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+}
+
+.swiper-button-prev::before,
+.swiper-button-next::before {
+  color: #000;
+}
+
 .footer {
   height: 50px;
   display: -webkit-box;

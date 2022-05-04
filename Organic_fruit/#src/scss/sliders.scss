@@ -62,8 +62,24 @@
 		}
 	}
 	&__button{
-
+		color:#000;
 	}
+}
+.swiper-button{
+	border: #cccccc 1px solid;
+	border-radius: 30px;
+	&-prev,&-next{
+		&::after{
+			color: #cccccc;
+			border: #cccccc 1px solid;
+			width: 32px;
+			height: 32px;
+			border-radius: 100%;
+		}
+		&::before {
+			color: #000;
+		}
+	}	
 }
 
 
