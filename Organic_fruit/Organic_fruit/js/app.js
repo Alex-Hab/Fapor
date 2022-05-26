@@ -77,32 +77,32 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 //feedback-slider
 const swiper = new Swiper('.slider-feedback__body', {
-  // Optional parameters
+	// Optional parameters
 	direction: 'horizontal',
 	slidesPerGroup: 2,
 	sliderPerView: 2,
 	initialSlide: 0,
 	enteredSlides: true,
 	watchOverflow: true,
- 	preloadImages: false,
+	preloadImages: false,
 	//autoHeight: true,
 	simulateTouch: true,
 
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-  },
+	// If we need pagination
+	pagination: {
+		el: '.swiper-pagination',
+	},
 
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
+	// Navigation arrows
+	navigation: {
+		nextEl: '.button-feedback-next',
+		prevEl: '.button-feedback-prev',
+	},
 
-  // And if we need scrollbar
-  scrollbar: {
-    el: '.swiper-scrollbar',
-  },
+	// And if we need scrollbar
+	scrollbar: {
+		el: '.swiper-scrollbar',
+	},
 });
 "use strict"
 
