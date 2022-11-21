@@ -2,12 +2,16 @@
 .feedback-slider {
 	max-width: $maxWidth;
 	height: 730px;
+	@media (max-width: $md2+px){
+		height: auto;
+	}
 	// .main-slider__container
-	&__container {
+		&__container {
 		position: relative;
 		max-height: 100%;
 		margin: 0px 100px 0px 100px;
-		@media (min-width: $md2+px) {
+		@media (max-width: $md2+px) {
+			margin: 0px 15px 0px 15px;
 			&::before {
 				content: "";
 				position: absolute;
@@ -25,27 +29,48 @@
 	}
 }
 .slider-feedback{
-	&__body {
-		min-width: 0;
-		max-height: 100%;
-		display: flex;
-		flex-direction: column;
-	}
 	width: 100%;
 	max-height: 100%;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	position: relative;
+	&__title {
+		padding: 40px 0px 20px 0px;
+		text-align: center;
+	}
+	&__body {
+		min-width: 0;
+		max-height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}	
 	&__slide{
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		max-height: 100%;
+		padding: 0px 0px 0px 0px;
+		flex-wrap: wrap;
+		@media (max-width: $md2+px){
+			padding: 0px 0px 0px 0px;
+		}
 	}
 	&__content{
 		flex: 0 1 70%;
 		padding: 0px 20px 0px 20px;
+		@media (max-width: $md2+px) {
+			padding: 0px 0px 20px 0px;
+		}
+	}
+	//slider-feedback__name
+	&__name{
+		p{
+			font-weight: 900;
+			color: #000;
+		}
 	}
 	&__image{
 		display: flex;
@@ -55,30 +80,42 @@
 		flex: 0 1 30%;
 		width:100%;
 		img {
+			max-width: 100%;
 			height: 100%;
 			border-radius: 50%;
 			background-color: #F3FBF8;
-			border: 1px solid #000;
+			border: 1px solid #F3FBF8;
+		}
+		@media (max-width: $md2+px){
+			flex: 0 1 100%;
 		}
 	}
 	&__button{
 	}
 }
 .button-feedback{	
+	max-height: 100px;
 	display: flex;
-	justify-content: space-evenly;
+	align-items: center;
+	width: 100%;
 	font-size: 12px;
 	pointer-events: auto;
+	&__container{
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		flex: 0 1 60%;
+	}
 		
 	&-prev:before{
 		transform: rotate(90deg);
-	}
+	}	
 	&-next:before {
 		transform: rotate(-90deg);
 	}
 	&-prev,&-next{
 		display: flex;
-		justify-content: center;
+		justify-content: space-evenly;
 		align-items: center;
 		width: 60px;
 		height: 60px;
@@ -88,23 +125,39 @@
 		border-color: #C4C4C4;
 		cursor: pointer;
 		transition: all 0.3s ease 0s;
-		
+		background-color:#09A66D;		
 		@media (any-hover: hover) {
 			&:hover {				
-				background-color: #09A66D;
+				background-color: #fff;
 			}
 		}
 		&_light {
+			padding-left: 27px;
 			@media (any-hover: hover) {
 				&:hover {
 					color: rgba(232, 159, 113, 1);
-					background-color: #fff;
-					
+					background-color: #fff;					
 				}
 			}
 		}
 		
 	}	
+}
+.rating{
+	display: inline-flex;
+	flex-direction: row-reverse; 
+	&__item{
+		color: #dcdcdc;
+		cursor: pointer;
+		font-size: 40px;
+		transition: .2s;
+		&:hover{
+			color: #F1B90B;
+		}
+		&:hover ~ .rating__item {
+			color: #F1B90B;
+		}
+	}
 }
 
 

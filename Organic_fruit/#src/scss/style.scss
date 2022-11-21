@@ -20,7 +20,7 @@ $fontSize: 18;
 //</ШРИФТЫ>=======================================================================================================
 
 //<ПЕРЕМЕННЫЕ>===========================================================================================================
-$minWidth: 320px;
+$minWidth: 320;
 $maxWidth: 1920;
 $maxWidthContainer: 1700;
 $md1: $maxWidthContainer + 12;
@@ -49,7 +49,6 @@ body {
 	}
 	font-family: $font-Family;
 	font-weight: 400px;
-	width: $maxWidth;
 }
 
 //</ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
@@ -68,8 +67,9 @@ body {
 ._container {
 	max-width: $maxWidthContainer + px;
 	padding: 0px 100px; //чтобы не прилипало к краям браузера
-	@media (max-width: $md3+px) {
-		margin: 0px 20px 0px 20px;
+	@media (max-width: $md2+px) {
+		margin: 0px 00px 0px 00px;
+		padding: 20px 20px 20px 20px;
 	}
 }
 //</ОСНОВНАЯ СЕТКА>===========================================================================================================
@@ -186,6 +186,7 @@ p {
 	justify-content: center;
 	align-items: center;
 	width: 100%;
+	
 
 	// .main-page__row
 	&__row {
@@ -215,7 +216,7 @@ p {
 		z-index: 1;
 		position: absolute;
 		transform: translate(-60%, -8%);
-		overflow: visible;
+		overflow: hidden;
 		@media (max-width: $md2+px) {
 			transform: translate(-30%, -8%);
 		}
@@ -277,7 +278,9 @@ p {
 		background: #f3fbf8;
 		@media (max-width: $md2+px) {
 			flex: 0 1 100%;
+			margin: 0px 0px 0px 0px;
 		}
+		
 		img {
 			max-height: 100%;
 			width: 100%;
@@ -285,26 +288,27 @@ p {
 			//object-position: center;
 		}
 	}
-	// .row-page-bottom__item
+	// .row-page-bottom__items
 	&__items {
 		flex: 0 1 30%;
-		@media (max-width: $md3+px) {
+		@media (max-width: $md2+px) {
 			flex: 0 1 100%;
 			display: flex;
-			flex-direction: column;
 			justify-content: center;
 			align-items: center;
-		}
+			flex-wrap: wrap;
+		}		
 	}
 	// .row-page-bottom__item
 	&__item {
 		height: 114px;
 		width: 250px;
 		background-color: #fff;
-		margin: 30px 0px 30px 0px;
+		margin: 15px 15px 15px 15px;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		
 	}
 }
 .item-row-page {
@@ -359,12 +363,20 @@ p {
 	background-image: url("../img/best/line.png");
 	background-repeat: no-repeat;
 	background-position: 450px -100px;
-	
+		@media (max-width: $md2+px){
+			background-position: 10px -100px;
+		}	
 		&__wrapper{
 			max-width: 70%;
 			padding: 135px 0px 35px 94px;
 			min-height: 345px;
-			
+			@media (max-width: $md2+px){
+				padding: 135px 20px 35px 20px;
+				max-width: 100%;
+				justify-content: center;
+				align-items: center;
+				text-align: center;
+			}	
 		}
 		// .the-best__content
 		&__content {
@@ -401,17 +413,24 @@ p {
 	align-items: center;
 	min-height: 560px;
 	margin: 0px 95px 0px 95px;
-
+	@media (max-width: $md2+px) {
+		flex-wrap: wrap;
+		margin: 0px 10px 0px 10px;
+	}
 		// .service-best__items
 		&__items {
 			flex: 0 1 50%;
+			width: 100%;
+			@media (max-width: $md2+px){
+				flex: 0 1 100%;
+			}
 		}
 
 		// .service-best__item
 		&__item {
 			padding: 0px 30px 0px 30px;
 			width: 500px;
-			height: 160px;
+			min-height: 160px;
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -419,9 +438,15 @@ p {
 			&:nth-child(odd){
 				background-color: #fff;
 			}
-			&:last-child{
-				//background-color: #fff;
+			@media (max-width: $md2+px){
+				flex-wrap: wrap;
+				min-height: auto;
+				width: auto;
+				text-align: center;
+				margin-bottom: 5px;
+				padding: 10px 0px 10px 0px;
 			}
+
 		}
 		&__arrow{
 			display: flex;
@@ -487,6 +512,10 @@ p {
 		// .service-best__image
 		&__image {
 			flex: 0 1 50%;
+			@media (max-width: $md2+px){
+				flex: 0 1 100%;
+			}
+			img{max-width: 100%;}
 		}
 }
 //==========================explore===============================
@@ -498,21 +527,36 @@ p {
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
+	
+	@media (max-width: $md2+px){
+		padding: 0px 0px 0px 0px;
+		flex-wrap: wrap;
+		padding: 0px 0px 0px 0px;
+		margin: 0px 0px 0px 0px;
+		justify-content: center;
+	}
+
 	// .explore__image
 	&__image {
-		flex: 0 1 40%;		
+		flex: 0 1 40%;	
+		@media (max-width: $md2+px) {
+			flex: 0 1 100%;
+			img{max-width: 100%;}
+			padding: 0px 20px 0px 20px;
+		}
 	}
 	// .explore__content
 	&__content {
 		flex: 0 1 60%;
 		padding: 45px 50px 0px 50px;
+		text-align: center;
+		@media (max-width: $md2+px) {
+			flex: 0 1 100%;
+			padding-top: 0;
+		}
 	}
 	// .explore__title
 	&__title {
-		h2{
-			//font-size: 60px;
-		}
-
 	}
 	// .explore__text
 	&__text {
@@ -523,6 +567,9 @@ p {
 		display: flex;
 		justify-content: flex-start;
 		align-items: center;
+		@media (max-width: $md2+px){
+			justify-content: center;
+		}
 		
 		p {
 			font-weight: 700;
@@ -533,6 +580,9 @@ p {
 	&__fresh {
 		position: absolute;
 		transform: translate(30%, -40%);
-		
+		@media (max-width: $md2+px){
+			position: relative;
+			display: none;
+		}		
 	}
 }

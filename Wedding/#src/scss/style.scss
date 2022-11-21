@@ -1,0 +1,236 @@
+//<МИКСИНЫ>===============================================================================================
+@import "mixins";
+//</МИКСИНЫ>===============================================================================================
+
+//<ШРИФТЫ>===============================================================================================
+
+//<Подключаем шрифты>=======================================================================================
+@import "fonts";
+//</Подключаем шрифты>=======================================================================================
+
+//<Иконочные шрифты>==========================================================================================
+@import "icons";
+//</Иконочные шрифты>==========================================================================================
+
+//<Шрифт по умолчанию>==========================================================================================
+$font-Family: "Gilroy";
+$fontSize: 18;
+//</Шрифт по умолчанию>==========================================================================================
+
+//</ШРИФТЫ>=======================================================================================================
+
+//<ПЕРЕМЕННЫЕ>===========================================================================================================
+$minWidth: 320;
+$maxWidth: 1920;
+$maxWidthContainer: 1700;
+$md1: $maxWidthContainer + 12;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+
+$mainColor: #000;
+$orangeColor: #ff7300;
+$headerColor: #222533;
+$darkGrayColor: #616161;
+$redColor: #ff3c2d;
+$yelowColor: #ffcb0f;
+$buttonColor: #09a66d;
+
+//</ПЕРЕМЕННЫЕ>===========================================================================================================
+
+//<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+@import "null";
+
+body {
+	overflow-x: hidden;
+	color: $mainColor;
+	&._lock {
+		overflow: hidden;
+	}
+	font-family: $font-Family;
+	font-weight: 400px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+//</ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+
+//<ОБОЛОЧКА>===========================================================================================================
+.wrapper {
+	width: 100%;
+	//height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+//</ОБОЛОЧКА>===========================================================================================================
+
+//<ОСНОВНАЯ СЕТКА>===========================================================================================================
+
+//</ОСНОВНАЯ СЕТКА>===========================================================================================================
+
+//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
+@import "forms";
+//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
+
+//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+//@import "datepicker";
+//@import "lightgallery"; //галерея в popup
+//@import "pagging";
+@import "popup";
+//@import "header";
+//@import "sliders";
+//@import "footer";
+//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+
+//<ОСНОВНОЙ БЛОК>====================================================================================================
+.button {
+	background-color: №fff;
+	//height: 40px;
+	//width: 160px;
+	@include adaptiv-value("height", 60, 40, 1);
+	@include adaptiv-value("width", 200, 150, 1);
+	
+	border-radius: 8px;
+	font-size: 18px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 15px 0px 15px 0px;
+	padding: 0px 10px 0px 10px;
+	border: 1px solid $buttonColor;
+	background-color: $buttonColor;
+	font-family: $font-Family;
+	font-weight: 400px;
+
+	&:hover {
+		border: 1px solid $buttonColor;
+		background-color: inherit;
+		transition: all 0.5s ease 0s;
+		p{
+			color: #fff;
+			transition: all 0.5s ease 0s;}
+	}
+}
+h1 {
+	font-weight: 700;
+	font-family: "Nefelibata";
+	@include adaptiv-value("font-size", 150, 70, 1);
+	color: #fff;
+	text-align: center;
+}
+h2 {
+	@include adaptiv-value("font-size", 40, 24, 1);
+	font-weight: 500;
+	font-family: $font-Family;
+	padding-top: 10px;
+	
+	@media (max-width: $md2+px) {
+		//padding: 40px 0px 20px 0px;
+	}
+	@media (max-width: $md3+px) {
+		//margin: 0px 0px 10px 0px;
+	}
+}
+h3 {
+	font-size: 16px;
+	font-weight: 700;
+	color: $darkGrayColor;
+}
+p {
+	@include adaptiv-value("font-size", 18, 14, 1);	
+	color: #000;
+	line-height: 28px;
+	font-weight: 400;
+	padding: 10px 0px 10px 0px;
+	@media (max-width: $md3+px) {
+		padding: 0px 0px 0px 0px;
+		@include adaptiv-value("line-height", 30, 20, 1);
+	}
+}
+//</ОСНОВНОЙ БЛОК>====================================================================================================
+
+.wedding{
+	display: flex;
+	//background-image: url(../img/merries2.jpg);
+	//filter: brightness(0.5);
+	width: 100%;
+	height: 100%;
+	padding: 40px;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	position:fixed;
+	@media(max-width: $md3+px){
+		padding: 20px;
+	}
+	&__content{
+		text-align: center;
+		overflow: hidden;
+		color: inherit;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		height: 100%;
+		width: 100%;
+		position: relative;
+	}
+	&__img{
+		position: absolute;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		max-height: 100%;
+		width: 100%;
+		filter: brightness(0.5); //затемнение фона изображения
+		img {
+			object-fit: cover;
+			object-position: center;
+		}
+	}
+	&__title{
+		margin-bottom: 50px;
+		//position:relative;
+	}
+	&__text{
+		border-top:#fff solid 1px;
+		flex: 0 1 50%;
+		text-align: center;
+		color: #fff;
+	}
+	&__question{
+		margin-top: 20px;
+		border-top: #fff solid 1px;
+		flex: 0 1 50%;
+		text-align: center;
+		color: #fff;
+		h2{
+			@include adaptiv-value("font-size", 40, 30, 1);
+			}
+	}
+	&__buttons{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		position: relative;
+		@media(max-width: $md3+px) {
+			flex-direction: column;
+		};
+		
+		.button{
+			margin:0px 50px 0px 50px;
+			p{	
+				color:#fff;
+				font-size: 18px;
+			}
+			@media(max-width: $md3+px) {
+				margin: 15px 0px 15px 0px;
+				padding: 5px 0px 5px 0px;
+			}
+		}
+	}
+}

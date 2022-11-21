@@ -11,11 +11,11 @@
 	$mail->IsHTML(true);
 
 	//От кого письмо, здесь указана почта созданная на хостинге
-	$mail->setFrom('zestroy@sam-climate.ru', 'Фрилансер по жизни');
+	$mail->setFrom('zestroy@sam-climate.ru', 'Сайт ZeStroy.ru');
 	//Кому отправить сообщение с сайта
 	$mail->addAddress('sam_climate@mail.ru');
 	//Тема письма
-	$mail->Subject = 'Привет! Это "Фрилансер по жизни"';
+	$mail->Subject = 'Сообщение с сайта Сайт ZeStroy.ru';
 
 	//Рука
 	$hand = "Правая";
