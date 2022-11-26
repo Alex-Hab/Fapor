@@ -1,5 +1,67 @@
 body {
 	margin: 0%;
+	overflow: hidden;	
+	width: 100%;
+	height: 100%;
+}
+a {
+	/*color: #fff;*/
+	font-size: 20px;
+}
+/*=======================================Меню==============================================*/
+header{
+	display: flex;
+	min-width: 100%;
+	height: 50px;
+	justify-content: center;
+	align-items: center;
+	flex: 0 1 50%;
+}
+.portfolio__logo {
+	flex: 0 1 50%;
+}
+.portfolio__menu{
+	flex: 0 1 50%;
+	display: flex;
+	width: 100%;
+}
+/*=======================================Контент==============================================*/
+.portfilio__wrapper {
+	width: 100%;
+	height: 100%;
 	overflow: hidden;
-	background: rgb(17, 17, 19);
+}
+.container{
+	max-width: 1920px;
+	min-width: 320px;
+	padding: 0px 100px;
+	margin: 40px 40px 40px 40px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: rgba(55, 10, 71, 0.8);	
+}
+.portfolio__title{
+	padding: 40px 0px 40px 0px;
+	min-height: 200px;
+	text-align: center;
+	width: 100%;
+	font-size: 25px;
+	color:#fff;
+}
+
+.portfolio__list {
+	padding: 40px 0px 40px 0px;
+	min-height: 200px;	
+}
+
+/*=======================================particle canvas на js======================================*/
+.particle {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 10%;
+	z-index: -1;
 }

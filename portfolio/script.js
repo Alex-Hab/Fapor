@@ -14,7 +14,7 @@
 			lineLength: 120, //длина линии
 			particleLife: 800,
 		};
-	document.querySelector('body').appendChild(canvas);
+	document.querySelector('.particle').appendChild(canvas);
 
 	window.onresize = function () {
 		w = canvas.width = innerWidth,
