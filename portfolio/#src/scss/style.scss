@@ -1,0 +1,167 @@
+	//<МИКСИНЫ>===============================================================================================
+	@import "mixins";
+	//</МИКСИНЫ>===============================================================================================
+
+	//<ШРИФТЫ>===============================================================================================
+
+	//<Подключаем шрифты>=======================================================================================
+	@import "fonts";
+	//</Подключаем шрифты>=======================================================================================
+
+	//<Иконочные шрифты>==========================================================================================
+	@import "icons";
+	//</Иконочные шрифты>==========================================================================================
+	@import "null";
+
+$minWidth: 320;
+$maxWidth: 1920;
+$maxWidthContainer: 1700;
+$md1: $maxWidthContainer + 12;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+
+body {
+	min-width: $minWidth+px;
+	max-width: $maxWidth+px;
+	height: auto;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	/*overflow: hidden;*/
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+}
+a,
+a:visited {
+	text-decoration: none;
+	color: #fff;
+	font-size: 20px;
+}
+
+.wrapper {
+	width: 100%;
+	//height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+/*=======================================Меню==============================================*/
+.menu{
+	display: flex;
+	width: 100%;
+	max-width: 100%;
+	height: 100px;
+	justify-content: center;
+	align-items: center;
+	background: rgba(0, 0, 0, 0.8);
+	position: fixed;
+	padding:0;
+
+	&__logo {
+		flex: 0 1 50%;
+	}
+	&__header {
+		flex: 0 1 50%;
+		display: flex;
+		width: 100%;
+		justify-content: space-evenly;
+	}
+}
+.logo__block{
+	color: #fff;
+	border: 1px #fff solid;
+	border-radius: 50px;
+	width: 70px;
+	height: 70px;
+	padding: 10px 10px 10px 10px;
+	margin: 0px 25px 0px 25px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+/*=======================================Контент==============================================*/
+.container{
+	max-width: $maxWidth+px;
+	min-width: $minWidth+px;
+	padding: 0px 20px;
+	margin: 10px 40px 10px 40px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: rgba(0, 0, 0, 0.8);	
+	@media (max-width: $md3+px) {
+			padding: 0px 10px;
+			margin: 10px 10px 10px 10px;
+	}	
+}
+.about-me {
+	&__container {
+		max-width: 100%;
+		min-height: 200px;
+	}
+	&__wrapper {
+		max-width: 100%;
+		margin-top: 100px;
+		text-align: center;
+		width: 100%;
+		font-size: 25px;
+		color: #fff;
+	}
+}
+
+
+
+/*===========================portfolio======================================*/
+.portfolio {
+	&__title {
+		padding: 40px 0px 40px 0px;
+		width: 100%;
+		min-height: 100px;
+		text-align: center;
+		width: 100%;
+		font-size: 25px;
+		color: #fff;
+	}
+	&__list {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		flex-wrap: wrap;	
+	}
+}
+
+.list__item{
+	width: 250px;
+	min-height: 300px;
+	margin: 15px 15px 15px 15px;
+	padding: 0px 15px 0px 15px;
+	background: rgb(255, 255, 255);
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+}
+.list__item:hover{
+	background: rgb(255, 255, 255, 0.8);
+	transition: all 0.5s ease 0s;
+}
+a.black {
+	color: #000;
+}
+
+/*=======================================particle canvas на js======================================*/
+.particle {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 10%;
+	z-index: -1;
+}
